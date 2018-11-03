@@ -2,7 +2,7 @@ ship = Ferry Mk 2
 version = 1.4.5
 description = Due to the lack of the fact that the Ferry Mk 1 did not actually do its job of ferrying passengers into space, we decided to haul a new model together and launch that into space instead...
 type = VAB
-size = 5.70690775,18.2115345,6.09973049
+size = 5.70690823,18.2115345,6.09973145
 steamPublishedFileId = 0
 persistentId = 996916684
 rot = 0,0,0,0
@@ -260,6 +260,69 @@ PART
 	}
 	MODULE
 	{
+		name = RasterPropMonitorComputer
+		isEnabled = True
+		vesselDescription = Due to the lack of the fact that the Ferry Mk 1 did not actually do its job of ferrying passengers into space, we decided to haul a new model together and launch that into space instead...
+		RPMCid = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = SCANRPMStorage
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TrajectoriesVesselSettings
+		isEnabled = True
+		Initialized = False
+		EntryAngle = 3.1415926535897931
+		EntryHorizon = False
+		HighAngle = 3.1415926535897931
+		HighHorizon = False
+		LowAngle = 3.1415926535897931
+		LowHorizon = False
+		GroundAngle = 3.1415926535897931
+		GroundHorizon = False
+		ProgradeEntry = False
+		RetrogradeEntry = True
+		TargetBody = 
+		TargetPosition_x = 0
+		TargetPosition_y = 0
+		TargetPosition_z = 0
+		ManualTargetTxt = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -332,11 +395,11 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 2
 	resPri = 0
 	dstg = 0
 	sidx = 0
-	sqor = 1
+	sqor = 2
 	sepI = -1
 	attm = 1
 	modCost = 0
@@ -459,11 +522,11 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 0
 	sidx = 0
-	sqor = 2
+	sqor = 1
 	sepI = -1
 	attm = 1
 	modCost = 0
@@ -812,6 +875,21 @@ PART
 		stagingEnabled = True
 		MM_DYNAMIC = true
 		parent_vessel = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = SCANRPMStorage
+		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -1740,7 +1818,7 @@ PART
 	part = winglet_4292993836
 	partName = Part
 	persistentId = 2272074798
-	pos = -2.43695021,10.1281137,-0.0417221561
+	pos = -2.43695068,10.1281137,-0.0417221561
 	attPos = 0,0,0
 	attPos0 = 6.11281692E-08,-0.565932274,1.17626941
 	rot = -2.79956752E-10,8.42932479E-08,-0.00332117453,0.999994576
@@ -1933,7 +2011,7 @@ PART
 	part = solidBooster_4293250350
 	partName = Part
 	persistentId = 2749711021
-	pos = 0.77800262,10.694046,1.13531077
+	pos = 0.77800262,10.694046,1.13531101
 	attPos = 0,0,0
 	attPos0 = -0.786766529,-0.433755875,0
 	rot = -6.86331485E-15,0.258819222,1.83902034E-15,0.965925932
@@ -2082,7 +2160,7 @@ PART
 	part = noseCone_4293231992
 	partName = Part
 	persistentId = 1790375391
-	pos = 0.77800262,11.9758835,1.13531125
+	pos = 0.778002679,11.9758835,1.13531148
 	attPos = 0,0,0
 	attPos0 = -1.19209254E-07,1.28183746,2.38418693E-07
 	rot = -1.27054942E-21,-2.98023224E-08,1.37642854E-21,1.00000012
@@ -2137,7 +2215,7 @@ PART
 	part = winglet_4292993648
 	partName = Part
 	persistentId = 1880370918
-	pos = 1.36614311,10.1281137,2.15400052
+	pos = 1.36614335,10.1281137,2.15400147
 	attPos = 0,0,0
 	attPos0 = 4.26325709E-14,-0.565932274,1.17627025
 	rot = -0.00287622283,0.866020679,-0.00166058668,0.499997258
@@ -2537,7 +2615,7 @@ PART
 	pos = 1.36613667,10.1281137,-2.23743272
 	attPos = 0,0,0
 	attPos0 = 1.19209183E-07,-0.565932274,1.17626977
-	rot = -0.00287621911,0.866020501,0.00166058633,-0.499997467
+	rot = -0.00287621934,0.86602056,0.00166058645,-0.499997467
 	attRot = 0,0,0,1
 	attRot0 = -0.00234842487,0.707102954,-0.00234842487,0.707102835
 	mir = 1,1,-1
@@ -2862,7 +2940,7 @@ PART
 	pos = -0.581282735,13.7855625,-1.21904278
 	attPos = 0,0,0
 	attPos0 = 9.32587002E-15,0.6875,5.22519379E-08
-	rot = 5.15143483E-14,-2.98023224E-08,-2.22044605E-14,1
+	rot = 5.32907052E-14,-2.98023224E-08,-2.13162821E-14,1
 	attRot = 0,0,0,1
 	attRot0 = 1.92835277E-08,-0.965925872,7.19670936E-08,-0.258819014
 	mir = 1,1,1
@@ -3172,7 +3250,7 @@ PART
 	pos = -0.581283212,13.7855625,1.13559818
 	attPos = 0,0,0
 	attPos0 = -5.96046341E-08,0.6875,-7.35268912E-09
-	rot = 3.28626015E-14,0.866025567,-2.39808173E-14,0.49999994
+	rot = 3.28626015E-14,0.866025627,-2.35367281E-14,0.5
 	attRot = 0,0,0,1
 	attRot0 = 1.92835206E-08,-0.965925813,7.19670723E-08,-0.258819014
 	mir = 1,1,1
@@ -3482,7 +3560,7 @@ PART
 	pos = 1.45789564,13.7855625,-0.041722592
 	attPos = 0,0,0
 	attPos0 = -4.88498131E-15,0.6875,-6.6957341E-08
-	rot = 0,0.866025388,8.8817842E-15,-0.5
+	rot = 1.77635684E-15,0.866025448,1.0658141E-14,-0.50000006
 	attRot = 0,0,0,1
 	attRot0 = 1.92835241E-08,-0.965925872,7.19670794E-08,-0.258818954
 	mir = 1,1,1
@@ -4778,7 +4856,7 @@ PART
 	part = winglet_4292996230
 	partName = Part
 	persistentId = 2015621151
-	pos = -2.52806139,1.88231754,-0.0417220183
+	pos = -2.52806187,1.88231754,-0.0417220183
 	attPos = 0,0,0
 	attPos0 = 2.3933751E-07,-2.7803688,1.25846565
 	rot = 4.86479948E-15,2.03502992E-07,2.61023541E-08,1.00000012
@@ -4971,7 +5049,7 @@ PART
 	part = solidBooster1-1_4293256186
 	partName = Part
 	persistentId = 3253612067
-	pos = 0.782459855,4.66268635,1.14303112
+	pos = 0.782459915,4.66268635,1.14303136
 	attPos = 0,0,0
 	attPos0 = -0.796322823,-0.376093864,0
 	rot = -6.86331485E-15,0.258819222,1.83902034E-15,0.965925932
@@ -5118,7 +5196,7 @@ PART
 	part = winglet_4292996344
 	partName = Part
 	persistentId = 414623468
-	pos = 1.41170168,1.88231754,2.232903
+	pos = 1.41170216,1.88231754,2.23290348
 	attPos = 0,0,0
 	attPos0 = 2.38418579E-07,-2.7803688,1.25846529
 	rot = 2.26053185E-08,0.866025686,1.30511788E-08,0.499999881
@@ -5458,7 +5536,7 @@ PART
 	part = winglet_4292996192
 	partName = Part
 	persistentId = 2485723488
-	pos = 1.41169322,1.88231754,-2.31634188
+	pos = 1.41169357,1.88231754,-2.31634212
 	attPos = 0,0,0
 	attPos0 = 3.57627613E-07,-2.7803688,1.25846553
 	rot = 2.26053078E-08,0.866025329,-1.30511904E-08,-0.500000358
@@ -5858,7 +5936,7 @@ PART
 	pos = -1.82583904,3.73024845,1.93679631
 	attPos = 0,0,0
 	attPos0 = -0.677218497,-2.35069275,1.31676698
-	rot = -0.612372398,-0.353553414,-0.353553385,0.612372458
+	rot = -0.612372398,-0.353553414,-0.353553385,0.612372518
 	attRot = 0,0,0,1
 	attRot0 = -0.683012664,-0.183012784,-0.183012724,0.683012784
 	mir = 1,1,1
@@ -5891,10 +5969,10 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 0.86335057
+		scaleFactor = 0.863350391
 		height = 2.17840385
 		stagingEnabled = True
-		towerRot = 0.612372458,0.353553474,0.353553385,0.612372458
+		towerRot = 0.612372458,0.353553444,0.353553385,0.612372518
 		EVENTS
 		{
 		}
@@ -6556,7 +6634,7 @@ PART
 	pos = -0.580967784,6.0809412,-1.2184968
 	attPos = 0,0,0
 	attPos0 = -0.786592722,-0.1896687,5.96046448E-08
-	rot = 7.71344766E-09,0.965925813,2.87868751E-08,-0.258819163
+	rot = 7.71344943E-09,0.965925813,2.87868769E-08,-0.258819163
 	attRot = 0,0,0,1
 	attRot0 = -2.82330559E-09,-0.707106769,-2.82330337E-09,0.707106829
 	mir = 1,1,1
@@ -6705,7 +6783,7 @@ PART
 	pos = -0.580967784,7.36277866,-1.2184968
 	attPos = 0,0,0
 	attPos0 = -1.37212535E-16,1.28183746,6.9840759E-08
-	rot = -1.59872116E-14,0.866025448,-1.50990331E-14,-0.500000119
+	rot = -1.59872116E-14,0.866025388,-1.687539E-14,-0.500000119
 	attRot = 0,0,0,1
 	attRot0 = 2.87868307E-08,0.258819014,7.71340947E-09,0.965925813
 	mir = 1,1,1
@@ -6760,7 +6838,7 @@ PART
 	pos = -0.652863264,3.73024845,-2.69745994
 	attPos = 0,0,0
 	attPos0 = -0.677218437,-2.35069275,1.31676686
-	rot = -2.72783439E-07,0.707107186,0.707106471,-2.98023224E-08
+	rot = -3.32388083E-07,0.707107186,0.707106531,-2.98023224E-08
 	attRot = 0,0,0,1
 	attRot0 = -0.683012605,-0.183012754,-0.183012769,0.683012843
 	mir = 1,1,1
@@ -6796,7 +6874,7 @@ PART
 		scaleFactor = 0.863350749
 		height = 2.17840481
 		stagingEnabled = True
-		towerRot = 2.5331974E-07,-0.707107127,-0.707106471,-4.47034836E-08
+		towerRot = 2.83122063E-07,-0.707107127,-0.707106471,-4.47034836E-08
 		EVENTS
 		{
 		}

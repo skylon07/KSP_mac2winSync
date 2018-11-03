@@ -37,7 +37,8 @@ PART
 	link = radialDrogue_4293294352
 	link = science.module_4293127692
 	link = sasModule_4294182630
-	link = sensorBarometer_4293786056
+	link = sensorBarometer_4293519110
+	link = GooExperiment_4293506884
 	attN = bottom,science.module_4293127692_0|-0.4050379|0
 	attN = top,sasModule_4294182630_0|0.6423756|0
 	EVENTS
@@ -261,6 +262,69 @@ PART
 	}
 	MODULE
 	{
+		name = RasterPropMonitorComputer
+		isEnabled = True
+		vesselDescription = Due to the lack of the fact that the Ferry Mk 1 did not actually do its job of ferrying passengers into space, we decided to haul a new model together and launch that into space instead...
+		RPMCid = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = SCANRPMStorage
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TrajectoriesVesselSettings
+		isEnabled = True
+		Initialized = False
+		EntryAngle = 3.1415926535897931
+		EntryHorizon = False
+		HighAngle = 3.1415926535897931
+		HighHorizon = False
+		LowAngle = 3.1415926535897931
+		LowHorizon = False
+		GroundAngle = 3.1415926535897931
+		GroundHorizon = False
+		ProgradeEntry = False
+		RetrogradeEntry = True
+		TargetBody = 
+		TargetPosition_x = 0
+		TargetPosition_y = 0
+		TargetPosition_z = 0
+		ManualTargetTxt = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -333,11 +397,11 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 2
 	resPri = 0
 	dstg = 0
 	sidx = 0
-	sqor = 1
+	sqor = 2
 	sepI = -1
 	attm = 1
 	modCost = 0
@@ -460,11 +524,11 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 0
 	sidx = 0
-	sqor = 2
+	sqor = 1
 	sepI = -1
 	attm = 1
 	modCost = 0
@@ -813,6 +877,21 @@ PART
 		stagingEnabled = True
 		MM_DYNAMIC = true
 		parent_vessel = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = SCANRPMStorage
+		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -7096,12 +7175,12 @@ PART
 }
 PART
 {
-	part = sensorBarometer_4293786056
+	part = sensorBarometer_4293519110
 	partName = Part
-	persistentId = 3337454191
-	pos = 0.0984433889,18.2682705,0.29330188
+	persistentId = 4066101626
+	pos = 0.0984433889,18.2347012,0.307555467
 	attPos = 0,0,0
-	attPos0 = 0,0.436483383,0.335024416
+	attPos0 = 0,0.402914047,0.349278003
 	rot = -1.99910133E-08,0.983294487,-0.182021797,-1.07992854E-07
 	attRot = 0,0,0,1
 	attRot0 = -1.99910133E-08,0.983294487,-0.182021797,-1.07992854E-07
@@ -7134,6 +7213,110 @@ PART
 		name = ModuleEnviroSensor
 		isEnabled = True
 		sensorActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FMRS_PM
+		isEnabled = True
+		stagingEnabled = True
+		MM_DYNAMIC = true
+		parent_vessel = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GooExperiment_4293506884
+	partName = Part
+	persistentId = 3552786238
+	pos = 0.098443374,17.7648277,0.39013949
+	attPos = 0,0,0
+	attPos0 = -1.49011612E-08,-0.0669593811,0.431862026
+	rot = -1.99910133E-08,0.983294487,-0.182021797,-1.07992854E-07
+	attRot = 0,0,0,1
+	attRot0 = -1.99910133E-08,0.983294487,-0.182021797,-1.07992854E-07
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,mk1pod_4293320496
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
 		stagingEnabled = True
 		EVENTS
 		{

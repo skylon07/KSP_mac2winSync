@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Agencies/R&D
-	launchID = 2
+	launchID = 3
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -158,6 +158,17 @@ GAME
 			facilityLevelTS = 3
 			facilityLevelVAB = 3
 		}
+		PM
+		{
+			EnabledForSave = True
+		}
+		TC
+		{
+			showStockTooltips = True
+			hoverTimeout = 0.5
+			debugMode = False
+			oldDebugMode = False
+		}
 		FMRS_Settings
 		{
 			enabled = True
@@ -171,17 +182,6 @@ GAME
 			_SETTING_Parachutes = True
 			_SETTING_Defer_Parachutes_to_StageRecovery = True
 			_SETTING_Control_Uncontrollable = False
-		}
-		TC
-		{
-			showStockTooltips = True
-			hoverTimeout = 0.5
-			debugMode = False
-			oldDebugMode = False
-		}
-		PM
-		{
-			EnabledForSave = True
 		}
 	}
 	SCENARIO
@@ -713,8 +713,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.4.5
-		UT = 197.50000000002723
-		activeVessel = 0
+		UT = 206.76000000003197
+		activeVessel = 4
 		mapViewFiltering = -1026
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
@@ -821,11 +821,6 @@ GAME
 				RPMVesselComputer
 				{
 				}
-				CommNetVessel
-				{
-					controlState = None
-					canComm = True
-				}
 			}
 		}
 		VESSEL
@@ -930,11 +925,6 @@ GAME
 				}
 				RPMVesselComputer
 				{
-				}
-				CommNetVessel
-				{
-					controlState = None
-					canComm = True
 				}
 			}
 		}
@@ -1041,11 +1031,6 @@ GAME
 				RPMVesselComputer
 				{
 				}
-				CommNetVessel
-				{
-					controlState = None
-					canComm = True
-				}
 			}
 		}
 		VESSEL
@@ -1151,17 +1136,12 @@ GAME
 				RPMVesselComputer
 				{
 				}
-				CommNetVessel
-				{
-					controlState = None
-					canComm = True
-				}
 			}
 		}
 		VESSEL
 		{
-			pid = 28b02e18eae44bb597bf7bfea91839c9
-			persistentId = 2951879604
+			pid = 7759fe9a7a72469ab794368c76959816
+			persistentId = 1632048038
 			name = AeroEquus
 			type = Ship
 			sit = PRELAUNCH
@@ -1173,8 +1153,8 @@ GAME
 			displaylandedAt = LaunchPad
 			splashed = False
 			met = 0
-			lct = 197.50000000002723
-			lastUT = 197.50000000002723
+			lct = 206.76000000003197
+			lastUT = 206.76000000003197
 			distanceTraveled = 0
 			root = 0
 			lat = -0.097207781047075698
@@ -1183,35 +1163,35 @@ GAME
 			hgt = 10.6586084
 			nrm = 0.000745564699,0.999999642,1.1920929E-07
 			rot = -0.70098871,-0.0922177136,-0.0972654223,0.700464249
-			CoM = 5.96046448E-06,-6.99035931,-2.86102295E-06
+			CoM = 5.00679016E-06,-6.99035835,-2.86102295E-06
 			stg = 7
 			prst = False
-			ref = 2649460776
-			ctrl = False
+			ref = 4251730978
+			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = 0
-			cHdg = 0
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300820.50770805369
-				ECC = 0.99479842377553263
-				INC = 0.09720778469181246
+				SMA = 300820.50770814478
+				ECC = 0.99479842377552807
+				INC = 0.097207784721807175
 				LPE = 90
-				LAN = 108.74171080598205
+				LAN = 108.89640634759871
 				MNA = -3.1415926535897887
-				EPH = 197.50000000002723
+				EPH = 206.76000000003197
 				REF = 1
 			}
 			PART
 			{
 				name = mk1pod
 				cid = 4294664102
-				uid = 2649460776
-				mid = 37932540
-				persistentId = 113570054
-				launchID = 1
+				uid = 4251730978
+				mid = 3959768861
+				persistentId = 4015398260
+				launchID = 2
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1229,16 +1209,16 @@ GAME
 				attN = top, 1
 				mass = 0.800000012
 				shielded = False
-				temp = 308.67136578453147
-				tempExt = 308.83218227181976
-				tempExtUnexp = 308.82951575514733
+				temp = 308.68107219412462
+				tempExt = 308.75838231122833
+				tempExtUnexp = 308.75481509115923
 				expt = 0.5
 				state = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
 				flag = Squad/Agencies/R&D
-				rTrf = mk1pod (AeroEquus)
+				rTrf = mk1pod
 				modCost = 0
 				crew = Jebediah Kerman
 				EVENTS
@@ -1282,7 +1262,7 @@ GAME
 					isEnabled = True
 					actuatorModeCycle = 0
 					authorityLimiter = 100
-					stateString = Active
+					stateString = Idle
 					stagingEnabled = True
 					WheelState = Active
 					EVENTS
@@ -1347,7 +1327,6 @@ GAME
 						DeployAction
 						{
 							actionGroup = None
-							active = False
 						}
 						ResetAction
 						{
@@ -1467,7 +1446,7 @@ GAME
 					name = RasterPropMonitorComputer
 					isEnabled = True
 					vesselDescription = 
-					RPMCid = 674c061d-c1a4-47ba-a5b6-282875d627e5
+					RPMCid = 0ec5255e-209a-4d21-a800-c7ad2b6f7742
 					stagingEnabled = True
 					EVENTS
 					{
@@ -1624,10 +1603,10 @@ GAME
 			{
 				name = parachuteSingle
 				cid = 4294655242
-				uid = 2129917769
-				mid = 37932540
-				persistentId = 2675905778
-				launchID = 1
+				uid = 3111743898
+				mid = 3959768861
+				persistentId = 1028510096
+				launchID = 2
 				parent = 0
 				position = 0,0.65746021270751953,0
 				rotation = 0,0,0,1
@@ -1644,9 +1623,9 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 308.67167539602366
-				tempExt = 308.94477663900676
-				tempExtUnexp = 308.94258916940089
+				temp = 308.68116227303773
+				tempExt = 308.8301720748305
+				tempExtUnexp = 308.82533048028859
 				expt = 0.5
 				state = 0
 				attached = True
@@ -1760,10 +1739,10 @@ GAME
 			{
 				name = stackDecoupler
 				cid = 4294640066
-				uid = 3847346391
-				mid = 37932540
-				persistentId = 3514676446
-				launchID = 1
+				uid = 1168001597
+				mid = 3959768861
+				persistentId = 2355269414
+				launchID = 2
 				parent = 0
 				position = 0,-0.47008991241455078,0
 				rotation = 0,0,0,1
@@ -1781,9 +1760,9 @@ GAME
 				attN = top, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.67175061797479
-				tempExt = 308.77098238004197
-				tempExtUnexp = 308.76977307914973
+				temp = 308.68118507972486
+				tempExt = 308.73164756795097
+				tempExtUnexp = 308.73023470516767
 				expt = 0.5
 				state = 0
 				attached = True
@@ -1872,10 +1851,10 @@ GAME
 			{
 				name = fuelTank
 				cid = 4288402330
-				uid = 3052159530
-				mid = 37932540
-				persistentId = 317423675
-				launchID = 1
+				uid = 2160246035
+				mid = 3959768861
+				persistentId = 3947414646
+				launchID = 2
 				parent = 2
 				position = 0,-1.5687694549560547,0
 				rotation = 0,0,0,1
@@ -1893,9 +1872,9 @@ GAME
 				attN = bottom, 4
 				mass = 0.25
 				shielded = False
-				temp = 308.67130810489761
-				tempExt = 308.74747673481369
-				tempExtUnexp = 308.74622283170299
+				temp = 308.68106059726028
+				tempExt = 308.71785655551184
+				tempExtUnexp = 308.71630190994927
 				expt = 0.5
 				state = 0
 				attached = True
@@ -1957,10 +1936,10 @@ GAME
 			{
 				name = liquidEngine3
 				cid = 4294626068
-				uid = 3060381711
-				mid = 37932540
-				persistentId = 3361901204
-				launchID = 1
+				uid = 2274819210
+				mid = 3959768861
+				persistentId = 732072066
+				launchID = 2
 				parent = 3
 				position = 0,-2.7518997192382813,0
 				rotation = 0,0,0,1
@@ -1978,9 +1957,9 @@ GAME
 				attN = bottom, 5
 				mass = 0.5
 				shielded = False
-				temp = 308.67137454209819
-				tempExt = 308.71152216088285
-				tempExtUnexp = 308.71088795152667
+				temp = 308.68107336438032
+				tempExt = 308.69916181377988
+				tempExtUnexp = 308.69839167849472
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2168,10 +2147,10 @@ GAME
 			{
 				name = stackDecoupler
 				cid = 4273860990
-				uid = 2406683029
-				mid = 37932540
-				persistentId = 2590248676
-				launchID = 1
+				uid = 2096409449
+				mid = 3959768861
+				persistentId = 2024341673
+				launchID = 2
 				parent = 4
 				position = 0,-3.289769172668457,0
 				rotation = 0,0,0,1
@@ -2189,9 +2168,9 @@ GAME
 				attN = top, 4
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.67162265452498
-				tempExt = 308.75305586641565
-				tempExtUnexp = 308.75204143426942
+				temp = 308.68112140846011
+				tempExt = 308.7158285923249
+				tempExtUnexp = 308.71435263163386
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2280,10 +2259,10 @@ GAME
 			{
 				name = fuelTank
 				cid = 4294599110
-				uid = 3805754366
-				mid = 37932540
-				persistentId = 3466160749
-				launchID = 1
+				uid = 2431708677
+				mid = 3959768861
+				persistentId = 3677019565
+				launchID = 2
 				parent = 5
 				position = 0,-4.3884496688842773,0
 				rotation = 0,0,0,1
@@ -2301,9 +2280,9 @@ GAME
 				attN = bottom, 7
 				mass = 0.25
 				shielded = False
-				temp = 308.67131058366328
-				tempExt = 308.75463308823913
-				tempExtUnexp = 308.75341154189249
+				temp = 308.6810607881788
+				tempExt = 308.71930649729319
+				tempExtUnexp = 308.71767484793531
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2365,10 +2344,10 @@ GAME
 			{
 				name = fuelTank
 				cid = 4294598432
-				uid = 52841084
-				mid = 37932540
-				persistentId = 948206670
-				launchID = 1
+				uid = 2879549476
+				mid = 3959768861
+				persistentId = 2679148332
+				launchID = 2
 				parent = 6
 				position = 0,-6.2666358947753906,0
 				rotation = 0,0,0,1
@@ -2386,9 +2365,9 @@ GAME
 				attN = bottom, 8
 				mass = 0.25
 				shielded = False
-				temp = 308.67130586469233
-				tempExt = 308.74074229718218
-				tempExtUnexp = 308.73941946826056
+				temp = 308.68106041913671
+				tempExt = 308.71655143751383
+				tempExtUnexp = 308.71503942966262
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2450,10 +2429,10 @@ GAME
 			{
 				name = fuelTank
 				cid = 4294597690
-				uid = 3807416979
-				mid = 37932540
-				persistentId = 3796079424
-				launchID = 1
+				uid = 2619432360
+				mid = 3959768861
+				persistentId = 3568603497
+				launchID = 2
 				parent = 7
 				position = 0,-8.1448268890380859,0
 				rotation = 0,0,0,1
@@ -2471,9 +2450,9 @@ GAME
 				attN = bottom, 9
 				mass = 0.25
 				shielded = False
-				temp = 308.67130227104269
-				tempExt = 308.71815829064474
-				tempExtUnexp = 308.71744573694019
+				temp = 308.68106006099555
+				tempExt = 308.71131046362251
+				tempExtUnexp = 308.71019633990232
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2535,10 +2514,10 @@ GAME
 			{
 				name = liquidEngine2
 				cid = 4294569520
-				uid = 34991351
-				mid = 37932540
-				persistentId = 1437265835
-				launchID = 1
+				uid = 2186517383
+				mid = 3959768861
+				persistentId = 217711611
+				launchID = 2
 				parent = 8
 				position = 0,-9.9591522216796875,0
 				rotation = 0,0,0,1
@@ -2556,9 +2535,9 @@ GAME
 				attN = bottom, -1
 				mass = 1.5
 				shielded = False
-				temp = 308.67132370709754
-				tempExt = 308.70737469529809
-				tempExtUnexp = 308.70663138186984
+				temp = 308.6810659293148
+				tempExt = 308.70280267415876
+				tempExtUnexp = 308.70190841167488
 				expt = 0.5
 				state = 0
 				attached = True
@@ -2787,10 +2766,10 @@ GAME
 			{
 				name = R8winglet
 				cid = 4293295646
-				uid = 2378196889
-				mid = 37932540
-				persistentId = 3082845717
-				launchID = 1
+				uid = 3408241782
+				mid = 3959768861
+				persistentId = 2242053080
+				launchID = 2
 				parent = 8
 				position = -6.480709089373704E-07,-8.3701868057250977,-1.1595920324325562
 				rotation = 2.10734203E-08,0.707106471,-2.10734292E-08,-0.707107127
@@ -2809,9 +2788,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.100000001
 				shielded = False
-				temp = 308.6712768602718
-				tempExt = 308.65953289035673
-				tempExtUnexp = 308.65940281852869
+				temp = 308.68105663229159
+				tempExt = 308.68290230036234
+				tempExtUnexp = 308.6828088487465
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -2887,10 +2866,10 @@ GAME
 			{
 				name = R8winglet
 				cid = 4293293442
-				uid = 795150894
-				mid = 37932540
-				persistentId = 925767357
-				launchID = 1
+				uid = 4077623294
+				mid = 3959768861
+				persistentId = 2781946238
+				launchID = 2
 				parent = 8
 				position = -1.1595906019210815,-8.3701868057250977,5.7895340432878584E-07
 				rotation = -7.10542693E-15,-4.76837101E-07,-2.98023206E-08,-1
@@ -2909,9 +2888,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.100000001
 				shielded = False
-				temp = 308.67127685899356
-				tempExt = 308.65953136102723
-				tempExtUnexp = 308.65940129136175
+				temp = 308.68105663227124
+				tempExt = 308.6829022160432
+				tempExtUnexp = 308.68280876818568
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -2987,10 +2966,10 @@ GAME
 			{
 				name = R8winglet
 				cid = 4293293396
-				uid = 424174682
-				mid = 37932540
-				persistentId = 2504215183
-				launchID = 1
+				uid = 2747727627
+				mid = 3959768861
+				persistentId = 3041007915
+				launchID = 2
 				parent = 8
 				position = 7.4944500738638453E-07,-8.3701868057250977,1.1595919132232666
 				rotation = -2.10734292E-08,-0.707107186,-2.10734097E-08,-0.707106471
@@ -3009,9 +2988,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.100000001
 				shielded = False
-				temp = 308.67127686041005
-				tempExt = 308.65953305471044
-				tempExtUnexp = 308.65940298265934
+				temp = 308.68105663229454
+				tempExt = 308.68290231243941
+				tempExtUnexp = 308.68280886028543
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -3087,10 +3066,10 @@ GAME
 			{
 				name = R8winglet
 				cid = 4293293350
-				uid = 3785543673
-				mid = 37932540
-				persistentId = 3121890157
-				launchID = 1
+				uid = 1120993103
+				mid = 3959768861
+				persistentId = 87338698
+				launchID = 2
 				parent = 8
 				position = 1.1595923900604248,-8.3701868057250977,-7.171875040512532E-07
 				rotation = -2.98023206E-08,-1,7.10542693E-15,4.76837101E-07
@@ -3109,9 +3088,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.100000001
 				shielded = False
-				temp = 308.67127685749455
-				tempExt = 308.65952957463634
-				tempExtUnexp = 308.65939950743865
+				temp = 308.68105663224247
+				tempExt = 308.68290209871151
+				tempExtUnexp = 308.68280865608324
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -3187,10 +3166,10 @@ GAME
 			{
 				name = radialDecoupler
 				cid = 4294556130
-				uid = 2887035367
-				mid = 37932540
-				persistentId = 2013240412
-				launchID = 1
+				uid = 1787212158
+				mid = 3959768861
+				persistentId = 3091635610
+				launchID = 2
 				parent = 8
 				position = 0.45555523037910461,-8.4340095520019531,-0.45555531978607178
 				rotation = 2.38449385E-08,0.923879564,-9.87689575E-09,-0.382683456
@@ -3209,9 +3188,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.0250000004
 				shielded = False
-				temp = 308.67178191706768
-				tempExt = 308.73823383822611
-				tempExtUnexp = 308.73764265178022
+				temp = 308.68117125271334
+				tempExt = 308.7152291514663
+				tempExtUnexp = 308.71381288583507
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3315,10 +3294,10 @@ GAME
 			{
 				name = solidBooster
 				cid = 4294552284
-				uid = 1249973366
-				mid = 37932540
-				persistentId = 3956951829
-				launchID = 1
+				uid = 1364545092
+				mid = 3959768861
+				persistentId = 2414656021
+				launchID = 2
 				parent = 14
 				position = 1.0116285085678101,-8.4123744964599609,-1.0116279125213623
 				rotation = 9.02999275E-09,0.923879683,-2.18002931E-08,0.382683337
@@ -3339,9 +3318,9 @@ GAME
 				attN = top, 16
 				mass = 0.75
 				shielded = False
-				temp = 308.6712872152288
-				tempExt = 308.67759583632517
-				tempExtUnexp = 308.67604125203763
+				temp = 308.68107067775503
+				tempExt = 308.71007363458608
+				tempExtUnexp = 308.70894270123716
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3472,10 +3451,10 @@ GAME
 			{
 				name = noseCone
 				cid = 4294546934
-				uid = 3822977001
-				mid = 37932540
-				persistentId = 1362306637
-				launchID = 1
+				uid = 826439866
+				mid = 3959768861
+				persistentId = 2642661393
+				launchID = 2
 				parent = 15
 				position = 1.0116283893585205,-7.1305375099182129,-1.0116280317306519
 				rotation = -8.03339795E-09,-0.923879683,3.32754557E-09,0.382683158
@@ -3495,9 +3474,9 @@ GAME
 				attN = bottom01, 15
 				mass = 0.0299999993
 				shielded = False
-				temp = 308.67135630395131
-				tempExt = 308.69416055828236
-				tempExtUnexp = 308.6940219049975
+				temp = 308.6810615609391
+				tempExt = 308.68556505783016
+				tempExtUnexp = 308.68533870043882
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3537,10 +3516,10 @@ GAME
 			{
 				name = radialDecoupler
 				cid = 4293293274
-				uid = 2782799672
-				mid = 37932540
-				persistentId = 1659583347
-				launchID = 1
+				uid = 163425660
+				mid = 3959768861
+				persistentId = 1575498477
+				launchID = 2
 				parent = 8
 				position = -0.45555534958839417,-8.4340095520019531,-0.45555531978607178
 				rotation = 9.87689841E-09,0.382683456,-2.38449385E-08,-0.923879564
@@ -3559,9 +3538,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.0250000004
 				shielded = False
-				temp = 308.67189344268695
-				tempExt = 308.7597468149068
-				tempExtUnexp = 308.75854483918613
+				temp = 308.68117510171101
+				tempExt = 308.71666546989678
+				tempExtUnexp = 308.71513620344933
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3665,10 +3644,10 @@ GAME
 			{
 				name = solidBooster
 				cid = 4293293218
-				uid = 2419467975
-				mid = 37932540
-				persistentId = 2983834343
-				launchID = 1
+				uid = 623390179
+				mid = 3959768861
+				persistentId = 642884598
+				launchID = 2
 				parent = 17
 				position = -1.0116266012191772,-8.4123744964599609,-1.0116260051727295
 				rotation = -9.02996788E-09,0.923879623,-2.18003002E-08,-0.382683575
@@ -3689,9 +3668,9 @@ GAME
 				attN = top, 19
 				mass = 0.75
 				shielded = False
-				temp = 308.67142417242206
-				tempExt = 308.7928100904287
-				tempExtUnexp = 308.79172359007788
+				temp = 308.68107749343932
+				tempExt = 308.72397737111874
+				tempExtUnexp = 308.722220371719
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3822,10 +3801,10 @@ GAME
 			{
 				name = noseCone
 				cid = 4293293136
-				uid = 290925730
-				mid = 37932540
-				persistentId = 1134994407
-				launchID = 1
+				uid = 241302727
+				mid = 3959768861
+				persistentId = 3929159548
+				launchID = 2
 				parent = 18
 				position = -1.0116266012191772,-7.1305375099182129,-1.0116260051727295
 				rotation = -3.32754091E-09,-0.382683933,8.03342015E-09,0.923879504
@@ -3845,9 +3824,9 @@ GAME
 				attN = bottom01, 18
 				mass = 0.0299999993
 				shielded = False
-				temp = 308.67212483375573
-				tempExt = 308.94966563178644
-				tempExtUnexp = 308.94930930418258
+				temp = 308.68109105624416
+				tempExt = 308.70798976643852
+				tempExtUnexp = 308.70667038340827
 				expt = 0.5
 				state = 0
 				attached = True
@@ -3887,10 +3866,10 @@ GAME
 			{
 				name = radialDecoupler
 				cid = 4293293068
-				uid = 1107932929
-				mid = 37932540
-				persistentId = 3724580754
-				launchID = 1
+				uid = 2027680533
+				mid = 3959768861
+				persistentId = 1346208611
+				launchID = 2
 				parent = 8
 				position = -0.45555534958839417,-8.4340095520019531,0.45555537939071655
 				rotation = -9.87689841E-09,-0.382683456,-2.38449385E-08,-0.923879564
@@ -3909,9 +3888,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.0250000004
 				shielded = False
-				temp = 308.67185714018296
-				tempExt = 308.75247369721274
-				tempExtUnexp = 308.75143341426974
+				temp = 308.68117395366647
+				tempExt = 308.71623461127189
+				tempExtUnexp = 308.71473867179623
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4015,10 +3994,10 @@ GAME
 			{
 				name = solidBooster
 				cid = 4293293012
-				uid = 4055282219
-				mid = 37932540
-				persistentId = 1719485217
-				launchID = 1
+				uid = 276487160
+				mid = 3959768861
+				persistentId = 2579546899
+				launchID = 2
 				parent = 20
 				position = -1.0116256475448608,-8.4123744964599609,1.0116269588470459
 				rotation = -2.18002896E-08,0.382683337,-9.02999275E-09,-0.923879683
@@ -4039,9 +4018,9 @@ GAME
 				attN = top, 22
 				mass = 0.75
 				shielded = False
-				temp = 308.67138288797833
-				tempExt = 308.76037349820751
-				tempExtUnexp = 308.75897434870069
+				temp = 308.68107544804758
+				tempExt = 308.71986413109346
+				tempExtUnexp = 308.7182853122996
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4172,10 +4151,10 @@ GAME
 			{
 				name = noseCone
 				cid = 4293292930
-				uid = 1704722764
-				mid = 37932540
-				persistentId = 431696350
-				launchID = 1
+				uid = 118242016
+				mid = 3959768861
+				persistentId = 447771264
+				launchID = 2
 				parent = 21
 				position = -1.0116257667541504,-7.1305375099182129,1.0116269588470459
 				rotation = 3.32755201E-09,0.382683158,8.03339617E-09,0.923879683
@@ -4195,9 +4174,9 @@ GAME
 				attN = bottom01, 21
 				mass = 0.0299999993
 				shielded = False
-				temp = 308.67210182592777
-				tempExt = 308.941242273456
-				tempExtUnexp = 308.94095496772297
+				temp = 308.68109044707228
+				tempExt = 308.70750166664527
+				tempExtUnexp = 308.70620940587008
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4237,10 +4216,10 @@ GAME
 			{
 				name = radialDecoupler
 				cid = 4293292862
-				uid = 3812610040
-				mid = 37932540
-				persistentId = 1312413220
-				launchID = 1
+				uid = 4239756839
+				mid = 3959768861
+				persistentId = 2109404238
+				launchID = 2
 				parent = 8
 				position = 0.45555534958839417,-8.4340095520019531,0.45555517077445984
 				rotation = -2.38449385E-08,-0.923879564,-9.87689841E-09,-0.382683456
@@ -4259,9 +4238,9 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.0250000004
 				shielded = False
-				temp = 308.67178191789549
-				tempExt = 308.73823396802078
-				tempExtUnexp = 308.73764277886056
+				temp = 308.68117125276893
+				tempExt = 308.71522917215731
+				tempExtUnexp = 308.71381290492695
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4365,10 +4344,10 @@ GAME
 			{
 				name = solidBooster
 				cid = 4293292806
-				uid = 2383333769
-				mid = 37932540
-				persistentId = 365782146
-				launchID = 1
+				uid = 228948507
+				mid = 3959768861
+				persistentId = 1985114786
+				launchID = 2
 				parent = 23
 				position = 1.011628270149231,-8.4123744964599609,1.0116266012191772
 				rotation = -2.18003002E-08,-0.382683575,9.02997233E-09,-0.923879623
@@ -4389,9 +4368,9 @@ GAME
 				attN = top, 25
 				mass = 0.75
 				shielded = False
-				temp = 308.67128721666853
-				tempExt = 308.67759702982369
-				tempExtUnexp = 308.67604245297923
+				temp = 308.68107067785337
+				tempExt = 308.71007383095213
+				tempExtUnexp = 308.70894289009175
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4522,10 +4501,10 @@ GAME
 			{
 				name = noseCone
 				cid = 4293292724
-				uid = 177104745
-				mid = 37932540
-				persistentId = 271489694
-				launchID = 1
+				uid = 1702819273
+				mid = 3959768861
+				persistentId = 768661539
+				launchID = 2
 				parent = 24
 				position = 1.0116283893585205,-7.1305375099182129,1.0116266012191772
 				rotation = 8.03342104E-09,0.923879504,3.32754446E-09,0.382683933
@@ -4545,9 +4524,9 @@ GAME
 				attN = bottom01, 24
 				mass = 0.0299999993
 				shielded = False
-				temp = 308.67135630408154
-				tempExt = 308.69416061851734
-				tempExtUnexp = 308.69402196362444
+				temp = 308.6810615609437
+				tempExt = 308.68556506250661
+				tempExtUnexp = 308.68533870471663
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4587,10 +4566,10 @@ GAME
 			{
 				name = GooExperiment
 				cid = 4294265902
-				uid = 2777001258
-				mid = 37932540
-				persistentId = 3971120138
-				launchID = 1
+				uid = 3342864706
+				mid = 3959768861
+				persistentId = 2402493950
+				launchID = 2
 				parent = 0
 				position = 0.19692224264144897,0.56469058990478516,2.0469997252803296E-08
 				rotation = -0.00601698318,0.70708102,-0.00601697713,-0.707081378
@@ -4607,9 +4586,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.67150787685273
-				tempExt = 308.76603207212361
-				tempExtUnexp = 308.76438139261569
+				temp = 308.68110934650906
+				tempExt = 308.72612154536341
+				tempExtUnexp = 308.72445246619742
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4668,7 +4647,6 @@ GAME
 						DeployAction
 						{
 							actionGroup = None
-							active = False
 						}
 						ResetAction
 						{
@@ -4701,10 +4679,10 @@ GAME
 			{
 				name = GooExperiment
 				cid = 4293294182
-				uid = 1473227361
-				mid = 37932540
-				persistentId = 279589717
-				launchID = 1
+				uid = 960774905
+				mid = 3959768861
+				persistentId = 3905038343
+				launchID = 2
 				parent = 0
 				position = -0.19692236185073853,0.56469058990478516,-3.2532625482417643E-09
 				rotation = -0.00601697713,-0.707081497,0.00601698318,-0.707080901
@@ -4721,9 +4699,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.67170956219547
-				tempExt = 308.84210194956154
-				tempExtUnexp = 308.84007134473677
+				temp = 308.68116388279554
+				tempExt = 308.76922931572153
+				tempExtUnexp = 308.76616029530834
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4782,7 +4760,6 @@ GAME
 						DeployAction
 						{
 							actionGroup = None
-							active = False
 						}
 						ResetAction
 						{
@@ -4815,10 +4792,10 @@ GAME
 			{
 				name = longAntenna
 				cid = 4294368390
-				uid = 3368549363
-				mid = 37932540
-				persistentId = 65809322
-				launchID = 1
+				uid = 2302433784
+				mid = 3959768861
+				persistentId = 155461586
+				launchID = 2
 				parent = 0
 				position = 0.29345756769180298,0.42660331726074219,-0.16942785680294037
 				rotation = -0.00425466755,0.865994394,0.00736932689,0.499981433
@@ -4835,9 +4812,9 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 308.67143163446383
-				tempExt = 308.74446832056032
-				tempExtUnexp = 308.74259495259474
+				temp = 308.6810833174473
+				tempExt = 308.71037624674653
+				tempExtUnexp = 308.70883062963139
 				expt = 0.5
 				state = 0
 				attached = True
@@ -4892,7 +4869,7 @@ GAME
 					isEnabled = True
 					xmitIncomplete = False
 					stagingEnabled = True
-					canComm = True
+					canComm = False
 					EVENTS
 					{
 					}
@@ -4975,7 +4952,7 @@ GAME
 				{
 					RPM_PERSISTENT_VARS
 					{
-						name = 674c061d-c1a4-47ba-a5b6-282875d627e5
+						name = 0ec5255e-209a-4d21-a800-c7ad2b6f7742
 						activePage34 = System.Int32,21
 						activePage35 = System.Int32,21
 						activePage36 = System.Int32,21
@@ -5088,11 +5065,12 @@ GAME
 			hero = True
 			CAREER_LOG
 			{
-				flight = 0
+				flight = 1
+				0 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 0
+				flight = 1
 			}
 		}
 		KERBAL

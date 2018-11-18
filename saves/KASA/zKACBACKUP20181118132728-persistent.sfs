@@ -158,17 +158,6 @@ GAME
 			facilityLevelTS = 3
 			facilityLevelVAB = 3
 		}
-		PM
-		{
-			EnabledForSave = True
-		}
-		TC
-		{
-			showStockTooltips = True
-			hoverTimeout = 0.5
-			debugMode = False
-			oldDebugMode = False
-		}
 		FMRS_Settings
 		{
 			enabled = True
@@ -182,6 +171,17 @@ GAME
 			_SETTING_Parachutes = True
 			_SETTING_Defer_Parachutes_to_StageRecovery = True
 			_SETTING_Control_Uncontrollable = False
+		}
+		TC
+		{
+			showStockTooltips = True
+			hoverTimeout = 0.5
+			debugMode = False
+			oldDebugMode = False
+		}
+		PM
+		{
+			EnabledForSave = True
 		}
 	}
 	SCENARIO
@@ -217,7 +217,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 146318.75452180952
+		update = 144990.20697812102
 		version = 1.4.5
 		WEIGHTS
 		{
@@ -503,6 +503,61 @@ GAME
 						targetType = Orbit
 						kerbalName = Dudrey Kerman
 					}
+				}
+			}
+			CONTRACT
+			{
+				guid = f32e7e31-209e-4477-99d4-ac6aeb324e61
+				type = SatelliteContract
+				prestige = 0
+				seed = -1638659845
+				state = Active
+				viewed = Read
+				agent = Experimental Engineering Group
+				deadlineType = Floating
+				expiryType = Floating
+				values = 106930.693387985,45552475.3832817,32319.9996948242,86960.9952297211,33599.9984741211,0,11.42857,6,225344.801697618,119249.128309803,45671724.5115915,0
+				targetBody = 1
+				deviation = 7
+				orbitType = 6
+				placementMode = 0
+				PARAM
+				{
+					name = VesselSystemsParameter
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					typeString = probe
+					mannedStatus = 1
+					requireNew = True
+					checkModuleTypes = Antenna|Generator
+					checkModuleDescriptions = has an antenna|can generate power
+					launchID = 67
+				}
+				PARAM
+				{
+					name = SpecificOrbitParameter
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					TargetBody = 1
+					deviationWindow = 7
+					orbitType = 6
+					inclination = 175.57701392287464
+					eccentricity = 0.090841992845455313
+					sma = 7503679.3171562944
+					lan = 164.54933855894456
+					argumentOfPeriapsis = 146.10052676224205
+					meanAnomalyAtEpoch = -1.7864145138258065
+					epoch = 0
+				}
+				PARAM
+				{
+					name = StabilityParameter
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					holdSeconds = 10
 				}
 			}
 			CONTRACT
@@ -1070,41 +1125,6 @@ GAME
 					targetSituation = ORBITING
 					noun = station
 					finalObjective = False
-				}
-			}
-			CONTRACT
-			{
-				guid = 87d7acc9-0d1e-4f27-9cda-22bcacde269f
-				type = TourismContract
-				prestige = 0
-				seed = 742176613
-				state = Offered
-				viewed = Unseen
-				agent = Reaction Systems Ltd
-				deadlineType = Floating
-				expiryType = Floating
-				values = 64800,46008000,0,0,0,0,19.04762,10,209905.226978061,0,0,0
-				preposition = right here on Kerbin
-				homeDestinations = True
-				isGeeAdventure = False
-				tourists = Kimzer Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Incomplete
-					allowPartialFailure = True
-					values = 9750,0,0,0,0
-					kerbalName = Kimzer Kerman
-					kerbalGender = Female
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 3250,0,0,0,0
-						targetBody = 1
-						targetType = Orbit
-						kerbalName = Kimzer Kerman
-					}
 				}
 			}
 			CONTRACT_FINISHED
@@ -5720,61 +5740,6 @@ GAME
 					wpNavigationId = b2c391d1-64ab-4712-822f-98a94a18394e
 				}
 			}
-			CONTRACT_FINISHED
-			{
-				guid = f32e7e31-209e-4477-99d4-ac6aeb324e61
-				type = SatelliteContract
-				prestige = 0
-				seed = -1638659845
-				state = Completed
-				viewed = Read
-				agent = Experimental Engineering Group
-				deadlineType = Floating
-				expiryType = Floating
-				values = 106930.693387985,45552475.3832817,32319.9996948242,86960.9952297211,33599.9984741211,0,11.42857,6,225344.801697618,119249.128309803,45671724.5115915,0
-				targetBody = 1
-				deviation = 7
-				orbitType = 6
-				placementMode = 0
-				PARAM
-				{
-					name = VesselSystemsParameter
-					state = Complete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					typeString = probe
-					mannedStatus = 1
-					requireNew = True
-					checkModuleTypes = Antenna|Generator
-					checkModuleDescriptions = has an antenna|can generate power
-					launchID = 67
-				}
-				PARAM
-				{
-					name = SpecificOrbitParameter
-					state = Complete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					TargetBody = 1
-					deviationWindow = 7
-					orbitType = 6
-					inclination = 175.57701392287464
-					eccentricity = 0.090841992845455313
-					sma = 7503679.3171562944
-					lan = 164.54933855894456
-					argumentOfPeriapsis = 146.10052676224205
-					meanAnomalyAtEpoch = -1.7864145138258065
-					epoch = 0
-				}
-				PARAM
-				{
-					name = StabilityParameter
-					state = Complete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					holdSeconds = 10
-				}
-			}
 		}
 	}
 	SCENARIO
@@ -5787,7 +5752,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 1265280.9417773983
+		funds = 1175913.8215476773
 	}
 	SCENARIO
 	{
@@ -5942,7 +5907,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 25.9674892
+		sci = 25.040123
 		Tech
 		{
 			id = start
@@ -6245,7 +6210,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinOrbited
-			title = Recovery of a vessel returned from orbit around Kerbin
+			title = Recovery of a vessel returned from Kerbin orbit.
 			dsc = 1
 			scv = 0
 			sbv = 10
@@ -6812,7 +6777,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 483.482178
+		rep = 479.700195
 	}
 	SCENARIO
 	{
@@ -7397,12 +7362,47 @@ GAME
 		scene = 5, 6, 7, 8
 		KACAlarmListStorage
 		{
+			list
+			{
+				Item
+				{
+					VesselID = 77a19f37-3b8c-45b9-abac-6efceb34da00
+					ID = a8703df8fa244b5e9ae831fdce72ad09
+					Name = Maneuver for DataSat - Experimental Engineering Group
+					NotesStorage = The maneuver is in 10 minutes
+					TypeOfAlarm = Maneuver
+					AlarmTimeStorage = 144824.67102588314
+					AlarmMarginSecs = 0
+					Enabled = True
+					AlarmAction = Converted
+					AlarmActionConverted = True
+					ManNodesStorage = 
+					XferOriginBodyName = 
+					XferTargetBodyName = 
+					RepeatAlarm = False
+					RepeatAlarmPeriodStorage = 0
+					PlaySound = False
+					TargetObjectStorage = 
+					ContractGUIDStorage = 00000000-0000-0000-0000-000000000000
+					ContractAlarmType = Expire
+					Triggered = True
+					Actioned = True
+					AlarmWindowClosed = True
+					Actions
+					{
+						Warp = KillWarp
+						Message = Yes
+						DeleteWhenDone = False
+						PlaySound = False
+					}
+				}
+			}
 		}
 	}
 	FLIGHTSTATE
 	{
 		version = 1.4.5
-		UT = 146325.35452180606
+		UT = 144990.52697812085
 		activeVessel = 0
 		mapViewFiltering = 15358
 		commNetUIModeTracking = Network
@@ -8721,11 +8721,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 0.096909912490632161
+				INC = 0.059126579629356128
 				LPE = 90
-				LAN = 209.60110659119158
+				LAN = 187.56576850533779
 				MNA = 0
-				EPH = 146308.71452181478
+				EPH = 144990.12697812106
 				REF = 1
 			}
 			PART
@@ -12233,6 +12233,3322 @@ GAME
 		}
 		VESSEL
 		{
+			pid = 77a19f373b8c45b9abac6efceb34da00
+			persistentId = 110216272
+			name = DataSat - Experimental Engineering Group
+			type = Probe
+			sit = ORBITING
+			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = LaunchPad
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 20156.406879682982
+			lct = 119977.14684998857
+			lastUT = 140133.59372967153
+			distanceTraveled = 2187788.9479753794
+			root = 0
+			lat = -1.9634224630314423
+			lon = -92.369082377944721
+			alt = 7244261.7009080555
+			hgt = -1
+			nrm = -0.626110852,-0.757894099,0.183252886
+			rot = -0.672891915,0.342018813,-0.123547792,-0.64418596
+			CoM = 0.00503802299,-2.84042072,-1.1920929E-07
+			stg = 2
+			prst = False
+			ref = 1455636128
+			ctrl = True
+			PQSMin = 2
+			PQSMax = 9
+			cPch = 0.2829999
+			cHdg = -1.081999
+			cMod = 0
+			ORBIT
+			{
+				SMA = 5649054.724994895
+				ECC = 0.44841856399959801
+				INC = 2.7168015559720518
+				LPE = 65.024252527392406
+				LAN = 312.41609313304775
+				MNA = 2.3953698646185622
+				EPH = 140133.57372967197
+				REF = 1
+			}
+			PART
+			{
+				name = probeCoreSphere
+				cid = 4293433318
+				uid = 1455636128
+				mid = 3240600501
+				persistentId = 3312361753
+				launchID = 69
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 1
+				mass = 0.0500000007
+				shielded = False
+				temp = 213.11969524716986
+				tempExt = 213.34342311371162
+				tempExtUnexp = 4
+				expt = 0
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = probeCoreSphere (DataSat - Experimental Engineering Group)
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleKerbNetAccess
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OpenKerbNetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = TrajectoriesVesselSettings
+					isEnabled = True
+					Initialized = True
+					EntryAngle = 3.1415926535897931
+					EntryHorizon = False
+					HighAngle = 3.1415926535897931
+					HighHorizon = False
+					LowAngle = 3.1415926535897931
+					LowHorizon = False
+					GroundAngle = 3.1415926535897931
+					GroundHorizon = False
+					ProgradeEntry = False
+					RetrogradeEntry = True
+					TargetBody = 
+					TargetPosition_x = 0
+					TargetPosition_y = 0
+					TargetPosition_z = 0
+					ManualTargetTxt = 
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+						0 = Flight,Kerbin
+						0 = Suborbit,Kerbin
+						0 = Orbit,Kerbin
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 10
+					maxAmount = 10
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				VESSELNAMING
+				{
+					name = DataSat - Experimental Engineering Group
+					type = Probe
+					priority = 20
+				}
+			}
+			PART
+			{
+				name = batteryBankMini
+				cid = 4293296324
+				uid = 1878345608
+				mid = 3240600501
+				persistentId = 345412908
+				launchID = 69
+				parent = 0
+				position = 0,-0.43834686279296875,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 0
+				attN = bottom, 2
+				mass = 0.00999999978
+				shielded = False
+				temp = 213.00375841450381
+				tempExt = 213.0315830574184
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = batteryBankMini
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 200
+					maxAmount = 200
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = sasModule
+				cid = 4293376406
+				uid = 3392426466
+				mid = 3240600501
+				persistentId = 1700557436
+				launchID = 69
+				parent = 1
+				position = 0,-0.62945938110351563,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 3
+				attN = top, 1
+				mass = 0.0500000007
+				shielded = False
+				temp = 213.00758794151704
+				tempExt = 212.90296105853398
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = sasModule
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = Running
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = dockingPort3
+				cid = 4293090318
+				uid = 3339393631
+				mid = 3240600501
+				persistentId = 444939263
+				launchID = 69
+				parent = 2
+				position = 0,-0.72056961059570313,0
+				rotation = 1,0,0,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 4
+				attN = bottom, 2
+				mass = 0.0199999996
+				shielded = False
+				temp = 213.00333951360733
+				tempExt = 212.86555128033623
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = dockingPort3
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDockingNode
+					isEnabled = True
+					crossfeed = True
+					stagingEnabled = False
+					state = PreAttached
+					dockUId = 0
+					dockNodeIdx = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						UndockAction
+						{
+							actionGroup = None
+						}
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						EnableXFeedAction
+						{
+							actionGroup = None
+						}
+						DisableXFeedAction
+						{
+							actionGroup = None
+						}
+						ToggleXFeedAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = dockingPort3
+				cid = 4294435098
+				uid = 1669597650
+				mid = 3240600501
+				persistentId = 4177920987
+				launchID = 69
+				parent = 3
+				position = 0,-1.0153923034667969,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 3
+				attN = bottom, 5
+				mass = 0.0199999996
+				shielded = False
+				temp = 213.00077346026595
+				tempExt = 212.838895761392
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = dockingPort3
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDockingNode
+					isEnabled = True
+					crossfeed = True
+					stagingEnabled = False
+					state = PreAttached
+					dockUId = 0
+					dockNodeIdx = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						UndockAction
+						{
+							actionGroup = None
+						}
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						EnableXFeedAction
+						{
+							actionGroup = None
+						}
+						DisableXFeedAction
+						{
+							actionGroup = None
+						}
+						ToggleXFeedAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = batteryBankMini
+				cid = 4292973254
+				uid = 4074031943
+				mid = 3240600501
+				persistentId = 1573206397
+				launchID = 69
+				parent = 4
+				position = 0,-1.1153945922851563,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 4
+				attN = bottom, 6
+				mass = 0.00999999978
+				shielded = False
+				temp = 213.00849453542151
+				tempExt = 212.89242582279013
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = batteryBankMini
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 200
+					maxAmount = 200
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = probeCoreOcto
+				cid = 4293079612
+				uid = 3792003392
+				mid = 3240600501
+				persistentId = 1618467197
+				launchID = 69
+				parent = 5
+				position = 0,-1.4024772644042969,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 7
+				attN = top, 5
+				mass = 0.100000001
+				shielded = False
+				temp = 213.01769931550405
+				tempExt = 212.98204951885282
+				tempExtUnexp = 4
+				expt = 0
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = probeCoreOcto
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = Running
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSAS
+					isEnabled = True
+					standaloneToggle = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleKerbNetAccess
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OpenKerbNetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = TrajectoriesVesselSettings
+					isEnabled = True
+					Initialized = False
+					EntryAngle = 3.1415926535897931
+					EntryHorizon = False
+					HighAngle = 3.1415926535897931
+					HighHorizon = False
+					LowAngle = 3.1415926535897931
+					LowHorizon = False
+					GroundAngle = 3.1415926535897931
+					GroundHorizon = False
+					ProgradeEntry = False
+					RetrogradeEntry = True
+					TargetBody = 
+					TargetPosition_x = 0
+					TargetPosition_y = 0
+					TargetPosition_z = 0
+					ManualTargetTxt = 
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+						0 = Flight,Kerbin
+						0 = Suborbit,Kerbin
+						0 = Orbit,Kerbin
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 10
+					maxAmount = 10
+					flowState = False
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				VESSELNAMING
+				{
+					name = DataSat - Experimental Engineering Group Launcher
+					type = Probe
+					priority = 10
+				}
+			}
+			PART
+			{
+				name = batteryBankMini
+				cid = 4292973582
+				uid = 1008343647
+				mid = 3240600501
+				persistentId = 2715210233
+				launchID = 69
+				parent = 6
+				position = 0,-1.6895580291748047,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 6
+				attN = bottom, 8
+				mass = 0.00999999978
+				shielded = False
+				temp = 213.01310218127924
+				tempExt = 212.89567140138141
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = batteryBankMini
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 200
+					maxAmount = 200
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = sasModule
+				cid = 4294435056
+				uid = 3516155025
+				mid = 3240600501
+				persistentId = 2717176145
+				launchID = 69
+				parent = 7
+				position = 0,-1.8806686401367188,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 10
+				attN = top, 7
+				mass = 0.0500000007
+				shielded = False
+				temp = 213.01233759608263
+				tempExt = 212.92662093613234
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = sasModule
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = Running
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = spotLight1
+				cid = 4294434872
+				uid = 2306152972
+				mid = 3240600501
+				persistentId = 4013361521
+				launchID = 69
+				parent = 8
+				position = 1.4901161193847656E-08,-2.0806694030761719,0.5
+				rotation = 0.976296008,0,0,0.216439769
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 8
+				mass = 0.0149999997
+				shielded = False
+				temp = 212.99956527857745
+				tempExt = 212.85719945926257
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = spotLight1
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLight
+					isEnabled = True
+					isOn = False
+					uiWriteLock = False
+					lightR = 1
+					lightG = 1
+					lightB = 1
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleLightAction
+						{
+							actionGroup = Light
+						}
+						LightOnAction
+						{
+							actionGroup = None
+						}
+						LightOffAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = adapterSmallMiniShort
+				cid = 4294434834
+				uid = 4263161556
+				mid = 3240600501
+				persistentId = 1069024224
+				launchID = 69
+				parent = 8
+				position = 0,-2.1592788696289063,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, 8
+				attN = bottom, 15
+				mass = 0.0399999991
+				shielded = False
+				temp = 213.01956429512521
+				tempExt = 213.09064180869316
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = adapterSmallMiniShort
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294434744
+				uid = 1656690870
+				mid = 3240600501
+				persistentId = 4045664931
+				launchID = 69
+				parent = 10
+				position = 0.36974191665649414,-2.0611438751220703,0.25889605283737183
+				rotation = -0.601953149,-0.0413479581,-0.371015549,0.705896854
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 12
+				srfN = srfAttach, 10
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01862236833679
+				tempExt = 212.99198190345911
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294434714
+				uid = 1373363435
+				mid = 3240600501
+				persistentId = 2654054360
+				launchID = 69
+				parent = 10
+				position = -0.36974191665649414,-2.0611438751220703,-0.25889599323272705
+				rotation = -0.371015459,0.705896914,0.601953089,0.0413479395
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 11
+				srfN = srfAttach, 10
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01862236833679
+				tempExt = 212.99198190345911
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294434684
+				uid = 2747432381
+				mid = 3240600501
+				persistentId = 1664999425
+				launchID = 69
+				parent = 10
+				position = -0.36029762029647827,-2.0557460784912109,0.25228309631347656
+				rotation = -0.0413479619,-0.601952851,-0.705897093,0.3710154
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 14
+				srfN = srfAttach, 10
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01862236833679
+				tempExt = 212.99198190345911
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294434654
+				uid = 2659846539
+				mid = 3240600501
+				persistentId = 3928094412
+				launchID = 69
+				parent = 10
+				position = 0.36029750108718872,-2.0557460784912109,-0.25228312611579895
+				rotation = -0.705896974,0.371015549,0.0413479954,0.60195297
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 13
+				srfN = srfAttach, 10
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01862236833679
+				tempExt = 212.99198190345911
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = fuelTank
+				cid = 4294434588
+				uid = 2866331085
+				mid = 3240600501
+				persistentId = 1515585707
+				launchID = 69
+				parent = 10
+				position = 0,-3.1410045623779297,0
+				rotation = 0,0.173648208,0,-0.984807789
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 10
+				attN = bottom, 16
+				mass = 0.25
+				shielded = False
+				temp = 213.01960548987142
+				tempExt = 212.99022270384401
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = fuelTank
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 58.10278844041148
+					maxAmount = 180
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 71.014512028990453
+					maxAmount = 220
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = liquidEngine3
+				cid = 4294434556
+				uid = 737560866
+				mid = 3240600501
+				persistentId = 2098376316
+				launchID = 69
+				parent = 15
+				position = 0,-4.3410053253173828,0
+				rotation = 0,0.173648208,0,-0.984807789
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				resPri = 0
+				dstg = 0
+				sqor = 2
+				sepI = 1
+				sidx = 0
+				attm = 0
+				srfN = , -1
+				attN = top, 15
+				attN = bottom, -1
+				mass = 0.5
+				shielded = False
+				temp = 213.01304729079342
+				tempExt = 212.91630400617123
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 1
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = liquidEngine3
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEngines
+					isEnabled = True
+					staged = True
+					flameout = False
+					EngineIgnited = True
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 100
+					manuallyOverridden = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleGimbal
+					isEnabled = True
+					gimbalLock = False
+					gimbalLimiter = 100
+					currentShowToggles = False
+					enableYaw = True
+					enablePitch = True
+					enableRoll = True
+					gimbalActive = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+						LockAction
+						{
+							actionGroup = None
+						}
+						FreeAction
+						{
+							actionGroup = None
+						}
+						TogglePitchAction
+						{
+							actionGroup = None
+						}
+						ToggleYawAction
+						{
+							actionGroup = None
+						}
+						ToggleRollAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FXModuleAnimateThrottle
+					isEnabled = True
+					animState = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleJettison
+					isEnabled = True
+					activejettisonName = fairing
+					isJettisoned = True
+					shroudHideOverride = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						JettisonAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = batteryPack
+				cid = 4294434624
+				uid = 2548264114
+				mid = 3240600501
+				persistentId = 94712984
+				launchID = 69
+				parent = 8
+				position = -7.4505805969238281E-09,-1.9145011901855469,-0.29726129770278931
+				rotation = 1.78813934E-07,0,6.75015531E-14,-1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 8
+				mass = 0.00499999989
+				shielded = False
+				temp = 212.99878950441317
+				tempExt = 212.86376466788775
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = batteryPack
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 100
+					maxAmount = 100
+					flowState = False
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = radialDrogue
+				cid = 4292800000
+				uid = 3883636561
+				mid = 3240600501
+				persistentId = 812727005
+				launchID = 69
+				parent = 6
+				position = -0.34345835447311401,-1.3976955413818359,2.9802322387695313E-08
+				rotation = 0,0.707106829,0,0.707106829
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 1
+				resPri = 0
+				dstg = 0
+				sqor = 1
+				sepI = 1
+				sidx = 0
+				attm = 1
+				srfN = srfAttach, 6
+				mass = 0.075000003
+				shielded = False
+				temp = 213.01681415259273
+				tempExt = 212.86470702971954
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = radialDrogue
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					animTime = 0
+					minAirPressureToOpen = 0.219999999
+					deployAltitude = 2000
+					spreadAngle = 7
+					automateSafeDeploy = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = parachuteRadial
+				cid = 4292797182
+				uid = 2150239320
+				mid = 3240600501
+				persistentId = 1061737698
+				launchID = 69
+				parent = 6
+				position = 0.34343701601028442,-1.3964939117431641,1.4901161193847656E-08
+				rotation = 0,0.707106829,0,-0.707106829
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 1
+				sidx = 0
+				attm = 1
+				srfN = srfAttach, 6
+				mass = 0.100000001
+				shielded = False
+				temp = 213.0315705312012
+				tempExt = 213.3026033815448
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = parachuteRadial
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = STOWED
+					animTime = 0
+					minAirPressureToOpen = 0.540000021
+					deployAltitude = 800
+					spreadAngle = 7
+					automateSafeDeploy = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDragModifier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = JSIPrimitiveExternalCamera
+				cid = 4292781226
+				uid = 2876961544
+				mid = 3240600501
+				persistentId = 1551282594
+				launchID = 69
+				parent = 6
+				position = 0.39678984880447388,-1.1235370635986328,-1.4901161193847656E-08
+				rotation = 2.7939675E-09,4.470348E-08,0.0300059803,0.999549747
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 6
+				mass = 0.00400000019
+				shielded = False
+				temp = 213.01461387231808
+				tempExt = 212.94619462992677
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = JSIPrimitiveExternalCamera
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = JSIExternalCameraSelector
+					isEnabled = True
+					current = 1
+					showCones = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4292752444
+				uid = 3486802535
+				mid = 3240600501
+				persistentId = 957421931
+				launchID = 69
+				parent = 6
+				position = -7.4505805969238281E-09,-1.4049243927001953,0.34391975402832031
+				rotation = 0,-7.4505806E-08,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 22
+				srfN = srfAttach, 6
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01388858519482
+				tempExt = 212.92843345235744
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4292752312
+				uid = 1836886836
+				mid = 3240600501
+				persistentId = 3199633652
+				launchID = 69
+				parent = 6
+				position = -7.4505805969238281E-09,-1.4049243927001953,-0.34391972422599792
+				rotation = 0,1,0,2.98023188E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = 1
+				sidx = -1
+				attm = 1
+				sym = 21
+				srfN = srfAttach, 6
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.01574950358068
+				tempExt = 212.97034725647114
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = batteryPack
+				cid = 4293297648
+				uid = 2295996286
+				mid = 3240600501
+				persistentId = 1388842307
+				launchID = 69
+				parent = 1
+				position = 2.9802322387695313E-08,-0.53007888793945313,-0.30713307857513428
+				rotation = 2.30294503E-07,3.3125648E-08,7.62865486E-15,-1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 1
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.00279084200511
+				tempExt = 212.98220405423254
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = batteryPack
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 100
+					maxAmount = 100
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = Engineer7500
+				cid = 4293289008
+				uid = 1066543525
+				mid = 3240600501
+				persistentId = 1906327133
+				launchID = 69
+				parent = 1
+				position = 0,-0.4792327880859375,0.3094220757484436
+				rotation = -0.500000119,0.500000119,0.499999881,0.499999881
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 1
+				mass = 0.00499999989
+				shielded = False
+				temp = 212.98926202008931
+				tempExt = 212.89482176278352
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = Engineer7500
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = FlightEngineerModule
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = TapeDriveAnimator
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				cid = 4293063574
+				uid = 3048419603
+				mid = 3240600501
+				persistentId = 427024578
+				launchID = 69
+				parent = 24
+				position = 0,-0.579620361328125,0.34198427200317383
+				rotation = -0.279196531,-0.719042718,-0.207245499,-0.601727605
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 24
+				attN = bottom, -1
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.00248819448643
+				tempExt = 212.87028571873893
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = longAntenna
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableAntenna
+					isEnabled = True
+					currentRotation = (-0.707106829, 0, 0, 0.707106829)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 1
+					deployState = RETRACTED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4293294712
+				uid = 273603914
+				mid = 3240600501
+				persistentId = 3123598623
+				launchID = 69
+				parent = 0
+				position = -0.44963181018829346,0.17860603332519531,2.9802322387695313E-08
+				rotation = 0.0137961078,-0.706972182,0.0137961069,0.706972182
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sym = 27
+				sym = 28
+				srfN = srfAttach, 0
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.07758147706929
+				tempExt = 213.18296743688356
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4293294052
+				uid = 2362051683
+				mid = 3240600501
+				persistentId = 3524226069
+				launchID = 69
+				parent = 0
+				position = 0.22481600940227509,0.17860603332519531,0.38939261436462402
+				rotation = 0.0188458338,0.25876984,-0.00504972739,0.965741992
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sym = 26
+				sym = 28
+				srfN = srfAttach, 0
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.08060070230007
+				tempExt = 213.19367072617214
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4293294018
+				uid = 924007439
+				mid = 3240600501
+				persistentId = 2645181419
+				launchID = 69
+				parent = 0
+				position = 0.22481589019298553,0.17860603332519531,-0.38939264416694641
+				rotation = 0.00504972413,0.965741992,-0.0188458338,0.258769721
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sym = 26
+				sym = 27
+				srfN = srfAttach, 0
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.07758147706929
+				tempExt = 213.18296743688356
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4293293876
+				uid = 4063872183
+				mid = 3240600501
+				persistentId = 1541196383
+				launchID = 69
+				parent = 0
+				position = 0.0060706287622451782,0.64611053466796875,0
+				rotation = -0.496616244,0.503361106,0.496616215,0.503361046
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				srfN = srfAttach, 0
+				mass = 0.00499999989
+				shielded = False
+				temp = 213.07758147706929
+				tempExt = 213.18296743688356
+				tempExtUnexp = 4
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/default
+				rTrf = solarPanels5
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 119977.16684998857
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 00000000-0000-0000-0000-000000000000
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 120196.226850033
+				Gear = False, 0
+				Light = False, 122614.641288775
+				RCS = False, 0
+				SAS = True, 123947.975366482
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+				MANEUVER
+				{
+					UT = 145424.67102588314
+					dV = 0,-27.32893574228325,139.62006668586307
+				}
+			}
+			CTRLSTATE
+			{
+				pitch = 6.02514228E-06
+				yaw = -7.88633406E-06
+				roll = 2.8136501E-06
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+				CommNetVessel
+				{
+					controlState = ProbeFull
+					canComm = True
+				}
+			}
+		}
+		VESSEL
+		{
 			pid = 7cebde23c7b746ddac6a143635ff5ea2
 			persistentId = 1262126063
 			name = Hauler - Fuel
@@ -12245,36 +15561,36 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 6736.4376082794042
+			met = 4369.8023432868649
 			lct = 139572.27691353537
-			lastUT = 146308.71452181478
-			distanceTraveled = 1075731.700981936
+			lastUT = 143942.09925682223
+			distanceTraveled = 592127.23624975199
 			root = 0
-			lat = -0.012021621258099456
-			lon = -13.835882544655393
-			alt = 134891.29593688366
+			lat = -2.1335161569655456
+			lon = -62.717124475602645
+			alt = 74926.631044878857
 			hgt = -1
-			nrm = -0.921203792,0.388218462,0.0258878469
-			rot = 0.231542692,0.667741299,0.674463987,-0.213560253
-			CoM = -9.53674316E-07,-2.3975966,-2.38418579E-07
+			nrm = -0.891209424,-0.453588903,-0.00172191858
+			rot = -0.235264793,-0.671940386,-0.673731446,0.198072195
+			CoM = 5.96046448E-08,-2.4753983,4.76837158E-07
 			stg = 1
 			prst = False
 			ref = 2502895160
 			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = 0.2486603
-			cHdg = -5.744363
+			cPch = 0.20625
+			cHdg = 1.08125
 			cMod = 0
 			ORBIT
 			{
-				SMA = 734882.22040401516
-				ECC = 3.5793632022197959E-05
-				INC = 2.1154425028551604
-				LPE = 107.71376756239097
-				LAN = 0.6908073122449423
-				MNA = -1.8855744416658642
-				EPH = 146308.71452181478
+				SMA = 673071.65472140431
+				ECC = 0.0038334112952479729
+				INC = 2.1341632110461455
+				LPE = 135.26355920114946
+				LAN = 0.52800793088727005
+				MNA = 2.3710335540093834
+				EPH = 143942.07925682224
 				REF = 1
 			}
 			PART
@@ -12302,8 +15618,8 @@ GAME
 				attN = top, 5
 				mass = 0.800000012
 				shielded = False
-				temp = 131.26372846113281
-				tempExt = 131.91689764840422
+				temp = 186.01001462642844
+				tempExt = 186.25092997435027
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12675,7 +15991,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.999999994848174
+					amount = 48.668726869229587
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -12721,8 +16037,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25539759496783
-				tempExt = 131.69443508226141
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12815,8 +16131,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25558100156283
-				tempExt = 131.69449399332174
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12909,8 +16225,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25508815445937
-				tempExt = 131.69433568851525
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13003,8 +16319,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25508566869956
-				tempExt = 131.6943348900775
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13096,8 +16412,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.27284085161435
-				tempExt = 131.58210919820476
+				temp = 186.01830717119097
+				tempExt = 186.21071992884356
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13136,7 +16452,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 199.9999999793927
+					amount = 194.67490747691835
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -13169,8 +16485,8 @@ GAME
 				attN = bottom, 5
 				mass = 0.100000001
 				shielded = False
-				temp = 131.11167129096779
-				tempExt = 131.33870265284241
+				temp = 186.02548629957928
+				tempExt = 187.11566125005584
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13305,8 +16621,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.4640760083341
-				tempExt = 131.75884874056874
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13403,8 +16719,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.46407628225967
-				tempExt = 131.75884883327834
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13500,8 +16816,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.4640760083341
-				tempExt = 131.75884874056874
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13597,8 +16913,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.4640760083341
-				tempExt = 131.75884874056874
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13694,8 +17010,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.46407600989698
-				tempExt = 131.75884874109761
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13791,8 +17107,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.4640760083341
-				tempExt = 131.75884874056874
+				temp = 186.01933255543346
+				tempExt = 186.12855767786715
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13889,8 +17205,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25939241858754
-				tempExt = 131.69571823838149
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13981,8 +17297,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25515261407062
-				tempExt = 131.69435639324541
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14073,8 +17389,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25510963929736
-				tempExt = 131.69434258954618
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14165,8 +17481,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.25536340433544
-				tempExt = 131.69442410006945
+				temp = 186.00972971904298
+				tempExt = 186.12765594349264
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14258,8 +17574,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.28335172938802
-				tempExt = 131.41618208421394
+				temp = 186.01085114361928
+				tempExt = 186.08533349265883
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14364,8 +17680,8 @@ GAME
 				attN = bottom, 19
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.31843418466499
-				tempExt = 131.76430296573881
+				temp = 186.00475676672608
+				tempExt = 185.93876516962132
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14472,8 +17788,8 @@ GAME
 				attN = bottom, 20
 				mass = 0.100000001
 				shielded = False
-				temp = 131.37185388471622
-				tempExt = 131.98703853567983
+				temp = 186.00818795612125
+				tempExt = 185.96375779159288
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14605,8 +17921,8 @@ GAME
 				attN = bottom, 37
 				mass = 0.25
 				shielded = False
-				temp = 131.41235393154608
-				tempExt = 131.45604856010974
+				temp = 186.0080963030685
+				tempExt = 185.94692919802671
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14693,8 +18009,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.37123885503203
-				tempExt = 131.53735037259588
+				temp = 186.00825233891783
+				tempExt = 185.98509154706099
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14779,8 +18095,8 @@ GAME
 				srfN = srfAttach, 21
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.36254354962756
-				tempExt = 131.46978719300745
+				temp = 186.00758283108541
+				tempExt = 185.95486938720765
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14875,8 +18191,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.35173741989217
-				tempExt = 131.39177423277476
+				temp = 186.00770988892162
+				tempExt = 185.9286436374434
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14961,8 +18277,8 @@ GAME
 				srfN = srfAttach, 23
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.34219041969919
-				tempExt = 131.47940194278661
+				temp = 186.0082083537184
+				tempExt = 185.98753380228774
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15057,8 +18373,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.37927425992859
-				tempExt = 131.67091258509697
+				temp = 186.00766704338292
+				tempExt = 185.92420600918493
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15143,8 +18459,8 @@ GAME
 				srfN = srfAttach, 25
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.37208547410324
-				tempExt = 131.56279629528828
+				temp = 186.00696752625262
+				tempExt = 185.91407342246933
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15239,8 +18555,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.35187023462615
-				tempExt = 131.39300754597423
+				temp = 186.00768102082981
+				tempExt = 185.92443853301944
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15325,8 +18641,8 @@ GAME
 				srfN = srfAttach, 27
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.33978232121595
-				tempExt = 131.43556040136551
+				temp = 186.00910193733597
+				tempExt = 186.0393378060493
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15419,8 +18735,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41153685998114
-				tempExt = 131.43146520318942
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15519,8 +18835,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41153685998137
-				tempExt = 131.43146520318948
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15619,8 +18935,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41153685998114
-				tempExt = 131.43146520318942
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15719,8 +19035,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41153685998114
-				tempExt = 131.43146520318942
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15819,8 +19135,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41222079686182
-				tempExt = 131.44685600679674
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15919,8 +19235,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41157192317883
-				tempExt = 131.43151370123323
+				temp = 186.00503230113119
+				tempExt = 185.93190688694222
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16019,8 +19335,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.4149884298964
-				tempExt = 131.46120329262473
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16119,8 +19435,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.41153685998114
-				tempExt = 131.43146520318942
+				temp = 186.00494376408534
+				tempExt = 185.92908196929983
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16218,8 +19534,8 @@ GAME
 				attN = bottom, 20
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.97521488859712
-				tempExt = 132.39148792120497
+				temp = 186.00526831047847
+				tempExt = 185.92086409741637
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16324,8 +19640,8 @@ GAME
 				attN = bottom, 39
 				mass = 0.0199999996
 				shielded = False
-				temp = 133.49523290336774
-				tempExt = 134.0315012995616
+				temp = 186.00553030675439
+				tempExt = 185.94450260680654
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16430,8 +19746,8 @@ GAME
 				attN = bottom, 40
 				mass = 0.100000001
 				shielded = False
-				temp = 134.99872119153102
-				tempExt = 135.36060308970644
+				temp = 186.00734611002542
+				tempExt = 185.97603035024446
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16528,8 +19844,8 @@ GAME
 				attN = bottom, 41
 				mass = 0.25
 				shielded = False
-				temp = 135.37425508791878
-				tempExt = 135.86896010380605
+				temp = 186.00825525859187
+				tempExt = 185.99660188912185
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16568,7 +19884,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 40.822703625296647
+					amount = 64.619237484936178
 					maxAmount = 180
 					flowState = True
 					isTweakable = True
@@ -16579,7 +19895,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 49.894407348811697
+					amount = 78.979061244786791
 					maxAmount = 220
 					flowState = True
 					isTweakable = True
@@ -16613,8 +19929,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.5
 				shielded = False
-				temp = 136.57103279526106
-				tempExt = 136.5070009593928
+				temp = 186.00709098133734
+				tempExt = 185.96579484472659
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
@@ -16825,8 +20141,8 @@ GAME
 				srfN = srfAttach, 40
 				mass = 0.0500000007
 				shielded = False
-				temp = 135.01272944029395
-				tempExt = 135.58104824788296
+				temp = 186.00764866405316
+				tempExt = 185.96196476703687
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16919,8 +20235,8 @@ GAME
 				srfN = srfAttach, 40
 				mass = 0.0500000007
 				shielded = False
-				temp = 135.01097551551513
-				tempExt = 135.58046918008847
+				temp = 186.00764866405316
+				tempExt = 185.96196476703687
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17013,8 +20329,8 @@ GAME
 				srfN = srfAttach, 40
 				mass = 0.0500000007
 				shielded = False
-				temp = 135.0115299520381
-				tempExt = 135.58065223031892
+				temp = 186.00764866405316
+				tempExt = 185.96196476703687
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17107,8 +20423,8 @@ GAME
 				srfN = srfAttach, 40
 				mass = 0.0500000007
 				shielded = False
-				temp = 135.01097758069676
-				tempExt = 135.5804698619194
+				temp = 186.00764866405316
+				tempExt = 185.96196476703687
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17201,8 +20517,8 @@ GAME
 				srfN = srfAttach, 39
 				mass = 0.00499999989
 				shielded = False
-				temp = 135.05955833768155
-				tempExt = 135.24401380944596
+				temp = 186.01198046757457
+				tempExt = 186.05382719133129
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17241,7 +20557,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.999999989696349
+					amount = 97.337453738459175
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -17276,8 +20592,8 @@ GAME
 				srfN = srfAttach, 39
 				mass = 0.00499999989
 				shielded = False
-				temp = 135.06446825946389
-				tempExt = 135.25663045903966
+				temp = 186.00873045700291
+				tempExt = 186.01629236976078
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17316,7 +20632,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.999999989696349
+					amount = 97.337453738459175
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -17351,8 +20667,8 @@ GAME
 				srfN = srfAttach, 39
 				mass = 0.00499999989
 				shielded = False
-				temp = 135.05955834322162
-				tempExt = 135.24401381138301
+				temp = 186.00236690466534
+				tempExt = 185.94485566223659
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17391,7 +20707,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.999999989696349
+					amount = 97.337453738459175
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -17426,8 +20742,8 @@ GAME
 				srfN = srfAttach, 39
 				mass = 0.00499999989
 				shielded = False
-				temp = 135.21087617328422
-				tempExt = 135.56589347979184
+				temp = 186.01457256824199
+				tempExt = 186.08381133839228
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17466,7 +20782,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.999999989696349
+					amount = 97.337453738459175
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -17501,8 +20817,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.36006386311203
-				tempExt = 131.4111539608696
+				temp = 186.00753880608886
+				tempExt = 185.92820343458916
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17576,8 +20892,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.3942131709255
-				tempExt = 131.8178407928703
+				temp = 186.0104133245008
+				tempExt = 186.17948238439226
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17651,8 +20967,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.3597854307811
-				tempExt = 131.41105521886186
+				temp = 186.00763978792114
+				tempExt = 185.93719223842353
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17726,8 +21042,8 @@ GAME
 				srfN = srfAttach, 20
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.36790836232007
-				tempExt = 131.41393590343105
+				temp = 186.00843914340686
+				tempExt = 186.00457658700662
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17799,8 +21115,8 @@ GAME
 				srfN = srfAttach, 19
 				mass = 0.0149999997
 				shielded = True
-				temp = 131.274063140869
-				tempExt = 131.27306530018453
+				temp = 186.00841179243136
+				tempExt = 186.00841204335049
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17893,8 +21209,8 @@ GAME
 				srfN = srfAttach, 19
 				mass = 0.0149999997
 				shielded = True
-				temp = 131.274063140869
-				tempExt = 131.27306530018453
+				temp = 186.00841179243136
+				tempExt = 186.00841204335049
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17989,8 +21305,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 131.27884453885403
-				tempExt = 131.27784738851577
+				temp = 186.00841151401687
+				tempExt = 186.00841204335049
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18096,8 +21412,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 131.27884453885403
-				tempExt = 131.27784738851577
+				temp = 186.00841151401687
+				tempExt = 186.00841204335049
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18181,9 +21497,9 @@ GAME
 			{
 				Stage = False, 139956.973729764
 				Gear = False, 0
-				Light = False, 145252.266977984
+				Light = False, 139666.816913486
 				RCS = False, 0
-				SAS = True, 145285.166977967
+				SAS = True, 139570.776913536
 				Brakes = False, 0
 				Abort = False, 0
 				Custom01 = False, 0
@@ -18210,9 +21526,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = 1.95608209E-06
-				yaw = 4.69071801E-06
-				roll = 7.94721302E-07
+				pitch = 1.81662253E-05
+				yaw = 6.86802377E-06
+				roll = -2.07812218E-06
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -19274,35 +22590,6 @@ GAME
 			brave = 0.978913009
 			dumb = 0.0649211258
 			badS = False
-			veteran = False
-			tour = False
-			state = Assigned
-			inactive = False
-			inactiveTimeEnd = 0
-			gExperienced = 0
-			outDueToG = False
-			ToD = 0
-			idx = -1
-			extraXP = 0
-			hero = False
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
-			name = Kimzer Kerman
-			gender = Female
-			type = Unowned
-			trait = Tourist
-			brave = 0.758687019
-			dumb = 0.107271455
-			badS = True
 			veteran = False
 			tour = False
 			state = Assigned

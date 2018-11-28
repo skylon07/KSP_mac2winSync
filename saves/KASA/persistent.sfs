@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/default
-	launchID = 88
+	launchID = 92
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -158,17 +158,6 @@ GAME
 			facilityLevelTS = 3
 			facilityLevelVAB = 3
 		}
-		PM
-		{
-			EnabledForSave = True
-		}
-		TC
-		{
-			showStockTooltips = True
-			hoverTimeout = 0.5
-			debugMode = False
-			oldDebugMode = False
-		}
 		FMRS_Settings
 		{
 			enabled = True
@@ -182,6 +171,17 @@ GAME
 			_SETTING_Parachutes = True
 			_SETTING_Defer_Parachutes_to_StageRecovery = True
 			_SETTING_Control_Uncontrollable = False
+		}
+		TC
+		{
+			showStockTooltips = True
+			hoverTimeout = 0.5
+			debugMode = False
+			oldDebugMode = False
+		}
+		PM
+		{
+			EnabledForSave = True
 		}
 	}
 	SCENARIO
@@ -217,7 +217,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 199131.43378852092
+		update = 200971.64355330117
 		version = 1.4.5
 		WEIGHTS
 		{
@@ -392,6 +392,41 @@ GAME
 			}
 			CONTRACT
 			{
+				guid = 87d7acc9-0d1e-4f27-9cda-22bcacde269f
+				type = TourismContract
+				prestige = 0
+				seed = 742176613
+				state = Offered
+				viewed = Read
+				agent = Reaction Systems Ltd
+				deadlineType = Floating
+				expiryType = Floating
+				values = 64800,46008000,0,0,0,0,19.04762,10,209905.226978061,0,0,0
+				preposition = right here on Kerbin
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Kimzer Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Kimzer Kerman
+					kerbalGender = Female
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Kimzer Kerman
+					}
+				}
+			}
+			CONTRACT
+			{
 				guid = f28da6d1-9e72-43bd-85e2-57f82d9f0dd6
 				type = TourismContract
 				prestige = 0
@@ -431,41 +466,6 @@ GAME
 						targetBody = 1
 						targetType = Orbit
 						kerbalName = Lisdon Kerman
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 87d7acc9-0d1e-4f27-9cda-22bcacde269f
-				type = TourismContract
-				prestige = 0
-				seed = 742176613
-				state = Offered
-				viewed = Read
-				agent = Reaction Systems Ltd
-				deadlineType = Floating
-				expiryType = Floating
-				values = 64800,46008000,0,0,0,0,19.04762,10,209905.226978061,0,0,0
-				preposition = right here on Kerbin
-				homeDestinations = True
-				isGeeAdventure = False
-				tourists = Kimzer Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Incomplete
-					allowPartialFailure = True
-					values = 9750,0,0,0,0
-					kerbalName = Kimzer Kerman
-					kerbalGender = Female
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 3250,0,0,0,0
-						targetBody = 1
-						targetType = Orbit
-						kerbalName = Kimzer Kerman
 					}
 				}
 			}
@@ -658,7 +658,7 @@ GAME
 				prestige = 1
 				seed = -1968348309
 				state = Offered
-				viewed = Seen
+				viewed = Read
 				agent = Moving Parts Experts Group
 				deadlineType = Floating
 				expiryType = Floating
@@ -5932,7 +5932,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 910352.31569111615
+		funds = 869394.29241860181
 	}
 	SCENARIO
 	{
@@ -6100,7 +6100,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 231.830978
+		sci = 487.757874
 		Tech
 		{
 			id = start
@@ -6279,6 +6279,20 @@ GAME
 			part = radialRCSTank
 			part = linearRcs
 			part = RCSBlock
+		}
+		Tech
+		{
+			id = fuelSystems
+			state = Available
+			cost = 90
+			part = fuelLine
+			part = Rockomax16.BW
+			part = Rockomax32.BW
+			part = Rockomax8BW
+			part = fuelTank.long
+			part = fuelTank2-2
+			part = fuelTank1-2
+			part = fuelTank4-2
 		}
 		Science
 		{
@@ -6835,9 +6849,9 @@ GAME
 			id = evaReport@KerbinSrfLandedKSC
 			title = EVA Report from KSC
 			dsc = 1
-			scv = 1
+			scv = 0
 			sbv = 0.300000012
-			sci = 0
+			sci = 2.4000001
 			cap = 2.4000001
 		}
 		Science
@@ -6845,9 +6859,9 @@ GAME
 			id = crewReport@KerbinSrfLandedKSC
 			title = Crew Report from KSC
 			dsc = 1
-			scv = 1
+			scv = 0
 			sbv = 0.300000012
-			sci = 0
+			sci = 1.5
 			cap = 1.5
 		}
 		Science
@@ -6855,9 +6869,9 @@ GAME
 			id = evaReport@KerbinSrfLandedShores
 			title = EVA Report from Kerbin's Shores
 			dsc = 1
-			scv = 1
+			scv = 0
 			sbv = 0.300000012
-			sci = 0
+			sci = 2.4000001
 			cap = 2.4000001
 		}
 		Science
@@ -6885,9 +6899,9 @@ GAME
 			id = temperatureScan@KerbinSrfLandedKSC
 			title = Temperature Scan from KSC
 			dsc = 1
-			scv = 1
+			scv = 0
 			sbv = 0.300000012
-			sci = 0
+			sci = 2.4000001
 			cap = 2.4000001
 		}
 		Science
@@ -6895,9 +6909,9 @@ GAME
 			id = barometerScan@KerbinSrfLandedKSC
 			title = Atmospheric Pressure Scan from KSC
 			dsc = 1
-			scv = 1
+			scv = 0
 			sbv = 0.300000012
-			sci = 0
+			sci = 3.60000014
 			cap = 3.60000014
 		}
 		Science
@@ -6905,9 +6919,9 @@ GAME
 			id = mysteryGoo@KerbinSrfLandedKSC
 			title = Mystery Goo™ Observation from KSC
 			dsc = 1
-			scv = 0.230769247
+			scv = 0.0532544553
 			sbv = 0.300000012
-			sci = 3
+			sci = 3.69230771
 			cap = 3.9000001
 		}
 		Science
@@ -6935,9 +6949,9 @@ GAME
 			id = mysteryGoo@KerbinSrfLandedShores
 			title = Mystery Goo™ Observation from Kerbin's Shores
 			dsc = 1
-			scv = 0.230769247
+			scv = 0.0532544553
 			sbv = 0.300000012
-			sci = 3
+			sci = 3.69230771
 			cap = 3.9000001
 		}
 		Science
@@ -7180,6 +7194,726 @@ GAME
 			sci = 11.25
 			cap = 12
 		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedRunway
+			title = Crew Report from Runway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedRunway
+			title = EVA Report from Runway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedRunway
+			title = Surface Sample from Runway
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedKSC
+			title = Surface Sample from KSC
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedSPH
+			title = Crew Report from SPH
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedSPH
+			title = Surface Sample from SPH
+			dsc = 1
+			scv = 0.0625
+			sbv = 0.300000012
+			sci = 11.25
+			cap = 12
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedSPH
+			title = EVA Report from SPH
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedAstronautComplex
+			title = Crew Report from Astronaut Complex
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedAstronautComplex
+			title = EVA Report from Astronaut Complex
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedAstronautComplex
+			title = Surface Sample from Astronaut Complex
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedRunway
+			title = Materials Study from Runway
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedKSC
+			title = Materials Study from KSC
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedSPH
+			title = Mystery Goo™ Observation from SPH
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedSPH
+			title = Atmospheric Pressure Scan from SPH
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedSPH
+			title = Temperature Scan from SPH
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedAstronautComplex
+			title = Mystery Goo™ Observation from Astronaut Complex
+			dsc = 1
+			scv = 0.0532544553
+			sbv = 0.300000012
+			sci = 3.69230771
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedAstronautComplex
+			title = Atmospheric Pressure Scan from Astronaut Complex
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedAstronautComplex
+			title = Temperature Scan from Astronaut Complex
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedAstronautComplex
+			title = Materials Study from Astronaut Complex
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedSPH
+			title = Materials Study from SPH
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedAdministration
+			title = Materials Study from Administration
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedAdministration
+			title = Temperature Scan from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedAdministration
+			title = Atmospheric Pressure Scan from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedAdministration
+			title = Mystery Goo™ Observation from Administration
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedAdministration
+			title = Crew Report from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedAdministration
+			title = EVA Report from Administration
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedAdministration
+			title = Surface Sample from Administration
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedR&D
+			title = Materials Study from R&D
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedR&D
+			title = Atmospheric Pressure Scan from R&D
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedR&D
+			title = Temperature Scan from R&D
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedR&D
+			title = Mystery Goo™ Observation from R&D
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedR&D
+			title = Crew Report from R&D
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedR&D
+			title = EVA Report from R&D
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedR&D
+			title = Surface Sample from R&D
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedVAB
+			title = Crew Report from VAB
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedVAB
+			title = Atmospheric Pressure Scan from VAB
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedVAB
+			title = Mystery Goo™ Observation from VAB
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedVAB
+			title = Temperature Scan from VAB
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedVAB
+			title = Surface Sample from VAB
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedVAB
+			title = EVA Report from VAB
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedTrackingStation
+			title = Crew Report from Tracking Station
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedTrackingStation
+			title = Mystery Goo™ Observation from Tracking Station
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedTrackingStation
+			title = Temperature Scan from Tracking Station
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedTrackingStation
+			title = Atmospheric Pressure Scan from Tracking Station
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedTrackingStation
+			title = Materials Study from Tracking Station
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedTrackingStation
+			title = EVA Report from Tracking Station
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedTrackingStation
+			title = Surface Sample from Tracking Station
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedVAB
+			title = Materials Study from VAB
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedMissionControl
+			title = Crew Report from Mission Control
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedMissionControl
+			title = Materials Study from Mission Control
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedMissionControl
+			title = Mystery Goo™ Observation from Mission Control
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedMissionControl
+			title = Temperature Scan from Mission Control
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedMissionControl
+			title = Atmospheric Pressure Scan from Mission Control
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedMissionControl
+			title = EVA Report from Mission Control
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedMissionControl
+			title = Surface Sample from Mission Control
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedCrawlerway
+			title = Materials Study from Crawlerway
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedCrawlerway
+			title = Atmospheric Pressure Scan from Crawlerway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedCrawlerway
+			title = Temperature Scan from Crawlerway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedCrawlerway
+			title = Mystery Goo™ Observation from Crawlerway
+			dsc = 1
+			scv = 0.230769247
+			sbv = 0.300000012
+			sci = 3
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedCrawlerway
+			title = Crew Report from Crawlerway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedCrawlerway
+			title = EVA Report from Crawlerway
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedCrawlerway
+			title = Surface Sample from Crawlerway
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedShores
+			title = Materials Study from Kerbin's Shores
+			dsc = 1
+			scv = 0.218749985
+			sbv = 0.300000012
+			sci = 7.50000048
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedShores
+			title = Crew Report from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedShores
+			title = Surface Sample from Kerbin's Shores
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfSplashedShores
+			title = Mystery Goo™ Observation from Kerbin's Shores
+			dsc = 1
+			scv = 0.230769277
+			sbv = 0.400000006
+			sci = 4
+			cap = 5.20000029
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfSplashedShores
+			title = Materials Study from Kerbin's Shores
+			dsc = 1
+			scv = 0.218750015
+			sbv = 0.400000006
+			sci = 10
+			cap = 12.8000002
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfSplashedShores
+			title = Atmospheric Pressure Scan from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.400000006
+			sci = 4.80000019
+			cap = 4.80000019
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfSplashedShores
+			title = Temperature Scan from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.400000006
+			sci = 3.20000005
+			cap = 3.20000005
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfSplashedShores
+			title = Crew Report from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.400000006
+			sci = 2
+			cap = 2
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfSplashedShores
+			title = EVA Report from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.400000006
+			sci = 3.20000005
+			cap = 3.20000005
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfSplashedShores
+			title = Surface Sample from Kerbin's Shores
+			dsc = 1
+			scv = 0.25
+			sbv = 0.400000006
+			sci = 12
+			cap = 16
+		}
 		ExpParts
 		{
 			SmallGearBay = 1
@@ -7203,16 +7937,6 @@ GAME
 		scene = 7, 8, 5, 6
 		STRATEGIES
 		{
-			STRATEGY
-			{
-				name = FundraisingCampaignCfg
-				date = 49246.074766490237
-				factor = 0.200000003
-				EFFECT
-				{
-					name = CurrencyConverter
-				}
-			}
 			STRATEGY
 			{
 				name = UnpaidResearchProgramCfg
@@ -7876,7 +8600,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.4.5
-		UT = 199139.55378851667
+		UT = 200974.36355329974
 		activeVessel = 0
 		mapViewFiltering = 15358
 		commNetUIModeTracking = Network
@@ -9173,9 +9897,9 @@ GAME
 			landedAt = KSC
 			displaylandedAt = KSC
 			splashed = False
-			met = 146207.99434852126
+			met = 152213.57223891205
 			lct = 48693.391314422995
-			lastUT = 194901.38566294426
+			lastUT = 200907.00355333503
 			distanceTraveled = 0
 			root = 0
 			lat = -0.059131016642631672
@@ -9184,7 +9908,7 @@ GAME
 			hgt = 0.88115555
 			nrm = -0.00250019692,0.00639016926,-0.999976575
 			rot = -0.088818498,-0.104447633,0.643492341,0.753073454
-			CoM = 0.000518608838,0.294269592,-0.0191736817
+			CoM = 0.000518668443,0.294171393,-0.0191671252
 			stg = 0
 			prst = False
 			ref = 3681523843
@@ -9196,13 +9920,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300032.85873873706
-				ECC = 0.99999999999999978
-				INC = 0.059126579623191976
+				SMA = NaN
+				ECC = 1
+				INC = 0.059126581077930077
 				LPE = 90
-				LAN = 12.037302485880616
-				MNA = 3.1415926303452304
-				EPH = 199131.35378852097
+				LAN = 42.779445716700991
+				MNA = 0
+				EPH = 200971.56355330121
 				REF = 1
 				IDENT = Kerbin
 			}
@@ -9231,9 +9955,9 @@ GAME
 				attN = bottom, -1
 				mass = 1
 				shielded = False
-				temp = 303.51204581390311
-				tempExt = 303.64953476117455
-				tempExtUnexp = 303.64975590900576
+				temp = 299.79713386088952
+				tempExt = 299.71749618924383
+				tempExtUnexp = 299.71750547084372
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9356,6 +10080,23 @@ GAME
 				}
 				MODULE
 				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = SCANRPMStorage
 					isEnabled = True
 					stagingEnabled = True
@@ -9448,9 +10189,9 @@ GAME
 				attN = bottom, -1
 				mass = 0.0700000003
 				shielded = False
-				temp = 303.53656963821766
-				tempExt = 303.72389537988198
-				tempExtUnexp = 303.72425404145309
+				temp = 299.8027311824618
+				tempExt = 299.72171815988133
+				tempExtUnexp = 299.72172720402443
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9522,6 +10263,23 @@ GAME
 				}
 				MODULE
 				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = ModuleTripLogger
 					isEnabled = True
 					stagingEnabled = True
@@ -9565,9 +10323,9 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.54829097257453
-				tempExt = 303.68741997554844
-				tempExtUnexp = 303.68768084617255
+				temp = 299.7826749228642
+				tempExt = 299.71457321175177
+				tempExtUnexp = 299.71458256841464
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9637,6 +10395,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -9663,9 +10438,9 @@ GAME
 				attN = top, 4
 				mass = 0.125
 				shielded = False
-				temp = 303.509875672112
-				tempExt = 303.55491182362357
-				tempExtUnexp = 303.55489999232071
+				temp = 299.74368245297705
+				tempExt = 299.65996433791719
+				tempExtUnexp = 299.65997531805823
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9682,6 +10457,23 @@ GAME
 				}
 				PARTDATA
 				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 			}
 			PART
@@ -9709,9 +10501,9 @@ GAME
 				attN = bottom, 3
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.44783169123127
-				tempExt = 303.4878739841721
-				tempExtUnexp = 303.48786451887383
+				temp = 299.64809597477426
+				tempExt = 299.61970586963821
+				tempExtUnexp = 299.61971783492822
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9729,10 +10521,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -9766,9 +10575,9 @@ GAME
 				attN = bottom, 4
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.44401880386147
-				tempExt = 303.45241274776521
-				tempExtUnexp = 303.45240418100178
+				temp = 299.64363121944024
+				tempExt = 299.59731218123386
+				tempExtUnexp = 299.5973246794519
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9786,10 +10595,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -9823,9 +10649,9 @@ GAME
 				attN = bottom, 5
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.44096595614252
-				tempExt = 303.43697805106001
-				tempExtUnexp = 303.43697015171125
+				temp = 299.6398650272323
+				tempExt = 299.58668265009254
+				tempExtUnexp = 299.58669539762883
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9843,10 +10669,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -9880,9 +10723,9 @@ GAME
 				attN = bottom, 6
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.43922502135979
-				tempExt = 303.43133281694634
-				tempExtUnexp = 303.43132521208463
+				temp = 299.63707903876173
+				tempExt = 299.58231560543192
+				tempExtUnexp = 299.58232845776166
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9900,10 +10743,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -9937,9 +10797,9 @@ GAME
 				attN = bottom, 3
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.53883246044387
-				tempExt = 303.54417262881384
-				tempExtUnexp = 303.54415492044251
+				temp = 299.57488068583575
+				tempExt = 299.58140418802259
+				tempExtUnexp = 299.58141661902198
 				expt = 0.5
 				state = 0
 				attached = True
@@ -9957,10 +10817,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -9994,9 +10871,9 @@ GAME
 				attN = bottom, 8
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.57653219169737
-				tempExt = 303.5860505017688
-				tempExtUnexp = 303.58602512281897
+				temp = 299.56499055092593
+				tempExt = 299.53529843796343
+				tempExtUnexp = 299.53531163862266
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10014,10 +10891,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -10051,9 +10945,9 @@ GAME
 				attN = bottom, 11
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.61739221603301
-				tempExt = 303.65680541003661
-				tempExtUnexp = 303.65684210827936
+				temp = 299.55481388039794
+				tempExt = 299.5084280041807
+				tempExtUnexp = 299.50844152729684
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10071,10 +10965,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -10108,9 +11019,9 @@ GAME
 				attN = bottom, 12
 				mass = 0.00999999978
 				shielded = False
-				temp = 303.6604909975772
-				tempExt = 303.74764020056881
-				tempExtUnexp = 303.74761174543761
+				temp = 299.5451719498468
+				tempExt = 299.48467891552497
+				tempExtUnexp = 299.4846925573479
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10128,10 +11039,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 191.66587132046135
+					amount = 164.27855155648788
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -10165,9 +11093,9 @@ GAME
 				attN = top, 13
 				mass = 0.100000001
 				shielded = False
-				temp = 303.69164141326985
-				tempExt = 303.9069368446626
-				tempExtUnexp = 303.90690648628282
+				temp = 299.54047947528136
+				tempExt = 299.45834925454295
+				tempExtUnexp = 299.45836292084584
 				expt = 0
 				state = 0
 				attached = True
@@ -10304,6 +11232,23 @@ GAME
 				}
 				MODULE
 				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = TrajectoriesVesselSettings
 					isEnabled = True
 					Initialized = True
@@ -10395,9 +11340,9 @@ GAME
 				attN = bottom01, 12
 				mass = 0.0299999993
 				shielded = False
-				temp = 303.73304526733426
-				tempExt = 304.09470284327023
-				tempExtUnexp = 304.09481382649471
+				temp = 299.53714845736556
+				tempExt = 299.43023742782827
+				tempExtUnexp = 299.43025110014764
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10414,6 +11359,23 @@ GAME
 				}
 				PARTDATA
 				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 			}
 			PART
@@ -10439,9 +11401,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.00400000019
 				shielded = False
-				temp = 303.7221513114489
-				tempExt = 304.00546293460343
-				tempExtUnexp = 304.00543168103133
+				temp = 299.54034630552235
+				tempExt = 299.44575898843306
+				tempExtUnexp = 299.44577264414471
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10466,6 +11428,23 @@ GAME
 					current = 1
 					showCones = False
 					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10501,9 +11480,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0149999997
 				shielded = False
-				temp = 303.74549045434065
-				tempExt = 303.96305773239317
-				tempExtUnexp = 303.96302658231485
+				temp = 299.53276167508687
+				tempExt = 299.45719461482901
+				tempExtUnexp = 299.45720835409969
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10548,6 +11527,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -10578,9 +11574,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0149999997
 				shielded = False
-				temp = 303.74546873932957
-				tempExt = 303.96286466611247
-				tempExtUnexp = 303.96283351591575
+				temp = 299.53274779649155
+				tempExt = 299.45707134920747
+				tempExtUnexp = 299.45708508811651
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10630,6 +11626,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -10655,9 +11668,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.54316786046547
-				tempExt = 303.60552685521225
-				tempExtUnexp = 303.60551776080547
+				temp = 299.76622785698987
+				tempExt = 299.70953004837776
+				tempExtUnexp = 299.70953960132232
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10709,6 +11722,23 @@ GAME
 							actionGroup = None
 							active = False
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -10739,9 +11769,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.54316786046547
-				tempExt = 303.60552685521225
-				tempExtUnexp = 303.60551776080547
+				temp = 299.76622785698987
+				tempExt = 299.70953004837776
+				tempExtUnexp = 299.70953960132232
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10793,6 +11823,23 @@ GAME
 							actionGroup = None
 							active = False
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -10823,9 +11870,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.54316786046547
-				tempExt = 303.60552685521225
-				tempExtUnexp = 303.60551776080547
+				temp = 299.76622785698987
+				tempExt = 299.70953004837776
+				tempExtUnexp = 299.70953960132232
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10877,6 +11924,23 @@ GAME
 							actionGroup = None
 							active = False
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -10907,9 +11971,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.54316786046547
-				tempExt = 303.60552685521225
-				tempExtUnexp = 303.60551776080547
+				temp = 299.76622785698987
+				tempExt = 299.70953004837776
+				tempExtUnexp = 299.70953960132232
 				expt = 0.5
 				state = 0
 				attached = True
@@ -10966,6 +12030,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -10990,9 +12071,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.52335998829949
-				tempExt = 303.59996485172712
-				tempExtUnexp = 303.59995570144497
+				temp = 299.78314167049712
+				tempExt = 299.71471481120778
+				tempExtUnexp = 299.71472416254358
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11056,6 +12137,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11080,9 +12178,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.5094784200287
-				tempExt = 303.61325491857957
-				tempExtUnexp = 303.61324610447997
+				temp = 299.79681717931481
+				tempExt = 299.71940186279278
+				tempExtUnexp = 299.7194110702672
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11146,6 +12244,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11170,9 +12285,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0149999997
 				shielded = False
-				temp = 303.54532232466443
-				tempExt = 303.60482471853976
-				tempExtUnexp = 303.60481542006369
+				temp = 299.75817634151753
+				tempExt = 299.70655927615371
+				tempExtUnexp = 299.70656877871357
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11222,6 +12337,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11246,9 +12378,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0149999997
 				shielded = False
-				temp = 303.57047716844119
-				tempExt = 303.64878801947646
-				tempExtUnexp = 303.64890043532699
+				temp = 299.75817634151753
+				tempExt = 299.70655927615371
+				tempExtUnexp = 299.70656877871357
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11293,6 +12425,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11323,9 +12472,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 303.49444079172019
-				tempExt = 303.59212144593073
-				tempExtUnexp = 303.59211271477966
+				temp = 299.79837309233994
+				tempExt = 299.72173782998669
+				tempExtUnexp = 299.72174700131939
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11501,6 +12650,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11526,9 +12692,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 303.49444078181767
-				tempExt = 303.59212141986853
-				tempExtUnexp = 303.59211268871769
+				temp = 299.79837308235494
+				tempExt = 299.72173781356929
+				tempExtUnexp = 299.72174698490198
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11704,6 +12870,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11729,9 +12912,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 303.49444079172019
-				tempExt = 303.59212144593073
-				tempExtUnexp = 303.59211271477966
+				temp = 299.79837309233994
+				tempExt = 299.72173782998669
+				tempExtUnexp = 299.72174700131939
 				expt = 0.5
 				state = 0
 				attached = True
@@ -11907,6 +13090,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -11932,9 +13132,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 303.49500887660429
-				tempExt = 303.59230217299398
-				tempExtUnexp = 303.59229346179364
+				temp = 299.79837308235494
+				tempExt = 299.72173781356929
+				tempExtUnexp = 299.72174698490198
 				expt = 0.5
 				state = 0
 				attached = True
@@ -12110,6 +13310,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -12134,9 +13351,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 303.49441345752564
-				tempExt = 303.60287993806679
-				tempExtUnexp = 303.60287141685842
+				temp = 299.79930488720413
+				tempExt = 299.69877841654096
+				tempExtUnexp = 299.6987876639044
 				expt = 0.5
 				state = 0
 				attached = True
@@ -12153,6 +13370,23 @@ GAME
 				}
 				PARTDATA
 				{
+				}
+				MODULE
+				{
+					name = FMRS_PM
+					isEnabled = True
+					stagingEnabled = True
+					MM_DYNAMIC = true
+					parent_vessel = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 			}
 			ACTIONGROUPS
@@ -34374,7 +35608,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 52
+				flight = 55
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -34562,10 +35796,16 @@ GAME
 				51 = Suborbit,Kerbin
 				51 = Orbit,Kerbin
 				51 = Recover
+				52 = Land,Kerbin
+				52 = Recover
+				53 = Land,Kerbin
+				53 = Recover
+				54 = Land,Kerbin
+				54 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 52
+				flight = 55
 			}
 		}
 		KERBAL
@@ -34726,7 +35966,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 10
+				flight = 14
 				0 = Land,Kerbin
 				0 = Flight,Kerbin
 				0 = Recover
@@ -34773,10 +36013,26 @@ GAME
 				9 = Suborbit,Kerbin
 				9 = Orbit,Kerbin
 				9 = Recover
+				10 = ExitVessel,Kerbin
+				10 = BoardVessel,Kerbin
+				10 = Land,Kerbin
+				10 = Recover
+				11 = Land,Kerbin
+				11 = ExitVessel,Kerbin
+				11 = BoardVessel,Kerbin
+				11 = Recover
+				12 = Land,Kerbin
+				12 = ExitVessel,Kerbin
+				12 = BoardVessel,Kerbin
+				12 = Recover
+				13 = Land,Kerbin
+				13 = ExitVessel,Kerbin
+				13 = BoardVessel,Kerbin
+				13 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 10
+				flight = 14
 			}
 		}
 		KERBAL

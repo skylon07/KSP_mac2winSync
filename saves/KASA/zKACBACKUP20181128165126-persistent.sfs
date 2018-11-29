@@ -158,6 +158,17 @@ GAME
 			facilityLevelTS = 3
 			facilityLevelVAB = 3
 		}
+		PM
+		{
+			EnabledForSave = True
+		}
+		TC
+		{
+			showStockTooltips = True
+			hoverTimeout = 0.5
+			debugMode = False
+			oldDebugMode = False
+		}
 		FMRS_Settings
 		{
 			enabled = True
@@ -171,17 +182,6 @@ GAME
 			_SETTING_Parachutes = True
 			_SETTING_Defer_Parachutes_to_StageRecovery = True
 			_SETTING_Control_Uncontrollable = False
-		}
-		TC
-		{
-			showStockTooltips = True
-			hoverTimeout = 0.5
-			debugMode = False
-			oldDebugMode = False
-		}
-		PM
-		{
-			EnabledForSave = True
 		}
 	}
 	SCENARIO
@@ -217,7 +217,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 217047.56058026938
+		update = 217053.50168378279
 		version = 1.4.5
 		WEIGHTS
 		{
@@ -671,7 +671,7 @@ GAME
 				PARAM
 				{
 					name = VesselSystemsParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					typeString = probe
@@ -701,7 +701,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -750,7 +750,7 @@ GAME
 					PARAM
 					{
 						name = ReachDestination
-						state = Incomplete
+						state = Complete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
 						dest = 1
@@ -777,7 +777,7 @@ GAME
 					PARAM
 					{
 						name = ReachSpeedEnvelope
-						state = Incomplete
+						state = Complete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
 						minSpd = 1620
@@ -845,7 +845,7 @@ GAME
 				PARAM
 				{
 					name = VesselSystemsParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					typeString = probe
@@ -875,7 +875,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -886,7 +886,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -8640,8 +8640,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.4.5
-		UT = 217053.44168378282
-		activeVessel = 0
+		UT = 217053.76168378265
+		activeVessel = 10
 		mapViewFiltering = 15358
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
@@ -9960,13 +9960,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 0
-				ECC = 1
+				SMA = 300032.8030719118
+				ECC = 0.99999999999999989
 				INC = 0.059126962119453084
-				LPE = 90
-				LAN = 307.15586346745852
-				MNA = 0
-				EPH = 216797.00748700785
+				LPE = 90.000000000000014
+				LAN = 311.44013137968989
+				MNA = 3.1415926207170166
+				EPH = 217053.46168378281
 				REF = 1
 				IDENT = Kerbin
 			}
@@ -32493,26 +32493,26 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 23710.381823112897
+			met = 23992.536019874387
 			lct = 193061.22566390826
-			lastUT = 216771.60748702116
-			distanceTraveled = 3292235.5806000619
+			lastUT = 217053.76168378265
+			distanceTraveled = 3292395.1740405229
 			root = 0
-			lat = -0.02893757615788576
-			lon = 8.1727460966668666
-			alt = 18385525.690090619
+			lat = -0.030397724094822266
+			lon = 3.5536466854432156
+			alt = 18532681.388843752
 			hgt = -1
 			nrm = -0.572023988,0.014720113,0.820104659
-			rot = -0.398251414,-0.0191187318,-0.917070687,-0.00343245105
-			CoM = -0.0022694543,-2.89380074,-0.00364950299
+			rot = -0.39829421,-0.019118892,-0.917052031,-0.00343155884
+			CoM = -0.00124192238,-2.88090682,-0.0053807795
 			stg = 0
 			prst = False
 			ref = 28246674
 			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = -0.3259998
-			cHdg = -8.723001
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
@@ -32550,8 +32550,8 @@ GAME
 				attN = bottom, 1
 				mass = 0.0500000007
 				shielded = False
-				temp = 275.55735672835556
-				tempExt = 275.45001914209416
+				temp = 275.25609026870097
+				tempExt = 274.68882914282761
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
@@ -32748,8 +32748,8 @@ GAME
 				attN = bottom, 2
 				mass = 0.00999999978
 				shielded = False
-				temp = 275.53018265308157
-				tempExt = 275.19840015082377
+				temp = 275.23850761930964
+				tempExt = 274.61033138324848
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -32822,8 +32822,8 @@ GAME
 				attN = top, 1
 				mass = 0.0500000007
 				shielded = False
-				temp = 275.55874403609516
-				tempExt = 275.14945701851485
+				temp = 275.25975483520119
+				tempExt = 274.60827699828337
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -32920,8 +32920,8 @@ GAME
 				attN = bottom, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 275.57201031955537
-				tempExt = 275.36081143246344
+				temp = 275.26853291331304
+				tempExt = 274.64484555077877
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33044,8 +33044,8 @@ GAME
 				attN = bottom, 5
 				mass = 0.200000003
 				shielded = False
-				temp = 275.58955252536242
-				tempExt = 275.61218614640148
+				temp = 275.28120373276863
+				tempExt = 274.7128735267359
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33158,8 +33158,8 @@ GAME
 				attN = bottom, 6
 				mass = 0.25
 				shielded = False
-				temp = 275.59046938436518
-				tempExt = 275.67601194808327
+				temp = 275.28319186466285
+				tempExt = 274.73190894223023
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33243,8 +33243,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.5
 				shielded = False
-				temp = 275.59298599279606
-				tempExt = 275.65064086499672
+				temp = 275.2844803153223
+				tempExt = 274.75898308476752
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
@@ -33452,8 +33452,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.52058692088656
-				tempExt = 275.08659717272218
+				temp = 275.23028484100399
+				tempExt = 274.59666211570942
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33524,8 +33524,8 @@ GAME
 				srfN = srfAttach, 1
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.47712055873711
-				tempExt = 275.0456187914649
+				temp = 275.19777872360953
+				tempExt = 274.58893913142691
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33616,8 +33616,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.51535127214407
-				tempExt = 275.03878861070319
+				temp = 275.22766276983282
+				tempExt = 274.58886737195957
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33729,8 +33729,8 @@ GAME
 				srfN = srfAttach, 1
 				mass = 0.0500000007
 				shielded = False
-				temp = 275.55750927528157
-				tempExt = 275.15679764338984
+				temp = 275.25870325619758
+				tempExt = 274.61632374931952
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33843,8 +33843,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.5231981412627
-				tempExt = 275.28921569439541
+				temp = 275.23191279104157
+				tempExt = 274.62882878578938
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -33945,8 +33945,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.5231981412627
-				tempExt = 275.28921569439541
+				temp = 275.23191279104157
+				tempExt = 274.62882878578938
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -34047,8 +34047,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.5231981412627
-				tempExt = 275.28921569439541
+				temp = 275.23191279104157
+				tempExt = 274.62882878578938
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -34147,8 +34147,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 275.5231981412627
-				tempExt = 275.28921569439541
+				temp = 275.23191141406397
+				tempExt = 274.62857812332118
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0

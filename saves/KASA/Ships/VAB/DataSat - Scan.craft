@@ -2,7 +2,7 @@ ship = DataSat - Scan
 version = 1.4.5
 description = The scanning loadout of the DataSat series, this satellite provides essential tools necessary to figure out what planet you are currently on. Now with complementary scanning modules.
 type = VAB
-size = 1.05501294,2.19899368,1.06412959
+size = 1.0550127,2.19899368,1.06412935
 steamPublishedFileId = 0
 persistentId = 3033527099
 rot = 0,0,0,0
@@ -1051,7 +1051,7 @@ PART
 		isEnabled = True
 		currentRotation = (-0.707106829, 0, 0, 0.707106829)
 		storedAnimationTime = 0
-		storedAnimationSpeed = -10
+		storedAnimationSpeed = 1
 		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
@@ -1380,7 +1380,7 @@ PART
 		isEnabled = True
 		currentRotation = (0, 0, 0, 1)
 		storedAnimationTime = 0
-		storedAnimationSpeed = -10
+		storedAnimationSpeed = 1
 		deployState = RETRACTED
 		stagingEnabled = True
 		EVENTS
@@ -2128,6 +2128,7 @@ PART
 	modSize = 0,0,0
 	link = JSIPrimitiveExternalCamera_4293333794
 	link = sensorBarometer_4293352782
+	link = sensorThermometer_4293736214
 	attN = bottom,strutCube_4293308420_0|-0.1287344|0
 	EVENTS
 	{
@@ -2161,12 +2162,12 @@ PART
 	part = JSIPrimitiveExternalCamera_4293333794
 	partName = Part
 	persistentId = 3682425553
-	pos = -0.13414529,16.3177109,-0.0769900829
+	pos = -0.17138201,16.3736458,-0.121490255
 	attPos = 0,0,0
 	attPos0 = -0.134145468,0.0294876099,-0.076990366
-	rot = -0.469118744,0.0267755687,-0.857394218,-0.20996666
-	attRot = 0.609751403,0.0821396634,-0.170974299,0.769561291
-	attRot0 = -0.469118744,0.0267755687,-0.857394218,-0.20996666
+	rot = 0.282835722,-0.483259916,0.708732426,0.429141372
+	attRot = -0.100774124,-0.161140293,0.100064643,-0.976660788
+	attRot0 = 0.282835722,-0.483259916,0.708732426,0.429141372
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -2370,6 +2371,105 @@ PART
 		}
 		ACTIONS
 		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FMRS_PM
+		isEnabled = True
+		stagingEnabled = True
+		MM_DYNAMIC = true
+		parent_vessel = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sensorThermometer_4293736214
+	partName = Part
+	persistentId = 2941041144
+	pos = -0.106602043,16.2076492,-0.0615465492
+	attPos = 0,0,0
+	attPos0 = -0.106602222,-0.0805740356,-0.061546836
+	rot = 0,-0.675590158,0,-0.737277389
+	attRot = 0,0.216439635,0,0.976296067
+	attRot0 = 0,-0.675590158,0,-0.737277389
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,strutCube_4293307618
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnviroSensor
+		isEnabled = True
+		sensorActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{

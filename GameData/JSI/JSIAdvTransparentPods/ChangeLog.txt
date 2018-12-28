@@ -1,0 +1,61 @@
+﻿V0.1.17.0
+Re-Compile for KSP 1.5.1.
+Added German Localization (thanks Nils277)
+Added Spanish Localization (thanks Fitiales)
+Added Chinese Localization (thanks 6DYZBX)
+V0.1.16.0
+Re-Compile for KSP 1.4.1
+V0.1.15.0
+Re-Compile for KSP 1.3.1
+V0.1.14.0
+Re-Compile for KSP 1.3.0
+Localization ready. Volunteers for translation gratefully accepted. ;)
+V0.1.13.0
+Re-Compile for KSP 1.2.2
+V0.1.12.0
+Fix issue with use of the disableLoadingInEditor parameter.
+V0.1.11.0
+Re-Compile for KSP 1.2.1
+V0.1.10.0
+Fixed issue where Parts that are now considered "Plane" vessel type were being shown as transparentm (stock overlay) even if they were not
+defined as JSITransparentPods. ie: Stock Plane Cockpits.
+V0.1.9.0
+Fixed issue where Part Triggers were being considered for blocking the Transparency of a part.
+V0.1.8.0
+Re-Compile for KSP 1.2
+Changed Settings to use new Stock Settings Integration.
+V0.1.7.0
+Re-compile for KSP 1.1.3
+V0.1.6.0
+Fixed bug in TransparentTransforms processing for window shader swapping.
+V0.1.5.0
+Fixed issue with Transparent shaders support for transparent Windows. 
+Added check to part startup for fields stockOverlayDepthMaskShaderTransform & transparentPodDepthMaskShaderTransform if they cannot be found
+then processing is sped up (effiency change).
+Added support for Internal Models defined to parts that have NO crew capacity at all. (Stock does not spawn or support internal models for parts that have no crew capacity defined, but that doesn't mean we can't do it, this mod now supports it).
+Added bool field combineDepthMaskShaders. If this is set to True (Default is false) then the transparentPodDepthMaskShaderTransform is treated as an ADD_ON to
+the stockOverlayDepthMaskShaderTransform mesh. and BOTH will be turned on in JSIATP mode and the transparentPodDepthMaskShaderTransform will be
+turned off and the stockOverlayDepthMaskShaderTransform will be turned ON when in Stock overlay mode. This is to support different model
+configurations depending on what the modeller/modder requires. See WIKI for more details (added pictures to the WIKI as well).
+WIKI updated with more details and examples.
+V0.1.4.0
+Added swappable/multiple Depth Mask Shader support. See the WIKI page for details.
+Automatically enable/disable the TransparentPod setting (part right click menu) if the IVA is obstructed by something else in front of it.
+TransparentPod setting in the part right click menu will now display "Obstructed" in this scenario ONLY if it was set to "ON". If it is set to
+"OFF" or "AUTO" it will remain locked in that state whilst obstructed.
+Improved Portrait Camera handling.
+V0.1.3.0 (now released as a seperate mod/repro from Raster Prop Monitor)
+Fixed broken Transparent Shader and Opaque Shader swapping functionality.
+Fixed camera jitters/lag on Transparent IVAs that are not part of the active vessel in flight.
+Fixed Portrait Cameras when EVA from vessel.
+Fixed ON/OFF/AUTO functionality in the Editor.
+Opened settings var LoadedInactive to public so other mods can get it if they want it.
+Public bool isIVAobstructed added to JSIAdvTransparentPod will be true if IVA attached to part is obstructed by another object in the foreground.
+V0.1.2.0 (released under RPM V0.25.x)
+Lots of bug fixes. Fix issues with portrait camera processing.
+Fix bugs with settings file. Settings file now changed to default to show transparent pods on all loaded parts, and fixed logic for
+processing.
+V0.1.1.0 (released under RPM V0.25.0)
+JSITransparentPod is now obsolete (sorry for the short notice). Support for it has been removed from RasterPropMonitor. 
+To replace it, JSIAdvTransparentPod, in its own DLL, is now included in the RPM distribution. 
+The new module takes advantage of the stock cutaway functionality.

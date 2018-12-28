@@ -194,27 +194,6 @@ GAME
 			facilityLevelTS = 3
 			facilityLevelVAB = 3
 		}
-		FMRS_Settings
-		{
-			enabled = True
-			autoactiveAtLaunch = True
-			_SETTING_Include_Undock = False
-			Timer_Stage_Delay = 0.2
-			_SETTING_Messages = True
-			_SETTING_Auto_Cut_Off = True
-			_SETTING_Auto_Recover = True
-			_SETTING_Throttle_Log = True
-			_SETTING_Parachutes = True
-			_SETTING_Defer_Parachutes_to_StageRecovery = True
-			_SETTING_Control_Uncontrollable = False
-		}
-		TC
-		{
-			showStockTooltips = True
-			hoverTimeout = 0.5
-			debugMode = False
-			oldDebugMode = False
-		}
 	}
 	SCENARIO
 	{
@@ -254,7 +233,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 1014476.5490888726
+		update = 1015210.6090895563
 		version = 1.5.1
 		WEIGHTS
 		{
@@ -1210,7 +1189,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 828443.61224413267
+		funds = 768943.61224413267
 	}
 	SCENARIO
 	{
@@ -1550,6 +1529,8 @@ GAME
 			part = parachuteSingle
 			part = EngineerChip
 			part = Engineer7500
+			part = mk1pod.v2
+			part = solidBooster.sm.v2
 		}
 		Tech
 		{
@@ -1559,6 +1540,7 @@ GAME
 			part = fuelTankSmallFlat
 			part = liquidEngine2
 			part = solidBooster
+			part = solidBooster.v2
 		}
 		Tech
 		{
@@ -1654,6 +1636,7 @@ GAME
 			part = HighGainAntenna5
 			part = JSIPrimitiveExternalCamera
 			part = SCANsat.Scanner
+			part = probeCoreSphere.v2
 		}
 		Tech
 		{
@@ -1675,6 +1658,7 @@ GAME
 			part = foldingRadSmall
 			part = spotLight1
 			part = spotLight2
+			part = probeCoreOcto.v2
 		}
 		Tech
 		{
@@ -1774,6 +1758,7 @@ GAME
 			part = RelayAntenna5
 			part = mediumDishAntenna
 			part = stackDecouplerMini
+			part = probeCoreHex.v2
 		}
 		Tech
 		{
@@ -1827,6 +1812,7 @@ GAME
 			part = ksp.r.largeBatteryPack
 			part = LgRadialSolarPanel
 			part = foldingRadMed
+			part = KAS.PortPylonPwr
 		}
 		Tech
 		{
@@ -1837,6 +1823,8 @@ GAME
 			part = batteryBank
 			part = FuelCell
 			part = foldingRadLarge
+			part = heat-exchanger-125-1
+			part = heat-exchanger-25-1
 		}
 		Science
 		{
@@ -4662,7 +4650,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.5.1
-		UT = 1014481.3890888771
+		UT = 1015214.4290895598
 		activeVessel = 0
 		mapViewFiltering = 15358
 		commNetUIModeTracking = Network
@@ -6795,36 +6783,36 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 447294.61823961616
+			met = 843217.15334076667
 			lct = 171973.29574877082
-			lastUT = 619267.95398838702
-			distanceTraveled = 28492060.258863274
+			lastUT = 1015190.4890895375
+			distanceTraveled = 28520529.833141204
 			root = 0
-			lat = -1.7310574331885256
-			lon = -120.14944779297616
-			alt = 134971.96407991438
+			lat = -2.0567302433037735
+			lon = 128.10918919008452
+			alt = 134968.47917436773
 			hgt = -1
-			nrm = -0.841737509,-0.217775598,-0.494016051
-			rot = -0.386635333,0.167248622,-0.269973606,-0.865826428
-			CoM = 0.00343492627,0.416079223,0.0227015242
+			nrm = -0.115248278,0.80393815,0.583439231
+			rot = -0.387005746,0.166013151,-0.269443095,-0.866063952
+			CoM = 0.00343993306,0.416079313,0.0227023214
 			stg = 3
 			prst = False
 			ref = 706696513
 			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = 0.3062499
-			cHdg = -2.993749
+			cPch = 0.3375
+			cHdg = -0.6374995
 			cMod = 0
 			ORBIT
 			{
-				SMA = 734642.56371948135
-				ECC = 0.00045500435051867101
-				INC = 2.1042569561373399
-				LPE = 65.243755441063314
-				LAN = 359.86832883809689
-				MNA = 2.9688577765729156
-				EPH = 619267.93398838746
+				SMA = 734642.56140215963
+				ECC = 0.00045500594361592262
+				INC = 2.1042568639371777
+				LPE = 65.243805409495124
+				LAN = 359.86832945695426
+				MNA = -2.9222499361154162
+				EPH = 1015190.469089538
 				REF = 1
 			}
 			PART
@@ -6852,8 +6840,8 @@ GAME
 				attN = bottom, 1
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19591730493639
-				tempExt = 131.1994848239745
+				temp = 163.89265728359877
+				tempExt = 155.80631841410573
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -6939,23 +6927,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -6984,8 +6955,8 @@ GAME
 				attN = bottom, 2
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19609354810856
-				tempExt = 131.22047275477038
+				temp = 165.47098141103453
+				tempExt = 137.5768117409155
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7074,23 +7045,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -7117,8 +7071,8 @@ GAME
 				attN = bottom, 25
 				mass = 0.25
 				shielded = False
-				temp = 131.19492731428525
-				tempExt = 131.16785052739951
+				temp = 165.5421665272263
+				tempExt = 156.55275174454292
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7139,11 +7093,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -7205,8 +7158,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.1955286521318
-				tempExt = 131.19368852235868
+				temp = 165.55946039571481
+				tempExt = 160.64275851262272
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7227,11 +7180,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -7290,8 +7242,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 131.19722748926887
-				tempExt = 131.21303172111828
+				temp = 165.17651787896733
+				tempExt = 160.98918348539587
 				tempExtUnexp = 232.82267096026712
 				expt = 0.5
 				state = 0
@@ -7309,23 +7261,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -7351,8 +7286,8 @@ GAME
 				srfN = srfAttach, 4
 				mass = 0.0149999997
 				shielded = False
-				temp = 131.20102797763957
-				tempExt = 131.23824108815799
+				temp = 164.43275013128905
+				tempExt = 160.93593287447132
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7403,23 +7338,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -7444,8 +7362,8 @@ GAME
 				srfN = srfAttach, 4
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19705657995004
-				tempExt = 131.19605991340896
+				temp = 164.90529522304638
+				tempExt = 161.05389753919272
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7466,13 +7384,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -7498,23 +7413,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -7549,8 +7447,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19478792376657
-				tempExt = 131.16684593769577
+				temp = 165.55943544311214
+				tempExt = 160.64003355446815
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7571,11 +7469,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -7634,8 +7531,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 131.19358205563336
-				tempExt = 131.16862641895119
+				temp = 165.17644722971392
+				tempExt = 160.98694928012816
 				tempExtUnexp = 232.79478938972477
 				expt = 0.5
 				state = 0
@@ -7653,23 +7550,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -7695,8 +7575,8 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.0149999997
 				shielded = False
-				temp = 131.19259617944493
-				tempExt = 131.17702797315428
+				temp = 164.43197460034236
+				tempExt = 160.92385328255796
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7747,23 +7627,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -7788,8 +7651,8 @@ GAME
 				srfN = srfAttach, 8
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19256488722979
-				tempExt = 131.16669692056166
+				temp = 164.90519704198786
+				tempExt = 161.05245074477762
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7810,13 +7673,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -7842,23 +7702,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -7893,8 +7736,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19477568118819
-				tempExt = 131.1667979371646
+				temp = 165.55945803520086
+				tempExt = 160.64224794259505
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -7915,11 +7758,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -7978,8 +7820,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 131.19316103458468
-				tempExt = 131.16534444496938
+				temp = 165.17668257123216
+				tempExt = 160.99686683667866
 				tempExtUnexp = 126.74073740696373
 				expt = 0.5
 				state = 0
@@ -7997,23 +7839,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -8039,8 +7864,8 @@ GAME
 				srfN = srfAttach, 12
 				mass = 0.0149999997
 				shielded = False
-				temp = 131.19084791237177
-				tempExt = 131.16381803478572
+				temp = 164.43298489536647
+				tempExt = 160.93864863229413
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8091,23 +7916,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -8132,8 +7940,8 @@ GAME
 				srfN = srfAttach, 12
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19241958103399
-				tempExt = 131.17205682321384
+				temp = 164.90560283387629
+				tempExt = 161.05871870061574
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8154,13 +7962,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8186,23 +7991,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8237,8 +8025,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19516089707776
-				tempExt = 131.17834889426538
+				temp = 165.55936992880456
+				tempExt = 160.63181884112905
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8259,11 +8047,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -8322,8 +8109,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 131.19651408009554
-				tempExt = 131.20794033333968
+				temp = 165.17547922783868
+				tempExt = 160.94964921547688
 				tempExtUnexp = 232.89759645090214
 				expt = 0.5
 				state = 0
@@ -8341,23 +8128,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -8383,8 +8153,8 @@ GAME
 				srfN = srfAttach, 16
 				mass = 0.0149999997
 				shielded = False
-				temp = 131.19789208055667
-				tempExt = 131.21197661404258
+				temp = 164.42785327152245
+				tempExt = 160.86275809818886
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8435,23 +8205,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -8476,8 +8229,8 @@ GAME
 				srfN = srfAttach, 16
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19629405852524
-				tempExt = 131.19283463952746
+				temp = 164.90360603905594
+				tempExt = 161.02905397149794
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8498,13 +8251,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8530,23 +8280,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8579,8 +8312,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19467907867875
-				tempExt = 131.18802491519739
+				temp = 165.18580312589489
+				tempExt = 160.16269351504945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8601,13 +8334,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8633,23 +8363,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8682,8 +8395,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19373960308675
-				tempExt = 131.16670920623102
+				temp = 165.18580312589489
+				tempExt = 160.16269351504945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8704,13 +8417,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8736,23 +8446,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8785,8 +8478,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19373960308675
-				tempExt = 131.16670920623102
+				temp = 165.18580330167507
+				tempExt = 160.16269363106613
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8807,13 +8500,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8839,23 +8529,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8888,8 +8561,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19373960308675
-				tempExt = 131.16670920623102
+				temp = 165.18580312589489
+				tempExt = 160.16269351504945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -8910,13 +8583,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -8942,23 +8612,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -8989,8 +8642,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19533132135089
-				tempExt = 131.19622181745177
+				temp = 165.18580312589489
+				tempExt = 160.16269351504945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -9011,13 +8664,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -9043,23 +8693,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -9090,8 +8723,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19373960308675
-				tempExt = 131.16670920623102
+				temp = 165.18580312589489
+				tempExt = 160.16269351504945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -9112,13 +8745,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -9144,23 +8774,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -9192,8 +8805,8 @@ GAME
 				attN = bottom, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19329390110394
-				tempExt = 131.16726491295557
+				temp = 164.74255218498263
+				tempExt = 156.06759028963739
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -9279,23 +8892,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -9322,8 +8918,8 @@ GAME
 				attN = bottom, 27
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.1937109271002
-				tempExt = 131.18311115952108
+				temp = 163.48493876394647
+				tempExt = 150.72128551931547
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -9409,23 +9005,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -9454,8 +9033,8 @@ GAME
 				attN = bottom, 32
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19554275831126
-				tempExt = 131.19378878972364
+				temp = 165.47002081676214
+				tempExt = 137.97007902205738
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -9544,23 +9123,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -9586,8 +9148,8 @@ GAME
 				srfN = srfAttach, 27
 				mass = 0.0149999997
 				shielded = True
-				temp = 131.19570824999474
-				tempExt = 131.19570884081162
+				temp = 163.72543831519283
+				tempExt = 160.3320445852209
 				tempExtUnexp = 309.15550359956626
 				expt = 0.5
 				state = 0
@@ -9633,23 +9195,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -9680,8 +9225,8 @@ GAME
 				srfN = srfAttach, 27
 				mass = 0.0149999997
 				shielded = True
-				temp = 131.19570824999474
-				tempExt = 131.19570884081162
+				temp = 163.72543831519283
+				tempExt = 160.3320445852209
 				tempExtUnexp = 309.15550359956626
 				expt = 0.5
 				state = 0
@@ -9727,23 +9272,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -9776,8 +9304,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 131.19570759677353
-				tempExt = 131.19570884081162
+				temp = 162.77742612249395
+				tempExt = 159.58341910881916
 				tempExtUnexp = 309.15550359956626
 				expt = 0.5
 				state = 0
@@ -9847,23 +9375,6 @@ GAME
 					initialized = True
 					controlTransformName = 
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -9901,8 +9412,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 131.19570759677353
-				tempExt = 131.19570884081162
+				temp = 162.77742612249395
+				tempExt = 159.58341910881916
 				tempExtUnexp = 309.15550359956626
 				expt = 0.5
 				state = 0
@@ -9982,23 +9493,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -10025,8 +9519,8 @@ GAME
 				attN = bottom, 53
 				mass = 0.25
 				shielded = False
-				temp = 131.19530926878292
-				tempExt = 131.17650453599771
+				temp = 165.62730407163275
+				tempExt = 156.54236173501673
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10047,11 +9541,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10113,8 +9606,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19482218727828
-				tempExt = 131.17133296607864
+				temp = 165.53625606832841
+				tempExt = 160.69964335658639
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10135,11 +9628,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10198,8 +9690,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19280064200615
-				tempExt = 131.1684392728522
+				temp = 164.7526619588586
+				tempExt = 160.81590704291949
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10279,23 +9771,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -10325,8 +9800,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19535428041465
-				tempExt = 131.18898334473036
+				temp = 165.53619014388087
+				tempExt = 160.69480143687014
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10347,11 +9822,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10410,8 +9884,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19413129242085
-				tempExt = 131.18007871099749
+				temp = 164.75122813588987
+				tempExt = 160.79574410572292
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10491,23 +9965,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -10537,8 +9994,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19598501881416
-				tempExt = 131.20695459585141
+				temp = 165.53627419779451
+				tempExt = 160.70153064374355
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10559,11 +10016,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10622,8 +10078,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19563059876157
-				tempExt = 131.19216679164944
+				temp = 164.75318654499469
+				tempExt = 160.82426092672677
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10703,23 +10159,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -10749,8 +10188,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0625
 				shielded = False
-				temp = 131.19482218727828
-				tempExt = 131.17133296607864
+				temp = 165.5362388991235
+				tempExt = 160.69993201501055
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10771,11 +10210,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -10834,8 +10272,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19280064200615
-				tempExt = 131.1684392728522
+				temp = 164.75143370941547
+				tempExt = 160.79892734825367
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10915,23 +10353,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -10959,8 +10380,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -10981,13 +10402,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11013,23 +10431,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11062,8 +10463,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11084,13 +10485,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11116,23 +10514,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11165,8 +10546,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11187,13 +10568,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11219,23 +10597,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11268,8 +10629,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11290,13 +10651,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11322,23 +10680,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11371,8 +10712,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11393,13 +10734,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11425,23 +10763,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11474,8 +10795,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11496,13 +10817,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11528,23 +10846,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11577,8 +10878,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862003295066
+				tempExt = 160.21324740927028
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11599,13 +10900,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11631,23 +10929,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11680,8 +10961,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19434082616041
-				tempExt = 131.17276376324202
+				temp = 165.25862001007624
+				tempExt = 160.21324739417543
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11702,13 +10983,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -11734,23 +11012,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -11783,8 +11044,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19484705892518
-				tempExt = 131.17258264903447
+				temp = 165.5264365288082
+				tempExt = 160.32653148605812
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11802,23 +11063,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -11858,8 +11102,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19617096176293
-				tempExt = 131.21006235512831
+				temp = 165.5264365288082
+				tempExt = 160.32653148605812
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11877,23 +11121,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -11933,8 +11160,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19484705892518
-				tempExt = 131.17258264903447
+				temp = 165.5264365288082
+				tempExt = 160.32653148605812
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -11952,23 +11179,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12008,8 +11218,8 @@ GAME
 				srfN = srfAttach, 32
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19484705892518
-				tempExt = 131.17258264903447
+				temp = 165.52643955717292
+				tempExt = 160.32653243873
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12027,23 +11237,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12082,8 +11275,8 @@ GAME
 				attN = bottom, 32
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19383384859114
-				tempExt = 131.17110075347196
+				temp = 164.95374123324808
+				tempExt = 160.05256376252279
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12169,23 +11362,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -12213,8 +11389,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19462937438365
-				tempExt = 131.16691300214916
+				temp = 165.52104444620028
+				tempExt = 160.29497868074162
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12232,23 +11408,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12288,8 +11447,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19462937438365
-				tempExt = 131.16691300214916
+				temp = 165.5211069027724
+				tempExt = 160.29913499709963
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12307,23 +11466,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12363,8 +11505,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19462937438365
-				tempExt = 131.16691300214916
+				temp = 165.52104444620028
+				tempExt = 160.29497868074162
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12382,23 +11524,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12438,8 +11563,8 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19596093193456
-				tempExt = 131.20766692312694
+				temp = 165.52104444620028
+				tempExt = 160.29497868074162
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12457,23 +11582,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -12512,8 +11620,8 @@ GAME
 				attN = bottom, 59
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19377312275924
-				tempExt = 131.17947606946677
+				temp = 163.92133628506807
+				tempExt = 159.88153649443737
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12599,23 +11707,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -12642,8 +11733,8 @@ GAME
 				attN = bottom, 60
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.1954638469758
-				tempExt = 131.2038255061359
+				temp = 164.77356758808634
+				tempExt = 159.37371043879904
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12662,27 +11753,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 184.19725496758898
+					amount = 183.94070121856049
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -12716,8 +11790,8 @@ GAME
 				attN = top, 59
 				mass = 0.800000012
 				shielded = False
-				temp = 131.19641419989921
-				tempExt = 131.24098362778122
+				temp = 165.59368076447382
+				tempExt = 157.35105163873627
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -12932,23 +12006,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = RasterPropMonitorComputer
 					isEnabled = True
 					vesselDescription = The Hauler craft was designed to do just that: haul stuff into that deep dark vacuum we call "space"$$$Now with complimentary fuel tanks
@@ -13089,7 +12146,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 46.049313741897244
+					amount = 45.985175304640123
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -13135,8 +12192,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39699093122559
+				tempExt = 159.24401710019168
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13180,23 +12237,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13229,8 +12269,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691824642841
+				tempExt = 159.23984983597222
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13274,23 +12314,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13323,8 +12346,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691020549051
+				tempExt = 159.2398472889025
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13368,23 +12391,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13417,8 +12423,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691020549051
+				tempExt = 159.2398472889025
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13467,23 +12473,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -13509,8 +12498,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691020549051
+				tempExt = 159.2398472889025
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13554,23 +12543,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13601,8 +12573,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691020549051
+				tempExt = 159.2398472889025
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13651,23 +12623,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -13693,8 +12648,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691020549051
+				tempExt = 159.2398472889025
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13738,23 +12693,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13785,8 +12723,8 @@ GAME
 				srfN = srfAttach, 60
 				mass = 0.0299999993
 				shielded = False
-				temp = 131.19666251198782
-				tempExt = 131.21707463136136
+				temp = 165.39691142069537
+				tempExt = 159.23984767383399
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13830,23 +12768,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -13878,8 +12799,8 @@ GAME
 				attN = bottom, 70
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19624477188896
-				tempExt = 131.20663235033726
+				temp = 165.08607803764266
+				tempExt = 160.82454887066461
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13933,23 +12854,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -13976,8 +12880,8 @@ GAME
 				attN = bottom, 71
 				mass = 0.25
 				shielded = False
-				temp = 131.19598494148232
-				tempExt = 131.21572774636957
+				temp = 165.6720538323099
+				tempExt = 162.39203346692969
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -13998,11 +12902,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -14061,8 +12964,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.5
 				shielded = False
-				temp = 131.1970281623243
-				tempExt = 131.21167754725377
+				temp = 165.36306067588998
+				tempExt = 163.52517546669816
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
@@ -14229,23 +13132,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -14273,8 +13159,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19590223942689
-				tempExt = 131.19981901091663
+				temp = 165.46449013013847
+				tempExt = 162.28653241588623
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14318,23 +13204,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -14367,8 +13236,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19590223942689
-				tempExt = 131.19981901091663
+				temp = 165.46449013013847
+				tempExt = 162.28653241588623
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14412,23 +13281,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -14461,8 +13313,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19590223942689
-				tempExt = 131.19981901091663
+				temp = 165.46449013013847
+				tempExt = 162.28653241588623
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14506,23 +13358,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -14555,8 +13390,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19590223942689
-				tempExt = 131.19981901091663
+				temp = 165.46449508165546
+				tempExt = 162.28653404530928
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14605,23 +13440,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -14646,8 +13464,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19556707947743
-				tempExt = 131.19122118598463
+				temp = 165.3785410927596
+				tempExt = 162.22784165929741
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14740,23 +13558,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -14781,8 +13582,8 @@ GAME
 				srfN = srfAttach, 70
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19556707947743
-				tempExt = 131.19122118598463
+				temp = 165.3785410927596
+				tempExt = 162.22784165929741
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14875,23 +13676,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -14919,8 +13703,8 @@ GAME
 				srfN = srfAttach, 69
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19573719470537
-				tempExt = 131.19221240366758
+				temp = 164.14563799820763
+				tempExt = 160.55598541357676
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -14939,27 +13723,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 92.098627483794488
+					amount = 91.970350609280246
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -14994,8 +13761,8 @@ GAME
 				srfN = srfAttach, 69
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19573719470537
-				tempExt = 131.19221240366758
+				temp = 164.14553739169438
+				tempExt = 160.55586000925268
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15014,27 +13781,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 92.098627483794488
+					amount = 91.970350609280246
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -15069,8 +13819,8 @@ GAME
 				srfN = srfAttach, 69
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19573719470537
-				tempExt = 131.19221240366758
+				temp = 164.14553739169438
+				tempExt = 160.55586000925268
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15089,27 +13839,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 92.098627483794488
+					amount = 91.970350609280246
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -15144,8 +13877,8 @@ GAME
 				srfN = srfAttach, 69
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19573719470537
-				tempExt = 131.19221240366758
+				temp = 164.14833618153952
+				tempExt = 160.58193665537698
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15164,27 +13897,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 92.098627483794488
+					amount = 91.970350609280246
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -15218,8 +13934,8 @@ GAME
 				attN = bottom, 83
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19135501197712
-				tempExt = 131.17099068932367
+				temp = 164.38696935583758
+				tempExt = 159.00345520060887
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15305,23 +14021,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -15348,8 +14047,8 @@ GAME
 				attN = top, 82
 				mass = 0.125
 				shielded = False
-				temp = 131.19385870612521
-				tempExt = 131.18073946472691
+				temp = 164.94552090711611
+				tempExt = 160.38654323959781
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15367,23 +14066,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -15411,8 +14093,8 @@ GAME
 				attN = bottom, 85
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.19204724544326
-				tempExt = 131.17332527777617
+				temp = 164.56257318663799
+				tempExt = 160.72641659947178
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15431,27 +14113,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 184.19725496758898
+					amount = 183.94070121856049
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -15485,8 +14150,8 @@ GAME
 				attN = top, 84
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19204265661077
-				tempExt = 131.17584435701232
+				temp = 164.50735936391743
+				tempExt = 160.67917702072211
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
@@ -15624,23 +14289,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = TrajectoriesVesselSettings
 					isEnabled = True
 					Initialized = False
@@ -15696,7 +14344,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 9.2098627483866924
+					amount = 9.1970350609370559
 					maxAmount = 10
 					flowState = True
 					isTweakable = True
@@ -15737,8 +14385,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397231534738
+				tempExt = 160.66663786702449
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15759,13 +14407,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -15791,23 +14436,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -15840,8 +14468,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397176543832
+				tempExt = 160.66663735428054
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15862,13 +14490,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -15894,23 +14519,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -15943,8 +14551,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397176543832
+				tempExt = 160.66663735428054
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -15965,13 +14573,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -15997,23 +14602,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16046,8 +14634,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397193530391
+				tempExt = 160.66663751266594
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16068,13 +14656,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -16100,23 +14685,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16149,8 +14717,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397176543832
+				tempExt = 160.66663735428054
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16171,13 +14739,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -16203,23 +14768,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16252,8 +14800,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397229114226
+				tempExt = 160.66663784445512
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16274,13 +14822,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -16306,23 +14851,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16355,8 +14883,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33399329364386
+				tempExt = 160.66736532429462
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16377,13 +14905,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -16409,23 +14934,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16458,8 +14966,8 @@ GAME
 				srfN = srfAttach, 85
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1913724478278
-				tempExt = 131.17077589100191
+				temp = 164.33397176543832
+				tempExt = 160.66663735428054
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16480,13 +14988,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 186941.51549948833
+					launchUT = 1014645.6890890301
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -16512,23 +15017,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -16560,8 +15048,8 @@ GAME
 				attN = bottom, 95
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.19285016420531
-				tempExt = 131.17465052591376
+				temp = 164.43171946051964
+				tempExt = 160.49838903384762
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16580,27 +15068,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 184.19725496758898
+					amount = 183.94070121856049
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -16634,8 +15105,8 @@ GAME
 				attN = bottom, 94
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19433816707982
-				tempExt = 131.19077069211005
+				temp = 164.91660081696583
+				tempExt = 160.27598580107644
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16715,23 +15186,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -16758,8 +15212,8 @@ GAME
 				attN = top, 95
 				mass = 0.803000033
 				shielded = False
-				temp = 131.19590397454442
-				tempExt = 131.20870507818123
+				temp = 165.60049490836067
+				tempExt = 158.34097306304818
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -16963,23 +15417,6 @@ GAME
 					name = ModuleLiftingSurface
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -17266,7 +15703,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 46.049313741897244
+					amount = 45.985175304640123
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -17317,8 +15754,8 @@ GAME
 				attN = top, 96
 				mass = 0.600000024
 				shielded = False
-				temp = 131.19612818172391
-				tempExt = 131.20664496285065
+				temp = 165.33512862834351
+				tempExt = 160.92194750233
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17503,23 +15940,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = RasterPropMonitorComputer
 					isEnabled = True
 					vesselDescription = Ever need parts to connect a space station together? Well look no further, as the Hauler - Hub does exactly that!
@@ -17671,7 +16091,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 46.049313741897244
+					amount = 45.985175304640123
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -17716,8 +16136,8 @@ GAME
 				attN = bottom, 99
 				mass = 0.25
 				shielded = False
-				temp = 131.195868680101
-				tempExt = 131.21188713627072
+				temp = 165.67661400662175
+				tempExt = 162.15364474818512
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17738,11 +16158,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -17801,8 +16220,8 @@ GAME
 				attN = bottom, 100
 				mass = 0.5
 				shielded = False
-				temp = 131.1950777826263
-				tempExt = 131.18667995573924
+				temp = 165.34438613129328
+				tempExt = 163.22777776643403
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -17969,23 +16388,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -18012,8 +16414,8 @@ GAME
 				attN = bottom, 101
 				mass = 0.0399999991
 				shielded = False
-				temp = 131.19612118188945
-				tempExt = 131.21698751525972
+				temp = 165.61267153305815
+				tempExt = 162.70259348424386
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18096,23 +16498,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -18139,8 +16524,8 @@ GAME
 				attN = bottom, 102
 				mass = 0.25
 				shielded = False
-				temp = 131.196364909886
-				tempExt = 131.24754398930611
+				temp = 165.6909369127971
+				tempExt = 162.19131832259538
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18161,11 +16546,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -18224,8 +16608,8 @@ GAME
 				attN = bottom, 103
 				mass = 0.25
 				shielded = False
-				temp = 131.19634061455184
-				tempExt = 131.23333630347526
+				temp = 165.68586638917699
+				tempExt = 162.359228701853
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18246,11 +16630,10 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
+					name = ModulePartVariants
 					isEnabled = True
+					useVariantMass = False
 					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -18309,8 +16692,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.5
 				shielded = False
-				temp = 131.20086997795929
-				tempExt = 131.26345347860783
+				temp = 165.36107389381644
+				tempExt = 163.42979982528854
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
@@ -18477,23 +16860,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -18520,8 +16886,8 @@ GAME
 				srfN = srfAttach, 102
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.22378829019195
-				tempExt = 131.27957358067869
+				temp = 162.69839943431029
+				tempExt = 161.26143260236034
 				tempExtUnexp = 4
 				expt = 0.100000001
 				state = 0
@@ -18545,23 +16911,6 @@ GAME
 					name = ModuleLiftingSurface
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -18598,8 +16947,8 @@ GAME
 				srfN = srfAttach, 102
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.19572190314844
-				tempExt = 131.1967958728514
+				temp = 162.70579367368413
+				tempExt = 161.29794418747525
 				tempExtUnexp = 4
 				expt = 0.100000001
 				state = 0
@@ -18623,23 +16972,6 @@ GAME
 					name = ModuleLiftingSurface
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -18676,8 +17008,8 @@ GAME
 				srfN = srfAttach, 102
 				mass = 0.00999999978
 				shielded = False
-				temp = 131.19572190314844
-				tempExt = 131.1967958728514
+				temp = 162.70057664696571
+				tempExt = 161.27208919153301
 				tempExtUnexp = 4
 				expt = 0.100000001
 				state = 0
@@ -18701,23 +17033,6 @@ GAME
 					name = ModuleLiftingSurface
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -18755,8 +17070,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566733302801
-				tempExt = 131.19637765456437
+				temp = 165.46186572968367
+				tempExt = 162.09510327107645
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18800,23 +17115,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -18849,8 +17147,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566733302801
-				tempExt = 131.19637765456437
+				temp = 165.46186572968367
+				tempExt = 162.09510327107645
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18894,23 +17192,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -18943,8 +17224,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566733302801
-				tempExt = 131.19637765456437
+				temp = 165.46186572968367
+				tempExt = 162.09510327107645
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -18988,23 +17269,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -19037,8 +17301,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566733302801
-				tempExt = 131.19637765456437
+				temp = 165.46186572968367
+				tempExt = 162.09510327107645
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19087,23 +17351,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -19129,8 +17376,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19560696772328
-				tempExt = 131.19478016017609
+				temp = 165.54571277920888
+				tempExt = 162.11275875317128
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19148,23 +17395,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -19202,8 +17432,8 @@ GAME
 				srfN = srfAttach, 98
 				mass = 0.0199999996
 				shielded = False
-				temp = 131.19663012173643
-				tempExt = 131.20220648291371
+				temp = 165.54570982710885
+				tempExt = 162.11275770619852
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19221,23 +17451,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -19277,8 +17490,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566560475755
-				tempExt = 131.19343633184792
+				temp = 165.41409683151201
+				tempExt = 161.56481456981163
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19322,23 +17535,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -19371,8 +17567,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566560475755
-				tempExt = 131.19343633184792
+				temp = 165.41409683151201
+				tempExt = 161.56481456981163
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19416,23 +17612,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -19465,8 +17644,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566560475755
-				tempExt = 131.19343633184792
+				temp = 165.41409683151201
+				tempExt = 161.56481456981163
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19510,23 +17689,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -19559,8 +17721,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.0500000007
 				shielded = False
-				temp = 131.19566560475755
-				tempExt = 131.19343633184792
+				temp = 165.41409683151201
+				tempExt = 161.56481456981163
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19609,23 +17771,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -19651,8 +17796,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19536229315977
-				tempExt = 131.18514793147361
+				temp = 165.25577583181496
+				tempExt = 161.42924314518251
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19735,23 +17880,6 @@ GAME
 					name = ModuleDragModifier
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -19787,8 +17915,8 @@ GAME
 				srfN = srfAttach, 97
 				mass = 0.100000001
 				shielded = False
-				temp = 131.19536229315977
-				tempExt = 131.18514793147361
+				temp = 165.25573529086626
+				tempExt = 161.42861725036403
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19871,23 +17999,6 @@ GAME
 					name = ModuleDragModifier
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
 					EVENTS
 					{
 					}
@@ -19924,8 +18035,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0799999982
 				shielded = False
-				temp = 131.19469468246214
-				tempExt = 131.17750627682494
+				temp = 165.18517181240006
+				tempExt = 161.15716597795327
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -19963,23 +18074,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -20005,8 +18099,8 @@ GAME
 				attN = bottom, 119
 				mass = 0.169999987
 				shielded = False
-				temp = 131.1946198041671
-				tempExt = 131.18698467564397
+				temp = 164.96288175421336
+				tempExt = 161.2620970205914
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -20624,23 +18718,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -20667,8 +18744,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0799999982
 				shielded = False
-				temp = 131.19611214902187
-				tempExt = 131.2100967375674
+				temp = 165.41076758366577
+				tempExt = 161.37555260117603
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -20706,23 +18783,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -20748,8 +18808,8 @@ GAME
 				attN = bottom, 121
 				mass = 0.50000006
 				shielded = False
-				temp = 131.19832658878644
-				tempExt = 131.25515545589369
+				temp = 165.46266272124367
+				tempExt = 161.59897786314178
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -21325,23 +19385,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -21367,8 +19410,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19819149922401
-				tempExt = 131.21682551024119
+				temp = 164.19605133835253
+				tempExt = 160.70490407827219
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -21439,23 +19482,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -21480,8 +19506,8 @@ GAME
 				srfN = srfAttach, 83
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.19215998694793
-				tempExt = 131.17270990274031
+				temp = 164.42991934682263
+				tempExt = 160.51984434031945
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -21530,23 +19556,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -21572,8 +19581,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 131.1916292375889
-				tempExt = 131.17433720253723
+				temp = 164.31183935488818
+				tempExt = 160.75217891524397
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -21639,23 +19648,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 0
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -27091,13 +25083,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
-				ECC = 1
-				INC = 0.1461234782186773
+				SMA = 300074.00378309382
+				ECC = 0.99999999999999989
+				INC = 0.14612347822366575
 				LPE = 90
-				LAN = 346.94776208169736
-				MNA = 0
-				EPH = 1014446.5090888446
+				LAN = 359.37686392426571
+				MNA = 3.1415926207170166
+				EPH = 1015190.5090895375
 				REF = 1
 			}
 			PART
@@ -27345,13 +25337,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
-				ECC = 1
+				SMA = 300074.02369946946
+				ECC = 0.99999999999999989
 				INC = 0.14605930131754877
 				LPE = 90
-				LAN = 346.94769875739161
-				MNA = 0
-				EPH = 1014446.5090888446
+				LAN = 359.37680059995995
+				MNA = 3.1415926207170166
+				EPH = 1015190.5090895375
 				REF = 1
 			}
 			PART
@@ -28204,13 +26196,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 100919.55345331728
+				SMA = 100919.55345331716
 				ECC = 0.99999999999999989
 				INC = 3.4853340740490926
 				LPE = 270
-				LAN = 99.131149718992049
-				MNA = -3.1415926207170166
-				EPH = 1014446.5090888446
+				LAN = 101.05827280182245
+				MNA = 3.1415926207170166
+				EPH = 1015190.5090895375
 				REF = 2
 			}
 			PART
@@ -28396,13 +26388,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 102454.42937879101
-				ECC = 0.99999999999999989
-				INC = 7.3505308600996919
+				SMA = 0
+				ECC = 1
+				INC = 7.3505308601071997
 				LPE = 90
-				LAN = 99.252257042786994
-				MNA = 3.1415926207170166
-				EPH = 1014446.5090888446
+				LAN = 101.17938012561797
+				MNA = 0
+				EPH = 1015190.5090895375
 				REF = 2
 			}
 			PART
@@ -29395,13 +27387,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
-				ECC = 1
-				INC = 7.3506831200652423
+				SMA = 102455.15419472489
+				ECC = 0.99999999999999989
+				INC = 7.3506831200649945
 				LPE = 90
-				LAN = 99.260606685456423
-				MNA = 0
-				EPH = 1014446.5090888446
+				LAN = 101.18772976828745
+				MNA = 3.1415926207170166
+				EPH = 1015190.5090895375
 				REF = 2
 			}
 			PART
@@ -30849,38 +28841,38 @@ GAME
 			vesselSpawning = False
 			launchedFrom = Runway
 			landedAt = KSC
-			displaylandedAt = KSC
+			displaylandedAt = #autoLOC_300900
 			splashed = False
-			met = 706321.7112442106
+			met = 707035.97124487581
 			lct = 308113.5178446236
-			lastUT = 1014435.2690888342
+			lastUT = 1015149.5290894994
 			distanceTraveled = 0
 			root = 0
-			lat = -0.058765826232016566
-			lon = -74.611830049438751
-			alt = 65.826192628126591
-			hgt = 0.91261673
-			nrm = -0.00630758703,-0.00503268838,-0.999967635
-			rot = 0.0895690098,-0.103160866,-0.66835016,0.731193244
-			CoM = 0.000220952556,0.281995893,0.0675303936
+			lat = -0.058793501603349993
+			lon = -74.612159935307133
+			alt = 65.667836436070502
+			hgt = 0.907903254
+			nrm = 0.0104241744,0.00762942433,-0.999916792
+			rot = 0.0906226262,-0.0928490162,-0.667841911,0.732907891
+			CoM = 0.000232506543,0.281972796,0.0679529011
 			stg = 0
 			prst = False
 			ref = 1712860244
 			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = 0.4418778
-			cHdg = -3.090747
+			cPch = 0.3750003
+			cHdg = 0.7374997
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300032.87864333938
+				SMA = 300032.80101127573
 				ECC = 0.99999999999999989
-				INC = 0.058763370740493287
+				INC = 0.058791122555218511
 				LPE = 90
-				LAN = 312.5104595831678
-				MNA = -3.1415926207170166
-				EPH = 1014446.5090888446
+				LAN = 324.93923162506627
+				MNA = 3.1415926207170166
+				EPH = 1015190.5090895375
 				REF = 1
 			}
 			PART
@@ -30908,9 +28900,9 @@ GAME
 				attN = bottom, -1
 				mass = 1
 				shielded = False
-				temp = 310.52831878892749
-				tempExt = 310.77987668503857
-				tempExtUnexp = 310.78000761456474
+				temp = 310.9064977834081
+				tempExt = 311.17094301369008
+				tempExtUnexp = 311.17100182653093
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31023,23 +29015,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = SCANRPMStorage
 					isEnabled = True
 					stagingEnabled = True
@@ -31132,9 +29107,9 @@ GAME
 				attN = bottom, -1
 				mass = 0.0700000003
 				shielded = False
-				temp = 310.49832243816002
-				tempExt = 310.73355244052379
-				tempExtUnexp = 310.73361117711073
+				temp = 310.89148412879064
+				tempExt = 311.16533823439306
+				tempExtUnexp = 311.16538461429786
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31206,23 +29181,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = ModuleTripLogger
 					isEnabled = True
 					stagingEnabled = True
@@ -31266,9 +29224,9 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.56056672030746
-				tempExt = 310.73294654082633
-				tempExtUnexp = 310.73295996517021
+				temp = 310.95043795595728
+				tempExt = 311.15542545286183
+				tempExtUnexp = 311.15544992079526
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31338,23 +29296,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -31381,9 +29322,9 @@ GAME
 				attN = top, 4
 				mass = 0.125
 				shielded = False
-				temp = 310.39573093989372
-				tempExt = 310.58447912438453
-				tempExtUnexp = 310.58446046326316
+				temp = 310.7601576080441
+				tempExt = 310.98081118936329
+				tempExtUnexp = 310.9807977621428
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31400,23 +29341,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -31444,9 +29368,9 @@ GAME
 				attN = bottom, 3
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.43159382396374
-				tempExt = 310.5150215300954
-				tempExtUnexp = 310.5150038412915
+				temp = 310.86854093472874
+				tempExt = 310.93945839857946
+				tempExtUnexp = 310.93944124750794
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31463,23 +29387,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31518,9 +29425,9 @@ GAME
 				attN = bottom, 4
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.4298667707281
-				tempExt = 310.47925180572724
-				tempExtUnexp = 310.47923389671291
+				temp = 310.86759770053385
+				tempExt = 310.91817940970753
+				tempExtUnexp = 310.91816126834345
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31537,23 +29444,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31592,9 +29482,9 @@ GAME
 				attN = bottom, 5
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.42851268438733
-				tempExt = 310.46441676724726
-				tempExtUnexp = 310.46439871235731
+				temp = 310.86678539675182
+				tempExt = 310.90946386347679
+				tempExtUnexp = 310.90944564605161
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31611,23 +29501,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31666,9 +29539,9 @@ GAME
 				attN = bottom, 6
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.42820998471723
-				tempExt = 310.45938173694083
-				tempExtUnexp = 310.45936363856197
+				temp = 310.86739493173087
+				tempExt = 310.90674317947651
+				tempExtUnexp = 310.90672496373759
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31685,23 +29558,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31740,9 +29596,9 @@ GAME
 				attN = bottom, 3
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.49657425815508
-				tempExt = 310.54984318740577
-				tempExtUnexp = 310.54982668164905
+				temp = 310.88068583358961
+				tempExt = 310.946757400509
+				tempExtUnexp = 310.94674032445528
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31759,23 +29615,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31814,9 +29653,9 @@ GAME
 				attN = bottom, 8
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.49588937845658
-				tempExt = 310.5301445874959
-				tempExtUnexp = 310.53012846971677
+				temp = 310.87998666210416
+				tempExt = 310.93164192096089
+				tempExtUnexp = 310.93162390551936
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31833,23 +29672,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31888,9 +29710,9 @@ GAME
 				attN = bottom, 11
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.49639264449138
-				tempExt = 310.53570372524064
-				tempExtUnexp = 310.53569119065526
+				temp = 310.87940331287291
+				tempExt = 310.92869236097869
+				tempExtUnexp = 310.92867445357518
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31907,23 +29729,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -31962,9 +29767,9 @@ GAME
 				attN = bottom, 12
 				mass = 0.00999999978
 				shielded = False
-				temp = 310.49698644668382
-				tempExt = 310.55382136536201
-				tempExtUnexp = 310.55382985588403
+				temp = 310.87952516667627
+				tempExt = 310.94856603905936
+				tempExtUnexp = 310.94854803574884
 				expt = 0.5
 				state = 0
 				attached = True
@@ -31981,23 +29786,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -32036,9 +29824,9 @@ GAME
 				attN = top, 13
 				mass = 0.100000001
 				shielded = False
-				temp = 310.49682065608215
-				tempExt = 310.56930758252577
-				tempExtUnexp = 310.56930018413084
+				temp = 310.87291400889131
+				tempExt = 310.98260411417539
+				tempExtUnexp = 310.98258697050443
 				expt = 0
 				state = 0
 				attached = True
@@ -32175,23 +29963,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = TrajectoriesVesselSettings
 					isEnabled = True
 					Initialized = True
@@ -32283,9 +30054,9 @@ GAME
 				attN = bottom01, 12
 				mass = 0.0299999993
 				shielded = False
-				temp = 310.5045874992112
-				tempExt = 310.60086916308887
-				tempExtUnexp = 310.6008852795112
+				temp = 310.88328721304134
+				tempExt = 311.03205246777139
+				tempExtUnexp = 311.03204793280236
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32302,23 +30073,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -32344,9 +30098,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.00400000019
 				shielded = False
-				temp = 310.49870180066665
-				tempExt = 310.58382651305732
-				tempExtUnexp = 310.58382162033496
+				temp = 310.87481538794958
+				tempExt = 311.00606542685955
+				tempExtUnexp = 311.0060483635346
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32371,23 +30125,6 @@ GAME
 					current = 1
 					showCones = False
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
 					EVENTS
 					{
 					}
@@ -32423,9 +30160,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0149999997
 				shielded = False
-				temp = 310.508872539739
-				tempExt = 310.57983381095545
-				tempExtUnexp = 310.57982804254959
+				temp = 310.88891472309155
+				tempExt = 310.9985255340099
+				tempExtUnexp = 310.99850848564938
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32470,23 +30207,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -32517,9 +30237,9 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0149999997
 				shielded = False
-				temp = 310.50870236877279
-				tempExt = 310.57969473052384
-				tempExtUnexp = 310.57968882383688
+				temp = 310.88890417278196
+				tempExt = 310.99843151381117
+				tempExtUnexp = 310.99841446584321
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32569,23 +30289,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -32611,9 +30314,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.59178214478732
-				tempExt = 310.719292741917
-				tempExtUnexp = 310.7192695704133
+				temp = 310.97750137936919
+				tempExt = 311.11432264311492
+				tempExtUnexp = 311.11431025324248
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32662,23 +30365,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -32709,9 +30395,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.59179190413363
-				tempExt = 310.71929587772223
-				tempExtUnexp = 310.71927270902648
+				temp = 310.97750137950277
+				tempExt = 311.11432264315795
+				tempExtUnexp = 311.11431025328557
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32760,23 +30446,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -32807,9 +30476,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.59178214478732
-				tempExt = 310.719292741917
-				tempExtUnexp = 310.7192695704133
+				temp = 310.97750137936919
+				tempExt = 311.11432264311492
+				tempExtUnexp = 311.11431025324248
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32858,23 +30527,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -32905,9 +30557,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.59178214478732
-				tempExt = 310.719292741917
-				tempExtUnexp = 310.7192695704133
+				temp = 310.97750137936919
+				tempExt = 311.11432264311492
+				tempExtUnexp = 311.11431025324248
 				expt = 0.5
 				state = 0
 				attached = True
@@ -32961,23 +30613,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -33002,9 +30637,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.55551093247578
-				tempExt = 310.70895129546551
-				tempExtUnexp = 310.70892893221946
+				temp = 310.93504238193168
+				tempExt = 311.1020344976323
+				tempExtUnexp = 311.10202230517228
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33068,23 +30703,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -33109,9 +30727,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.52604918831548
-				tempExt = 310.72566969453351
-				tempExtUnexp = 310.72564690824953
+				temp = 310.9038964410035
+				tempExt = 311.11804066716627
+				tempExtUnexp = 311.11802891611546
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33175,23 +30793,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -33216,9 +30817,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0149999997
 				shielded = False
-				temp = 310.68170937563366
-				tempExt = 310.8579683788227
-				tempExtUnexp = 310.85811524226256
+				temp = 311.05951292649434
+				tempExt = 311.23890876131037
+				tempExtUnexp = 311.23896944541843
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33263,23 +30864,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -33309,9 +30893,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0149999997
 				shielded = False
-				temp = 310.73785489649708
-				tempExt = 310.948766839634
-				tempExtUnexp = 310.9490324098158
+				temp = 311.03215911215955
+				tempExt = 311.18920300662023
+				tempExtUnexp = 311.18923328721917
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33356,23 +30940,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -33403,9 +30970,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 310.50406396178903
-				tempExt = 310.71044070622588
-				tempExtUnexp = 310.71044557383266
+				temp = 310.88445890249818
+				tempExt = 311.10227320174982
+				tempExtUnexp = 311.10227252696188
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33430,7 +30997,7 @@ GAME
 					wheelType = MOTORIZED
 					isGrounded = True
 					autoFriction = True
-					frictionMultiplier = 0.999590039
+					frictionMultiplier = 1.00040996
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33451,9 +31018,10 @@ GAME
 					name = ModuleWheelSuspension
 					isEnabled = True
 					springTweakable = 1
-					damperTweakable = 1
-					suspensionPos = (-0.0849993303, 0.0665386617, -1.86264515E-06)
-					autoBoost = 0.815999031
+					damperTweakable = 1.00048769
+					autoSpringDamper = True
+					suspensionPos = (-0.0850001127, 0.0917935744, -1.49011576E-08)
+					autoBoost = 0.787998974
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33571,23 +31139,6 @@ GAME
 					name = ModuleTestSubject
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
 					EVENTS
 					{
 					}
@@ -33623,9 +31174,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 310.49311781598078
-				tempExt = 310.68986775714598
-				tempExtUnexp = 310.68984554460201
+				temp = 310.87435583624841
+				tempExt = 311.08593584020508
+				tempExtUnexp = 311.0859245469893
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33650,7 +31201,7 @@ GAME
 					wheelType = MOTORIZED
 					isGrounded = True
 					autoFriction = True
-					frictionMultiplier = 0.999590039
+					frictionMultiplier = 1.00040996
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33671,9 +31222,10 @@ GAME
 					name = ModuleWheelSuspension
 					isEnabled = True
 					springTweakable = 1
-					damperTweakable = 1
-					suspensionPos = (-0.0849831104, 0.0761787519, 8.46898001E-06)
-					autoBoost = 0.69199878
+					damperTweakable = 1.00048769
+					autoSpringDamper = True
+					suspensionPos = (-0.0850000829, 0.07540676, -1.53668154E-08)
+					autoBoost = 0.763998628
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33801,23 +31353,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -33843,9 +31378,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 310.49945305312895
-				tempExt = 310.72392128874731
-				tempExtUnexp = 310.72394991253776
+				temp = 310.88579074319273
+				tempExt = 311.09666393980314
+				tempExtUnexp = 311.09666004464657
 				expt = 0.5
 				state = 0
 				attached = True
@@ -33870,7 +31405,7 @@ GAME
 					wheelType = MOTORIZED
 					isGrounded = True
 					autoFriction = True
-					frictionMultiplier = 0.999590039
+					frictionMultiplier = 1.00040996
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33891,9 +31426,10 @@ GAME
 					name = ModuleWheelSuspension
 					isEnabled = True
 					springTweakable = 1
-					damperTweakable = 1
-					suspensionPos = (-0.0849985555, 0.0755663067, 7.99447298E-06)
-					autoBoost = 0.695999503
+					damperTweakable = 1.00048769
+					autoSpringDamper = True
+					suspensionPos = (-0.0850000679, 0.0780400708, 5.215405E-08)
+					autoBoost = 0.615999341
 					stagingEnabled = True
 					EVENTS
 					{
@@ -34011,23 +31547,6 @@ GAME
 					name = ModuleTestSubject
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
 					EVENTS
 					{
 					}
@@ -34063,9 +31582,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 310.51917950020999
-				tempExt = 310.75218523024324
-				tempExtUnexp = 310.75224904183
+				temp = 310.89592162004817
+				tempExt = 311.12384322678867
+				tempExtUnexp = 311.12385624677569
 				expt = 0.5
 				state = 0
 				attached = True
@@ -34090,7 +31609,7 @@ GAME
 					wheelType = MOTORIZED
 					isGrounded = True
 					autoFriction = True
-					frictionMultiplier = 0.999590039
+					frictionMultiplier = 1.00040996
 					stagingEnabled = True
 					EVENTS
 					{
@@ -34111,9 +31630,10 @@ GAME
 					name = ModuleWheelSuspension
 					isEnabled = True
 					springTweakable = 1
-					damperTweakable = 1
-					suspensionPos = (-0.0849828944, 0.0852491036, 8.82055429E-06)
-					autoBoost = 0.79399848
+					damperTweakable = 1.00048769
+					autoSpringDamper = True
+					suspensionPos = (-0.0850000903, 0.0616579913, -4.65661093E-10)
+					autoBoost = 0.741998374
 					stagingEnabled = True
 					EVENTS
 					{
@@ -34241,23 +31761,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -34282,9 +31785,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 310.49745503800131
-				tempExt = 310.71727648824941
-				tempExtUnexp = 310.71725356901231
+				temp = 310.87635076199513
+				tempExt = 311.10969250908971
+				tempExtUnexp = 311.10968081736735
 				expt = 0.5
 				state = 0
 				attached = True
@@ -34302,23 +31805,6 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			ACTIONGROUPS
 			{
@@ -34327,7 +31813,7 @@ GAME
 				Light = True, 308117.897844628
 				RCS = False, 0
 				SAS = True, 308110.197844621
-				Brakes = True, 308360.831965603
+				Brakes = True, 1014945.92908931
 				Abort = False, 0
 				Custom01 = False, 0
 				Custom02 = False, 0
@@ -34353,9 +31839,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = 0
-				yaw = 0
-				roll = 0
+				pitch = 0.482109696
+				yaw = 0.00713182101
+				roll = 0.466118574
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -34390,36 +31876,36 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 195086.83674906625
+			met = 706714.01712394482
 			lct = 308467.59196558449
-			lastUT = 503554.44871465076
-			distanceTraveled = 4911672.8632956129
+			lastUT = 1015181.6290895293
+			distanceTraveled = 5004516.7272413829
 			root = 0
-			lat = -64.380705117278865
-			lon = -90.060401648441399
-			alt = 300214.53946581425
+			lat = 30.297136668001801
+			lon = -176.20904536887568
+			alt = 247826.14424852689
 			hgt = -1
-			nrm = 0.00195652246,-0.809469938,0.587157965
-			rot = -0.511516392,0.0375896618,-0.00218965905,-0.858448088
-			CoM = 0.0201660693,-0.422518224,-0.0062699914
+			nrm = -0.880353689,0.218240619,-0.421128035
+			rot = -0.511520982,0.0327843539,0.000668975175,-0.858644962
+			CoM = 0.0201646239,-0.422516942,-0.00627186894
 			stg = 0
 			prst = False
 			ref = 3215893346
 			ctrl = True
 			PQSMin = 2
 			PQSMax = 9
-			cPch = 0.1167042
-			cHdg = 10.33751
+			cPch = 0.3062501
+			cHdg = -2.36875
 			cMod = 0
 			ORBIT
 			{
-				SMA = 876124.85035575321
-				ECC = 0.032349208209955002
-				INC = 89.344890382676255
-				LPE = 146.43880443570271
-				LAN = 133.57645732626003
-				MNA = 2.5696975417268484
-				EPH = 503554.42871465074
+				SMA = 876124.93727872847
+				ECC = 0.032349203252156435
+				INC = 89.344890382013617
+				LPE = 146.43873603488893
+				LAN = 133.57645776675179
+				MNA = 0.053337670932481075
+				EPH = 1015181.6090895293
 				REF = 1
 			}
 			PART
@@ -34447,8 +31933,8 @@ GAME
 				attN = top, 10
 				mass = 0.100000001
 				shielded = False
-				temp = 201.61911340110004
-				tempExt = 201.56219207137718
+				temp = 209.77425381085888
+				tempExt = 209.59269914626705
 				tempExtUnexp = 294.71143364612425
 				expt = 0
 				state = 0
@@ -34586,23 +32072,6 @@ GAME
 				}
 				MODULE
 				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
 					name = TrajectoriesVesselSettings
 					isEnabled = True
 					Initialized = True
@@ -34658,7 +32127,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 9.9999999998034159
+					amount = 9.9999999995279918
 					maxAmount = 10
 					flowState = True
 					isTweakable = True
@@ -34699,8 +32168,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.6155008862516
-				tempExt = 201.53160429991962
+				temp = 209.8006653876638
+				tempExt = 209.92853629780817
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -34721,13 +32190,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -34753,23 +32219,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -34802,8 +32251,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.64629553235881
-				tempExt = 202.13551029523396
+				temp = 209.72845652218365
+				tempExt = 209.64641145498925
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -34824,13 +32273,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -34856,23 +32302,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -34905,8 +32334,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61625960655905
-				tempExt = 201.54889349511402
+				temp = 209.72124405118399
+				tempExt = 209.5681657108216
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -34927,13 +32356,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -34959,23 +32385,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35008,8 +32417,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61501977995309
-				tempExt = 201.52099304439881
+				temp = 209.73306485389071
+				tempExt = 209.57990620153959
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -35030,13 +32439,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -35062,23 +32468,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35111,8 +32500,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61501977995309
-				tempExt = 201.52099304439881
+				temp = 209.72399565445426
+				tempExt = 209.61900218943705
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -35133,13 +32522,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -35165,23 +32551,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35214,8 +32583,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61501977995309
-				tempExt = 201.52099304439881
+				temp = 209.71877542141866
+				tempExt = 209.57445648481561
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -35236,13 +32605,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -35268,23 +32634,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35317,8 +32666,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61588003796044
-				tempExt = 201.54018525975943
+				temp = 209.7181880025702
+				tempExt = 209.57510373276307
 				tempExtUnexp = 295.09105437355953
 				expt = 0.5
 				state = 0
@@ -35339,13 +32688,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -35371,23 +32717,6 @@ GAME
 							actionGroup = None
 							active = False
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35420,8 +32749,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.61501977995309
-				tempExt = 201.52099304439881
+				temp = 209.72197489433862
+				tempExt = 209.56832151399394
 				tempExtUnexp = 295.68241509081906
 				expt = 0.5
 				state = 0
@@ -35442,13 +32771,10 @@ GAME
 				}
 				MODULE
 				{
-					name = KopernicusSolarPanel
+					name = ModuleDeployableSolarPanel
 					isEnabled = True
-					trackingBodyName = The Sun
-					manualTracking = False
-					relativeSunAOA = False
 					efficiencyMult = 1
-					launchUT = 308467.59196558449
+					launchUT = 1014613.0690889998
 					currentRotation = (0, -6.057208E-07, 0, 1)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
@@ -35479,23 +32805,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -35521,8 +32830,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.80070373671387
-				tempExt = 202.25593990121172
+				temp = 209.79137530526498
+				tempExt = 209.91311052290925
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -35547,7 +32856,7 @@ GAME
 					isEnabled = True
 					currentRotation = (-0.707106829, 0, 0, 0.707106829)
 					storedAnimationTime = 0
-					storedAnimationSpeed = 1
+					storedAnimationSpeed = 0
 					deployState = EXTENDED
 					stagingEnabled = True
 					EVENTS
@@ -35593,23 +32902,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -35636,8 +32928,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.00999999978
 				shielded = False
-				temp = 201.6078888889968
-				tempExt = 201.50933248206812
+				temp = 209.76547707688636
+				tempExt = 209.7540530653049
 				tempExtUnexp = 295.63071561195517
 				expt = 0.5
 				state = 0
@@ -35656,27 +32948,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 199.99999999606831
+					amount = 199.99999999055984
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -35709,8 +32984,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0700000003
 				shielded = False
-				temp = 201.60563710825974
-				tempExt = 201.53476880768204
+				temp = 209.79786783248409
+				tempExt = 210.00181883891818
 				tempExtUnexp = 297.53111912772056
 				expt = 0.5
 				state = 0
@@ -35735,7 +33010,7 @@ GAME
 					isEnabled = True
 					currentRotation = (0, 0, 0, 1)
 					storedAnimationTime = 0
-					storedAnimationSpeed = 1
+					storedAnimationSpeed = 0
 					deployState = EXTENDED
 					stagingEnabled = True
 					EVENTS
@@ -35776,23 +33051,6 @@ GAME
 						{
 							actionGroup = None
 						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -35847,8 +33105,8 @@ GAME
 				attN = bottom, 10
 				mass = 0.00100000005
 				shielded = False
-				temp = 201.65126152040764
-				tempExt = 201.59015980496548
+				temp = 209.69600730410826
+				tempExt = 209.62366773983354
 				tempExtUnexp = 295.19760483705386
 				expt = 0.5
 				state = 0
@@ -35866,23 +33124,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -35910,8 +33151,8 @@ GAME
 				attN = bottom, 12
 				mass = 0.00100000005
 				shielded = False
-				temp = 201.74478603998045
-				tempExt = 201.75610479332713
+				temp = 209.66015534872074
+				tempExt = 209.49857274315696
 				tempExtUnexp = 295.94228886390596
 				expt = 0.5
 				state = 0
@@ -35929,23 +33170,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -35971,8 +33195,8 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0299999993
 				shielded = False
-				temp = 201.89100957518917
-				tempExt = 202.1716151164012
+				temp = 209.767924500915
+				tempExt = 209.44036705586072
 				tempExtUnexp = 300.84111219587624
 				expt = 0.5
 				state = 0
@@ -36039,23 +33263,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36080,8 +33287,8 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.0299999993
 				shielded = False
-				temp = 201.67266661219051
-				tempExt = 201.5733422795594
+				temp = 209.77635211579133
+				tempExt = 209.6131909437299
 				tempExtUnexp = 290.26324025166866
 				expt = 0.5
 				state = 0
@@ -36148,23 +33355,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36191,8 +33381,8 @@ GAME
 				attN = bottom, 13
 				mass = 0.00100000005
 				shielded = False
-				temp = 201.73128747325757
-				tempExt = 201.69475841473957
+				temp = 209.6795136896346
+				tempExt = 209.50839474957536
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -36210,23 +33400,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -36254,8 +33427,8 @@ GAME
 				attN = bottom, 16
 				mass = 0.00100000005
 				shielded = False
-				temp = 201.71639616478481
-				tempExt = 201.68243031683076
+				temp = 209.68962007543385
+				tempExt = 209.53058507890074
 				tempExtUnexp = 292.66104181797056
 				expt = 0.5
 				state = 0
@@ -36273,23 +33446,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 			}
 			PART
@@ -36315,8 +33471,8 @@ GAME
 				srfN = srfAttach, 17
 				mass = 0.00400000019
 				shielded = False
-				temp = 201.70153785288772
-				tempExt = 201.65996444902515
+				temp = 209.74284959538195
+				tempExt = 209.52871457883768
 				tempExtUnexp = 294.16848955404538
 				expt = 0.5
 				state = 0
@@ -36352,23 +33508,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36393,8 +33532,8 @@ GAME
 				srfN = srfAttach, 17
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.72564072450749
-				tempExt = 201.77690489834802
+				temp = 209.73346867205854
+				tempExt = 209.53283598055586
 				tempExtUnexp = 291.32601991469869
 				expt = 0.5
 				state = 0
@@ -36459,23 +33598,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36500,8 +33622,8 @@ GAME
 				srfN = srfAttach, 13
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.7229095255324
-				tempExt = 201.65979762189059
+				temp = 209.680997398317
+				tempExt = 209.49337298570299
 				tempExtUnexp = 293.60558625385522
 				expt = 0.5
 				state = 0
@@ -36525,23 +33647,6 @@ GAME
 					name = FlightEngineerModule
 					isEnabled = True
 					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
 					EVENTS
 					{
 					}
@@ -36577,8 +33682,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.62870554609572
-				tempExt = 201.62517171979974
+				temp = 209.7771012763011
+				tempExt = 209.73108564134844
 				tempExtUnexp = 298.68439215684845
 				expt = 0
 				state = 0
@@ -36631,23 +33736,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36673,8 +33761,8 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.62870554609572
-				tempExt = 201.62517171979974
+				temp = 209.7771012763011
+				tempExt = 209.73108564134844
 				tempExtUnexp = 298.68439215684845
 				expt = 0
 				state = 0
@@ -36727,23 +33815,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36770,8 +33841,8 @@ GAME
 				attN = top, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.61667177871232
-				tempExt = 201.51984381989581
+				temp = 209.77675773636125
+				tempExt = 209.61635750833986
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -36825,23 +33896,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -36868,8 +33922,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.00999999978
 				shielded = False
-				temp = 201.56802024673124
-				tempExt = 201.45260132268152
+				temp = 209.75791621681256
+				tempExt = 209.61542331527019
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -36888,27 +33942,10 @@ GAME
 				PARTDATA
 				{
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 199.99999999606831
+					amount = 199.99999999055984
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -36940,8 +33977,8 @@ GAME
 				srfN = srfAttach, 24
 				mass = 0.00400000019
 				shielded = False
-				temp = 201.56085359432981
-				tempExt = 201.44420670675538
+				temp = 209.76668860100779
+				tempExt = 209.60080534026127
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -36977,23 +34014,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37018,8 +34038,8 @@ GAME
 				srfN = srfAttach, 24
 				mass = 0.0149999997
 				shielded = False
-				temp = 201.55596987156028
-				tempExt = 201.4370608956138
+				temp = 209.74619400037039
+				tempExt = 209.57955313616625
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -37070,23 +34090,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37112,8 +34115,8 @@ GAME
 				srfN = srfAttach, 24
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.61647340727509
-				tempExt = 201.59328170529139
+				temp = 209.776697056264
+				tempExt = 209.73965344535043
 				tempExtUnexp = 293.84899259048092
 				expt = 0
 				state = 0
@@ -37166,23 +34169,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37208,8 +34194,8 @@ GAME
 				srfN = srfAttach, 24
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.61647340727509
-				tempExt = 201.59328170529139
+				temp = 209.776697056264
+				tempExt = 209.73965344535043
 				tempExtUnexp = 293.84896664998001
 				expt = 0
 				state = 0
@@ -37262,23 +34248,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37305,8 +34274,8 @@ GAME
 				attN = bottom, 24
 				mass = 0.0199999996
 				shielded = False
-				temp = 201.64091451447231
-				tempExt = 201.66953856267514
+				temp = 209.78518747309278
+				tempExt = 209.79870794658586
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -37386,23 +34355,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37429,8 +34381,8 @@ GAME
 				attN = bottom, 31
 				mass = 0.0250000004
 				shielded = False
-				temp = 201.64704701748659
-				tempExt = 201.66745351165324
+				temp = 209.78969953095603
+				tempExt = 209.8527650577891
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -37448,23 +34400,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -37514,8 +34449,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0250000004
 				shielded = False
-				temp = 201.66130262676302
-				tempExt = 201.59296236817536
+				temp = 209.79436980970416
+				tempExt = 210.07387412336203
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
@@ -37533,23 +34468,6 @@ GAME
 				}
 				PARTDATA
 				{
-				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
 				}
 				RESOURCE
 				{
@@ -37600,8 +34518,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 201.88072575916678
-				tempExt = 201.94340041657495
+				temp = 209.79118691757051
+				tempExt = 209.84042241751845
 				tempExtUnexp = 294.05399469091265
 				expt = 0.5
 				state = 1
@@ -37669,23 +34587,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			PART
 			{
@@ -37713,8 +34614,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 201.79668650294357
-				tempExt = 201.64087325682218
+				temp = 209.79578986300106
+				tempExt = 209.90892118726617
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
@@ -37782,23 +34683,6 @@ GAME
 					{
 					}
 				}
-				MODULE
-				{
-					name = FMRS_PM
-					isEnabled = True
-					stagingEnabled = True
-					MM_DYNAMIC = true
-					parent_vessel = 00000000-0000-0000-0000-000000000000
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
 			}
 			ACTIONGROUPS
 			{
@@ -37831,11 +34715,16 @@ GAME
 			FLIGHTPLAN
 			{
 			}
+			TARGET
+			{
+				type = Vessel
+				vesselID = e3198e8c-7a50-41ee-930c-68c689a5635f
+			}
 			CTRLSTATE
 			{
-				pitch = 2.62626895E-06
-				yaw = -1.72132354E-06
-				roll = -6.58587453E-07
+				pitch = -3.9925244E-06
+				yaw = -2.78843527E-06
+				roll = 5.23911376E-06
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -60526,13 +57415,13 @@ GAME
 		ModuleManager v3.1.2.0 = True
 		ClickThroughBlocker v0.1.6.9 / v1.0.0.0 = True
 		MiniAVC v1.2.0.6 = True
-		aaa_Toolbar v1.7.17.14 = True
-		ToolbarControl v0.1.6.19 / v1.0.0.0 = True
+		aaa_Toolbar v1.7.17.14 = False
+		ToolbarControl v0.1.6.19 / v1.0.0.0 = False
 		CCK v4.0.0.0 / v4.0.0.0 for KSP 1.5.0 = True
 		ContractConfigurator v1.0.0.0 / v1.26.0 = True
 		DestructionEffects v1.9.0.0 = True
 		EasyVesselSwitch v1.9.6863.37707 / v1.9 for KSP v1.5+ = True
-		FMRS v1.2.7.3 / v1.0.2.0 = True
+		FMRS v1.2.7.3 / v1.0.2.0 = False
 		JSIAdvTransparentPods v0.1.17.0 = True
 		KAS v0.6.4.39793 / v0.6.4 for KSP 1.4+ = True
 		KAS-API-v1 v1.0.0.0 / vKAS API v1 = True
@@ -60542,9 +57431,9 @@ GAME
 		RecoveryController v0.0.3.3 / v1.0.0.0 = True
 		SCANsat v1.8.9.0 / vv18.9 = True
 		SCANsat.Unity v1.8.9.0 = True
-		VVDiscoDisplay v0.8.7.1 / v1.0.0.0 = True
-		VesselView v0.8.7.1 / v1.0.0.0 = True
-		VesselViewPlugin v0.8.7.1 / v1.0.0.0 = True
+		VVDiscoDisplay v0.8.7.1 / v1.0.0.0 = False
+		VesselView v0.8.7.1 / v1.0.0.0 = False
+		VesselViewPlugin v0.8.7.1 / v1.0.0.0 = False
 		WaypointManager v1.0.0.0 / v2.7.4 = True
 		ContractConfigurator = True
 		PreciseNode = True

@@ -1,0 +1,289 @@
+Debug information for CONTRACT_TYPE 'SCAN_Exceptional.Gilly':
+
+Configuration:
+CONTRACT_TYPE
+{
+	name = SCAN_Exceptional.Gilly
+	title = Do a group of high resolution SCANsat surveys of @/targetBodyValid3.
+	genericTitle = Do a group of high resolution SCANsat surveys of @/targetBodyValid3.
+	group = ScanSatOfficial
+	topic = Science
+	subject = Kerbal
+	agent = SCAN
+	notes = Scanning can take place while the vessel is not loaded.
+	synopsis = Perform several high resolution scans of @/targetBodyValid3
+	completedMessage = We now have a detailed map and survey for the surface of @/targetBodyValid3
+	minExpiry = 1
+	maxExpiry = 7
+	deadline = Random(300, 500) * @/targetBodyValid3.Multiplier()
+	cancellable = true
+	declinable = true
+	autoAccept = false
+	targetBody = @/targetBodyValid3
+	rewardScience = 0
+	rewardReputation = 1
+	rewardFunds = Random(60000, 80000.0)
+	failureReputation = 1
+	failureFunds = Random(1000, 10000.0)
+	advanceFunds = Random(10000, 20000.0)
+	prestige = Exceptional
+	DATA
+	{
+		type = CelestialBody
+		requiredValue = true
+		uniquenessCheck = CONTRACT_ALL
+		targetBodyValid3 = @/targetBody3
+	}
+	DATA
+	{
+		type = List<CelestialBody>
+		requiredValue = false
+		targetBodyList3 = @ScanSatOfficial:p3Bodies
+		targetBodyList4 = @ScanSatOfficial:p4Bodies
+	}
+	PARAMETER
+	{
+		name = SCANsatCoverage_1
+		type = SCANsatCoverage
+		targetBody = @/targetBodyValid3
+		coverage = 95
+		scanType = AltimetryHiRes
+	}
+	PARAMETER
+	{
+		name = SCANsatCoverage_2
+		type = SCANsatCoverage
+		targetBody = @/targetBodyValid3
+		coverage = 95
+		scanType = Ore
+	}
+	REQUIREMENT
+	{
+		name = AnyCoverage
+		type = Any
+		targetBody = @/targetBody
+		REQUIREMENT
+		{
+			name = SCANsatCoverage_1
+			type = SCANsatCoverage
+			targetBody = @/targetBodyValid3
+			minCoverage = 0.0
+			maxCoverage = 90
+			scanType = AltimetryHiRes
+			title = Must have less than a 90% high resolution altimetry scan of the target body.
+		}
+		REQUIREMENT
+		{
+			name = SCANsatCoverage_2
+			type = SCANsatCoverage
+			targetBody = @/targetBodyValid3
+			minCoverage = 0.0
+			maxCoverage = 90
+			scanType = Ore
+			title = Must have less than a 90% ore scan of the target body.
+		}
+	}
+	REQUIREMENT
+	{
+		name = Expression_1
+		type = Expression
+		title = Must have orbited the target body, or the target body must be next on the list.
+		expression = (@/targetBodyList3.Contains(@/targetBodyValid3) || @/targetBodyList4.Contains(@/targetBodyValid3))   == true
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = Orbit
+		type = Orbit
+		targetBody = HomeWorld()
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked_1
+		type = PartUnlocked
+		part = SCANsat_Scanner2
+		targetBody = @/targetBody
+	}
+	REQUIREMENT
+	{
+		name = PartUnlocked_2
+		type = PartUnlocked
+		part = OrbitalScanner
+		targetBody = @/targetBody
+	}
+	DATA
+	{
+		type = CelestialBody
+		targetBody3 = Gilly
+		isLiteral = True
+	}
+}
+
+Data Nodes:
+SCAN_Exceptional.Gilly
+    ScanSatOfficial:name = ScanSatOfficial, deterministic = True
+    ScanSatOfficial:displayName = ScanSat Official, deterministic = True
+    ScanSatOfficial:minVersion = 1.15.0, deterministic = True
+    ScanSatOfficial:maxCompletions = 0, deterministic = True
+    ScanSatOfficial:maxSimultaneous = 10, deterministic = True
+    ScanSatOfficial:disabledContractType = [], deterministic = True
+    ScanSatOfficial:agent = Contracts.Agents.Agent, deterministic = True
+    ScanSatOfficial:sortKey = ScanSat Official, deterministic = True
+    ScanSatOfficial:tip = , deterministic = True
+    ScanSatOfficial:homeBodies = [ Kerbin (CelestialBody), Mun (CelestialBody), Minmus (CelestialBody) ], deterministic = True
+    ScanSatOfficial:nonHomeBodies = [ Moho (CelestialBody), Eve (CelestialBody), Duna (CelestialBody), Ike (CelestialBody), Laythe (CelestialBody), Vall (CelestialBody), Bop (CelestialBody), Tylo (CelestialBody), Gilly (CelestialBody), Pol (CelestialBody), Dres (CelestialBody), Eeloo (CelestialBody) ], deterministic = True
+    ScanSatOfficial:p2Bodies = [], deterministic = False
+    ScanSatOfficial:p3Bodies = [], deterministic = False
+    ScanSatOfficial:p4Bodies = [], deterministic = False
+    name = SCAN_Exceptional.Gilly, deterministic = True
+    trace = False, deterministic = True
+    title = Do a group of high resolution SCANsat surveys of Gilly., deterministic = True
+    tag = , deterministic = True
+    description = null, deterministic = True
+    topic = Science, deterministic = True
+    subject = Kerbal, deterministic = True
+    notes = Scanning can take place while the vessel is not loaded., deterministic = True
+    synopsis = Perform several high resolution scans of Gilly, deterministic = True
+    completedMessage = We now have a detailed map and survey for the surface of Gilly, deterministic = True
+    agent = Contracts.Agents.Agent, deterministic = True
+    minExpiry = 1, deterministic = True
+    maxExpiry = 7, deterministic = True
+    deadline = 1812.818, deterministic = False
+    cancellable = True, deterministic = True
+    declinable = True, deterministic = True
+    autoAccept = False, deterministic = True
+    prestige = [ Exceptional ], deterministic = True
+    targetBody = Gilly (CelestialBody), deterministic = True
+    maxCompletions = 0, deterministic = True
+    maxSimultaneous = 4, deterministic = True
+    rewardFunds = 66329.41, deterministic = False
+    rewardReputation = 1, deterministic = True
+    rewardScience = 0, deterministic = True
+    failureFunds = 4355.875, deterministic = False
+    failureReputation = 1, deterministic = True
+    advanceFunds = 17529.85, deterministic = False
+    targetBodyValid3 = Gilly (CelestialBody), deterministic = True
+    targetBodyList3 = [], deterministic = False
+    targetBodyList4 = [], deterministic = False
+    targetBody3 = Gilly (CelestialBody), deterministic = True
+    genericTitle = Do a group of high resolution SCANsat surveys of Gilly., deterministic = True
+    genericDescription = null, deterministic = True
+    sortKey = Do a group of high resolution SCANsat surveys of Gilly., deterministic = True
+
+	SCANsatCoverage_1
+	    type = SCANsatCoverage, deterministic = True
+	    name = SCANsatCoverage_1, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 95, deterministic = True
+	    scanType = AltimetryHiRes, deterministic = True
+	
+	SCANsatCoverage_2
+	    type = SCANsatCoverage, deterministic = True
+	    name = SCANsatCoverage_2, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    rewardFunds = 0, deterministic = True
+	    rewardReputation = 0, deterministic = True
+	    rewardScience = 0, deterministic = True
+	    failureFunds = 0, deterministic = True
+	    failureReputation = 0, deterministic = True
+	    optional = False, deterministic = True
+	    disableOnStateChange = null, deterministic = True
+	    completeInSequence = False, deterministic = True
+	    hidden = False, deterministic = True
+	    hideChildren = False, deterministic = True
+	    title = null, deterministic = True
+	    notes = null, deterministic = True
+	    completedMessage = null, deterministic = True
+	    coverage = 95, deterministic = True
+	    scanType = Ore, deterministic = True
+	
+	AnyCoverage
+	    type = Any, deterministic = True
+	    name = AnyCoverage, deterministic = True
+	    title = null, deterministic = True
+	    hideChildren = False, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	
+		SCANsatCoverage_1
+		    type = SCANsatCoverage, deterministic = True
+		    name = SCANsatCoverage_1, deterministic = True
+		    title = Must have less than a 90% high resolution altimetry scan of the target body., deterministic = True
+		    hideChildren = False, deterministic = True
+		    targetBody = Gilly (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    minCoverage = 0, deterministic = True
+		    maxCoverage = 90, deterministic = True
+		    scanType = AltimetryHiRes, deterministic = True
+		
+		SCANsatCoverage_2
+		    type = SCANsatCoverage, deterministic = True
+		    name = SCANsatCoverage_2, deterministic = True
+		    title = Must have less than a 90% ore scan of the target body., deterministic = True
+		    hideChildren = False, deterministic = True
+		    targetBody = Gilly (CelestialBody), deterministic = True
+		    checkOnActiveContract = False, deterministic = True
+		    invertRequirement = False, deterministic = True
+		    minCoverage = 0, deterministic = True
+		    maxCoverage = 90, deterministic = True
+		    scanType = Ore, deterministic = True
+		
+	Expression_1
+	    type = Expression, deterministic = True
+	    name = Expression_1, deterministic = True
+	    title = Must have orbited the target body, or the target body must be next on the list., deterministic = True
+	    hideChildren = False, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    expression = False, deterministic = False
+	
+	Orbit
+	    type = Orbit, deterministic = True
+	    name = Orbit, deterministic = True
+	    title = null, deterministic = True
+	    hideChildren = False, deterministic = True
+	    targetBody = Kerbin (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    checkType = null, deterministic = True
+	
+	PartUnlocked_1
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked_1, deterministic = True
+	    title = null, deterministic = True
+	    hideChildren = False, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ SCANsat.Scanner2 ], deterministic = True
+	
+	PartUnlocked_2
+	    type = PartUnlocked, deterministic = True
+	    name = PartUnlocked_2, deterministic = True
+	    title = null, deterministic = True
+	    hideChildren = False, deterministic = True
+	    targetBody = Gilly (CelestialBody), deterministic = True
+	    checkOnActiveContract = False, deterministic = True
+	    invertRequirement = False, deterministic = True
+	    part = [ OrbitalScanner ], deterministic = True
+	
+
+Output log:
+[INFO] ContractConfigurator.ContractType: Loading CONTRACT_TYPE: 'SCAN_Exceptional.Gilly'
+[INFO] ContractConfigurator.ContractType: Successfully loaded CONTRACT_TYPE 'SCAN_Exceptional.Gilly'
